@@ -30,3 +30,13 @@
 | Success Response            |<ul><li>Content: {error:””}</li><li></li>Valid response codes:<ul><li>200 OK</li><li>201 Folder created</li></ul></li></ul>|
 | Error Response              |<ul><li>Content: {error:”Error code”}</li><li>Valid response codes:<ul><li>400 Bad request</li><li>401 Unauthorized</li><li>403 Forbidden</li><li>405 Method not found</li><li>408 Timeout</li><li>422 Unprocessable entity</li><li>429 Too many requests</li><li>500 Internal server error</li><li>502 Bad gateway</li><li>503 Service unavailable</li></ul></li></ul>|
 | Sample Call                 |$.ajax({url: “v1/docs/?{“token”:3861739164332}”,"fname":"Folder3", dataType:"json", type:"POST",sucess:function(r){console.log(r);}});|
+
+| Add folder to root          |   |
+|-----------------------------|---|
+| URL                         |/v1/docs?{“token”:ID,"fname":"FILE_NAME"}|
+| Method                      |POST|
+| URL Parameters              |<ul><li><strong>Required:</strong> None</li><li><strong>Optional:</strong> None</li></ul>|
+| Data Parameters             |<ul><li><strong>Required:</strong><ul><li>fname: Specifies the file to be created</li></ul><li><strong>Optional:</strong><ul><li>Security token for access. If none given, resort to default behavior.</li></ul></li></ul>|
+| Success Response            |<ul><li>Content: {error:””}</li><li></li>Valid response codes:<ul><li>200 OK</li><li>201 Folder created</li></ul></li></ul>|
+| Error Response              |<ul><li>Content: {error:”Error code”}</li><li>Valid response codes:<ul><li>400 Bad request</li><li>401 Unauthorized</li><li>403 Forbidden</li><li>405 Method not found</li><li>408 Timeout</li><li>422 Unprocessable entity</li><li>429 Too many requests</li><li>500 Internal server error</li><li>502 Bad gateway</li><li>503 Service unavailable</li></ul></li></ul>|
+| Sample Call                 |$.ajax({url: “v1/docs/?{“token”:3861739164332}”,"fname":"Folder3", dataType:"json", type:"POST",sucess:function(r){console.log(r);}});|
