@@ -19,4 +19,11 @@ Sometimes, however, someone will have updated the main branch before you committ
 
 ###What Should I Do?
 
-To get this repository, go to a directory, and type in **git clone https://github.com/n0needt0/fbg.git fbg**. This will clone the current project into a subdirectory called fbg.
+To get this repository, go to a directory, and type in **git clone https://github.com/n0needt0/fbg.git fbg**. This will clone the current project into a subdirectory called fbg. Once this is done, you should be able to edit and add files at will. When you have made a significant edit which can be summarized into a statement, stop working and run **git add** *SOMETHING* on any directories or files you have edited. Then run **git commit**. This will automatically open up Vim to create a commit message. Go into edit mode and write 50 characters or less on what you did. When you're done, save your edit and exit vim. Continuously run **git pull** so that you have the latest version of the code. Check any differences, and continue working. After you've performed a few commits, you may feel it is time to push your branch onto the remote branch. Pull and merge a final time, then run **git push -a** to put your changes on the remote branch.
+
+To summarize:
+
++ **git clone** copies a project
++ **git commit** saves changes locally
++ **git push** pushes your changes upstream
++ **git pull** pulls from the upstream
