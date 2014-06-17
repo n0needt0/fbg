@@ -2,6 +2,7 @@
 ###Preliminary Command Line Knowldge
 + **pwd** --> Print the working directory, AKA where you are.
 + **whoami** --> What your username is.
++ **cd** *DIRECTORY_NAME*--> Change the current directory you are in to the directory specified, use **..** to go up.
 + **ls** --> List what is in the directory <ul><li>**-l** --> Lists with more metadata.</li><li>**-a** --> Shows hidden files.</li></ul>
 + **mkdir** *DIRECTORY_NAME* --> Creates an empty directory with that name.
 + **touch** *FILE_NAME* --> Creates an empty file with that name.
