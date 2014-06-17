@@ -1,5 +1,5 @@
 #Tutorial for Git
-###Preliminary Command Line Knowldge
+###Preliminary Command Line Knowledge
 + **pwd** --> Print the working directory, AKA where you are.
 + **whoami** --> What your username is.
 + **cd** *DIRECTORY_NAME*--> Change the current directory you are in to the directory specified, use **..** to go up.
