@@ -1,5 +1,6 @@
 #REST API Version 0.1
 
+##Root commands
 
 | Get all folders in the root |   |
 |-----------------------------|---|
@@ -30,6 +31,8 @@
 | Success Response            |<ul><li>Content: {error:””}</li><li></li>Valid response codes:<ul><li>200 OK</li><li>201 Folder created</li></ul></li></ul>|
 | Error Response              |<ul><li>Content: {error:”Error code”}</li><li>Valid response codes:<ul><li>400 Bad request</li><li>401 Unauthorized</li><li>403 Forbidden</li><li>405 Method not found</li><li>408 Timeout</li><li>422 Unprocessable entity</li><li>429 Too many requests</li><li>500 Internal server error</li><li>502 Bad gateway</li><li>503 Service unavailable</li></ul></li></ul>|
 | Sample Call                 |$.ajax({url: “v1/docs/?{“token”:3861739164332}”,"fname":"Folder3", dataType:"json", type:"POST",sucess:function(r){console.log(r);}});|
+
+##Folder commands
 
 | Add folder to root          |   |
 |-----------------------------|---|
