@@ -107,39 +107,39 @@
 | Method                      |POST|
 | URL Parameters              |<ul><li><strong>Required:</strong><ul><li>Folder name required to add tag to all files in a specific folder.</li></ul></li><li><strong>Optional:</strong> None</li></ul>|
 | Data Parameters             |<ul><li><strong>Required:</strong><ul><li>Name is the patient name.</li><li>SSN is the last 4 digits of the patient's social security number.</li><li>Tab action differentiates this request from file actions.</li></ul><li><strong>Optional:</strong><ul><li>Security token for access. If none given, resort to default behavior.</li></ul></li></ul>|
-| Success Response            |<ul><li>Content: {error:””}</li><li></li>Valid response codes:<ul><li>200 OK</li><li>201 Folder created</li></ul></li></ul>|
+| Success Response            |<ul><li>Content: {error:””}</li><li></li>Valid response codes:<ul><li>200 OK</li><li>201 Tab created</li></ul></li></ul>|
 | Error Response              |<ul><li>Content: {error:”Error code”}</li><li>Valid response codes:<ul><li>400 Bad request</li><li>401 Unauthorized</li><li>403 Forbidden</li><li>405 Method not found</li><li>408 Timeout</li><li>422 Unprocessable entity</li><li>429 Too many requests</li><li>500 Internal server error</li><li>502 Bad gateway</li><li>503 Service unavailable</li></ul></li></ul>|
 | Sample Call                 |$.ajax({url: “v1/docs/mailtoday/?{“token”:3861739164332”,"name":"John Smith","ssn":1234}, dataType:"json", type:"POST",success:function(r){console.log(r);}});|
 
 | <a name="edit-global-tab"></a>Edit global tab                      |   |
 |-----------------------------|---|
-| URL                         |/v1/docs/FOLDER_NAME?{“token”:ID,"fname":"FILE_NAME"}|
-| Method                      |DELETE|
-| URL Parameters              |<ul><li><strong>Required:</strong><ul><li>Folder name required to search for specific files.</li></ul></li><li><strong>Optional:</strong> None</li></ul>|
-| Data Parameters             |<ul><li><strong>Required:</strong><ul><li>fname: Specifies the file to be deleted</li></ul><li><strong>Optional:</strong><ul><li>Security token for access. If none given, resort to default behavior.</li></ul></li></ul>|
-| Success Response            |<ul><li>Content: {error:””}</li><li></li>Valid response codes:<ul><li>200 OK</li><li>204 No content to be deleted</li><li>301, 302, 303 Redirect to correct content to be deleted</li></ul></li></ul>|
+| URL                         |/v1/docs/FOLDER_NAME?{“token”:ID, "oldname":"OLD_TAB_PATIENT_NAME","oldssn":OLD_PATIENT_SSN,"name","TAB_PATIENT_NAME","ssn":LAST_4_DIGITS_SSN,"action":"tabs"}|
+| Method                      |PUT|
+| URL Parameters              |<ul><li><strong>Required:</strong><ul><li>Folder name required to add tag to all files in a specific folder.</li></ul></li><li><strong>Optional:</strong> None</li></ul>|
+| Data Parameters             |<ul><li><strong>Required:</strong><ul><li>The old name identifies the tab to be changed.</li><li>The old ssn further identifies the tab to be changed.</li><li>Tab action differentiates this request from file actions.</li></ul></li><li><strong>Optional:</strong><ul><li>Security token for access. If none given, resort to default behavior.</li><li>The new patient name for the tab is changed from the old one.</li><li>The new patient SSN for the tab is changed from the old one.</li></ul></li></ul>|
+| Success Response            |<ul><li>Content: {error:””}</li><li></li>Valid response codes:<ul><li>200 OK</li><li>201 Tab changed.</li><li>301, 302, 303 Redirect to correct content</li></ul></li></ul>|
 | Error Response              |<ul><li>Content: {error:”Error code”}</li><li>Valid response codes:<ul><li>400 Bad request</li><li>401 Unauthorized</li><li>403 Forbidden</li><li>404 Not found</li><li>405 Method not found</li><li>408 Timeout</li><li>410 Gone</li><li>422 Unprocessable entity</li><li>429 Too many requests</li><li>500 Internal server error</li><li>502 Bad gateway</li><li>503 Service unavailable</li></ul></li></ul>|
-| Sample Call                 |$.ajax({url: “v1/docs/mailtoday/?{“token”:3861739164332}”,"fname":"File3", dataType:"json", type:"DELETE",success:function(r){console.log(r);}});|
+| Sample Call                 |$.ajax({url: “v1/docs/mailtoday/?{“token”:3861739164332”,"oldname":"Johny Smith","oldssn":1233,"name":"John Smith","ssn":1234}, dataType:"json", type:"PUT",success:function(r){console.log(r);}});|
 
 | <a name="delete-global-tab"></a>Delete global tab                      |   |
 |-----------------------------|---|
-| URL                         |/v1/docs/FOLDER_NAME?{“token”:ID,"fname":"FILE_NAME"}|
+| URL                         |/v1/docs/FOLDER_NAME?{“token”:ID,"name","TAB_PATIENT_NAME","ssn":LAST_4_DIGITS_SSN,"action":"tabs"}|
 | Method                      |DELETE|
-| URL Parameters              |<ul><li><strong>Required:</strong><ul><li>Folder name required to search for specific files.</li></ul></li><li><strong>Optional:</strong> None</li></ul>|
-| Data Parameters             |<ul><li><strong>Required:</strong><ul><li>fname: Specifies the file to be deleted</li></ul><li><strong>Optional:</strong><ul><li>Security token for access. If none given, resort to default behavior.</li></ul></li></ul>|
+| URL Parameters              |<ul><li><strong>Required:</strong><ul><li>Folder name required to add tag to all files in a specific folder.</li></ul></li><li><strong>Optional:</strong> None</li></ul>|
+| Data Parameters             |<ul><li><strong>Required:</strong><ul><li>The old name identifies the tab to be deleted.</li><li>The old ssn further identifies the tab to be deleted.</li><li>Tab action differentiates this request from file actions.</li></ul><li><strong>Optional:</strong><ul><li>Security token for access. If none given, resort to default behavior.</li></ul></li></ul>|
 | Success Response            |<ul><li>Content: {error:””}</li><li></li>Valid response codes:<ul><li>200 OK</li><li>204 No content to be deleted</li><li>301, 302, 303 Redirect to correct content to be deleted</li></ul></li></ul>|
 | Error Response              |<ul><li>Content: {error:”Error code”}</li><li>Valid response codes:<ul><li>400 Bad request</li><li>401 Unauthorized</li><li>403 Forbidden</li><li>404 Not found</li><li>405 Method not found</li><li>408 Timeout</li><li>410 Gone</li><li>422 Unprocessable entity</li><li>429 Too many requests</li><li>500 Internal server error</li><li>502 Bad gateway</li><li>503 Service unavailable</li></ul></li></ul>|
-| Sample Call                 |$.ajax({url: “v1/docs/mailtoday/?{“token”:3861739164332}”,"fname":"File3", dataType:"json", type:"DELETE",success:function(r){console.log(r);}});|
+| Sample Call                 |$.ajax({url: “v1/docs/mailtoday/?{“token”:3861739164332”,"name":"John Smith","ssn":1234}, dataType:"json", type:"DELETE",success:function(r){console.log(r);}});|
 
 | <a name="edit-global-property"></a>Edit global property                     |   |
 |-----------------------------|---|
-| URL                         |/v1/docs/FOLDER_NAME?{“token”:ID,"fname":"FILE_NAME"}|
-| Method                      |DELETE|
-| URL Parameters              |<ul><li><strong>Required:</strong><ul><li>Folder name required to search for specific files.</li></ul></li><li><strong>Optional:</strong> None</li></ul>|
-| Data Parameters             |<ul><li><strong>Required:</strong><ul><li>fname: Specifies the file to be deleted</li></ul><li><strong>Optional:</strong><ul><li>Security token for access. If none given, resort to default behavior.</li></ul></li></ul>|
-| Success Response            |<ul><li>Content: {error:””}</li><li></li>Valid response codes:<ul><li>200 OK</li><li>204 No content to be deleted</li><li>301, 302, 303 Redirect to correct content to be deleted</li></ul></li></ul>|
+| URL                         |/v1/docs/FOLDER_NAME?{“token”:ID,"pname":"PROPERTY_NAME","pvalue":"PROPERTY_VALUE","action":"properties"}|
+| Method                      |PUT|
+| URL Parameters              |<ul><li><strong>Required:</strong><ul><li>Folder name required to edit properties of all files inside folder</li></ul></li><li><strong>Optional:</strong> None</li></ul>|
+| Data Parameters             |<ul><li><strong>Required:</strong><ul><li>Property name is the property to be edited.</li><li>Property value is the new property value.</li><li>Property action differentiates this request from file actions and tab actions.</li></ul><li><strong>Optional:</strong><ul><li>Security token for access. If none given, resort to default behavior.</li></ul></li></ul>|
+| Success Response            |<ul><li>Content: {error:””}</li><li></li>Valid response codes:<ul><li>200 OK</li><li>201 Property changed</li></ul></li></ul>|
 | Error Response              |<ul><li>Content: {error:”Error code”}</li><li>Valid response codes:<ul><li>400 Bad request</li><li>401 Unauthorized</li><li>403 Forbidden</li><li>404 Not found</li><li>405 Method not found</li><li>408 Timeout</li><li>410 Gone</li><li>422 Unprocessable entity</li><li>429 Too many requests</li><li>500 Internal server error</li><li>502 Bad gateway</li><li>503 Service unavailable</li></ul></li></ul>|
-| Sample Call                 |$.ajax({url: “v1/docs/mailtoday/?{“token”:3861739164332}”,"fname":"File3", dataType:"json", type:"DELETE",success:function(r){console.log(r);}});|
+| Sample Call                 |$.ajax({url: “v1/docs/mailtoday/?{“token”:3861739164332,"pname":"type","pvalue":"chart","action":"properties"}, dataType:"json", type:"PUT",success:function(r){console.log(r);}});|
 
 ***
 ##File Commands
