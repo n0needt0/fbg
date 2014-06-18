@@ -1,5 +1,9 @@
 #REST API Version 0.1
 
+[Root Commands](#root-commands)
+
+[Folder and File Commands](#folder-and-file-commands)
+
 ##Root Commands
 
 | Get all folders in the root |   |
@@ -32,6 +36,7 @@
 | Error Response              |<ul><li>Content: {error:”Error code”}</li><li>Valid response codes:<ul><li>400 Bad request</li><li>401 Unauthorized</li><li>403 Forbidden</li><li>405 Method not found</li><li>408 Timeout</li><li>422 Unprocessable entity</li><li>429 Too many requests</li><li>500 Internal server error</li><li>502 Bad gateway</li><li>503 Service unavailable</li></ul></li></ul>|
 | Sample Call                 |$.ajax({url: “v1/docs/?{“token”:3861739164332,"fname":"Folder3"}, dataType:"json", type:"POST",success:function(r){console.log(r);}});|
 
+***
 ##Folder and File Commands
 
 | Search for tab       |   |
@@ -54,6 +59,7 @@
 | Error Response              |<ul><li>Content: {error:”Error code”}</li><li>Valid response codes:<ul><li>400 Bad request</li><li>401 Unauthorized</li><li>403 Forbidden</li><li>405 Method not found</li><li>408 Timeout</li><li>422 Unprocessable entity</li><li>429 Too many requests</li><li>500 Internal server error</li><li>502 Bad gateway</li><li>503 Service unavailable</li></ul></li></ul>|
 | Sample Call                 |$.ajax({url: “v1/tabs/?{“token”:3861739164332,"name":"John Smith","ssn":1234}, dataType:"json", type:"POST",success:function(r){console.log(r);}});|
 
+***
 ##Folder Commands
 
 | Get all files in a folder |   |
@@ -116,6 +122,7 @@
 | Error Response              |<ul><li>Content: {error:”Error code”}</li><li>Valid response codes:<ul><li>400 Bad request</li><li>401 Unauthorized</li><li>403 Forbidden</li><li>404 Not found</li><li>405 Method not found</li><li>408 Timeout</li><li>410 Gone</li><li>422 Unprocessable entity</li><li>429 Too many requests</li><li>500 Internal server error</li><li>502 Bad gateway</li><li>503 Service unavailable</li></ul></li></ul>|
 | Sample Call                 |$.ajax({url: “v1/docs/mailtoday/?{“token”:3861739164332}”,"fname":"File3", dataType:"json", type:"DELETE",success:function(r){console.log(r);}});|
 
+***
 ##File Commands
 
 | Get file data                     |   |
