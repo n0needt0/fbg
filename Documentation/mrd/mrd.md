@@ -16,22 +16,22 @@
 
 ##Preface
 Our medical office is required to store multitudes of patient files. The files consist of various medical notes, correspondences and financial statements. The documents are stored in folders, and are tabbed by patient name. Patient names may collide, therefore a combination of the patient's name and the last 4 digits of his or her SSN number are used. 
-Archiving new correspondence is a semi-weekly process of sorting and filing new documents  into corresponding folders.  Files are used by checking them out in a ledger.
-Files do not get purged from old documents and grow indefinitely.
+Archiving new correspondences is a semi-weekly process of sorting and filing new documents into their corresponding folders. Files are used by checking them out from a ledger.
+Old documents are not removed when new files are created, growing indefinitely.
 
 ##Problems
-1. Files are stored on premises in 400 SQF cost of $30 per 1 SQF per  year, or $12,000
-2. Files are NOT backed up for off-site storage, an additional expense of X$
-3. Because of no back up, files are at constant risk of loss
-4. Files are stored without encryption and without access control or access logs
-5. Sending files require faxing or copying, even for inter-clinic requests 
-6. While files are removed from file room,  their updates are blocked.
-7. Paper-based data can not be analysed or searched
-8. Other department namely Finance and HR also produce similar files.
+1. Files are stored on premises in 400 square feet. At a cost of $30 per square feet per year, this amounts to $12,000.
+2. Files are NOT backed up for off-site storage, which would be an additional expense.
+3. Because of the lack of backup, files are at constant risk of loss.
+4. Files are stored without encryption, access control or access logs.
+5. Sending files requires faxing or copying, even for inter-clinic requests.
+6. While files are removed from the file room, their updates are blocked.
+7. Paper-based data can not be analysed or searched automatically.
+8. Other departments, namely Finance and HR also produce similar files. (And have similar problems.)
 
 ##Opportunity Size
-Per American Academy Of Family Physicians each physician sees on average 80 patients per week, extrapolating from this number we estimate average practice documentation needs are in 1000 files per year. (http://www.aafp.org/about/the-aafp/family-medicine-facts/table-6.html)
-Per Wikipedia there are over 200,00 physician practices in USA. Half of which on average are single provider and half  two provider organizations. (http://en.wikipedia.org/wiki/Group_medical_practice_in_the_United_States)
+According to the American Academy Of Family Physicians, a typical physician sees on average 80 patients per week. Extrapolating from this number we estimate average practice documentation needs are in the range of 1000 files per year. There are over 200,000 physicians practicing in the USA. Half of these on average are on a single provider organization, and the rest on two. [References](#refs)
+
 Making estimated marked size of  200000 practices * 1.5 physician * 1000 files per physician = 300 million files a year.  This is not considering specialists, workman comp, medicare and medicaid practices that are required by law to keep patient files pretty much indefinitely.
 Estimated USA population is just over 300 million per latest census.
 
@@ -91,3 +91,8 @@ The check in checkout process shall use iPad style devices, where user can see a
 
 ##Business Model
 We will supply turn on hardware/software appliance solution and service combination via independent integrators or directly.  Appliance will be leased to the customer via finance company. Services will be provided and priced via tiers.
+
+***
+####<a name="refs"></a> References
+http://www.aafp.org/about/the-aafp/family-medicine-facts/table-6.html
+http://en.wikipedia.org/wiki/Group_medical_practice_in_the_United_States
