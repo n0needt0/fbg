@@ -1,12 +1,31 @@
 #REST API Version 0.1
 
-[Root Commands](#root-commands)
+##Table of Contents
 
-[Folder and File Commands](#folder-and-file-commands)
++ [Root Commands](#root-commands)
+ - [Get all folders in the root](#get-all-folders-in-the-root)
+ - [Remove folder from root](#remove-folder-from-root)
+ - [Add folder to root](#add-folder-to-root)
++ [Folder and File Commands](#folder-and-file-commands)
+ - [Search for tab](#search-for-tab)
+ - [Create new tab](#create-new-tab)
++ [Folder Commands](#folder-commands)
+ - [Get all files in a folder](#get-all-files-in-a-folder)
+ - [Remove file from folder](#remove-file-from-folder)
+ - [Add global tab](#add-global-tab)
+ - [Edit global tab](#edit-global-tab)
+ - [Delete global tab](#delete-global-tab)
+ - [Edit global property](#edit-global-property)
++ [File Commands](#file-commands)
+ - [Get file data](#get-file-data)
+ - [Add tab](#add-tab)
+ - [Edit tab](#edit-tab)
+ - [Delete tab](#delete-tab)
+ - [Edit property](#edit-property)
 
 ##Root Commands
 
-| Get all folders in the root |   |
+| <a name="get-all-folders-in-the-root"></a>Get all folders in the root |   |
 |-----------------------------|---|
 | URL                         |/v1/docs?{“token”:ID}|
 | Method                      |GET|
@@ -16,7 +35,7 @@
 | Error Response              |<ul><li>Content: {error:”Error code”}</li><li>Valid response codes:<ul><li>400 Bad request</li><li>401 Unauthorized</li><li>403 Forbidden</li><li>404 Not found</li><li>405 Method not found</li><li>408 Timeout</li><li>410 Gone</li><li>422 Unprocessable entity</li><li>429 Too many requests</li><li>500 Internal server error</li><li>502 Bad gateway</li><li>503 Service unavailable</li></ul></li></ul>|
 | Sample Call                 |$.ajax({url: “v1/docs/?{“token”:3861739164332}, dataType:"json", type:"GET",success:function(r){console.log(r);}});|
 
-| Remove folder from root     |   |
+| <a name="remove-folder-from-root"></a>Remove folder from root     |   |
 |-----------------------------|---|
 | URL                         |/v1/docs?{“token”:ID,"fname":"FOLDER_NAME"}|
 | Method                      |DELETE|
@@ -26,7 +45,7 @@
 | Error Response              |<ul><li>Content: {error:”Error code”}</li><li>Valid response codes:<ul><li>400 Bad request</li><li>401 Unauthorized</li><li>403 Forbidden</li><li>404 Not found</li><li>405 Method not found</li><li>408 Timeout</li><li>410 Gone</li><li>422 Unprocessable entity</li><li>429 Too many requests</li><li>500 Internal server error</li><li>502 Bad gateway</li><li>503 Service unavailable</li></ul></li></ul>|
 | Sample Call                 |$.ajax({url: “v1/docs/?{“token”:3861739164332,"fname":"Folder3"}, dataType:"json", type:"DELETE",success:function(r){console.log(r);}});|
 
-| Add folder to root          |   |
+| <a name="add-folder-to-root"></a>Add folder to root          |   |
 |-----------------------------|---|
 | URL                         |/v1/docs?{“token”:ID,"fname":"FOLDER_NAME"}|
 | Method                      |POST|
@@ -39,7 +58,7 @@
 ***
 ##Folder and File Commands
 
-| Search for tab       |   |
+| <a name="search-for-tab"></a> Search for tab       |   |
 |-----------------------------|---|
 | URL                         |/v1/tabs/?{“token”:ID,"name":"NAME_PARTIAL","ssn":SSN_PARTIAL}|
 | Method                      |GET|
@@ -49,7 +68,7 @@
 | Error Response              |<ul><li>Content: {error:”Error code”}</li><li>Valid response codes:<ul><li>400 Bad request</li><li>401 Unauthorized</li><li>403 Forbidden</li><li>405 Method not found</li><li>408 Timeout</li><li>422 Unprocessable entity</li><li>429 Too many requests</li><li>500 Internal server error</li><li>502 Bad gateway</li><li>503 Service unavailable</li></ul></li></ul>|
 | Sample Call                 |$.ajax({url: “v1/tabs/?{“token”:3861739164332”,"name":"John S"}, dataType:"json", type:"GET",success:function(r){console.log(r);}});|
 
-| Create new tab      |   |
+| <a name="create-new-tab"></a>Create new tab      |   |
 |-----------------------------|---|
 | URL                         |/v1/tabs/?{“token”:ID,"name":"NAME","ssn":SSN}|
 | Method                      |POST|
@@ -62,7 +81,7 @@
 ***
 ##Folder Commands
 
-| Get all files in a folder |   |
+| <a name="get-all-files-in-a-folder"></a>Get all files in a folder |   |
 |-----------------------------|---|
 | URL                         |/v1/docs/FOLDER_NAME?{“token”:ID,"action":"files"}|
 | Method                      |GET|
@@ -72,7 +91,7 @@
 | Error Response              |<ul><li>Content: {error:”Error code”}</li><li>Valid response codes:<ul><li>400 Bad request</li><li>401 Unauthorized</li><li>403 Forbidden</li><li>404 Not found</li><li>405 Method not found</li><li>408 Timeout</li><li>410 Gone</li><li>422 Unprocessable entity</li><li>429 Too many requests</li><li>500 Internal server error</li><li>502 Bad gateway</li><li>503 Service unavailable</li></ul></li></ul>|
 | Sample Call                 |$.ajax({url: “v1/docs/mailtoday/?{“token”:3861739164332}, dataType:"json", type:"GET",success:function(r){console.log(r);}});|
 
-| Remove file from folder     |   |
+| <a name="remove-file-from-folder"></a>Remove file from folder     |   |
 |-----------------------------|---|
 | URL                         |/v1/docs/FOLDER_NAME?{“token”:ID,"fname":"FILE_NAME","action":"files"}|
 | Method                      |DELETE|
@@ -82,7 +101,7 @@
 | Error Response              |<ul><li>Content: {error:”Error code”}</li><li>Valid response codes:<ul><li>400 Bad request</li><li>401 Unauthorized</li><li>403 Forbidden</li><li>404 Not found</li><li>405 Method not found</li><li>408 Timeout</li><li>410 Gone</li><li>422 Unprocessable entity</li><li>429 Too many requests</li><li>500 Internal server error</li><li>502 Bad gateway</li><li>503 Service unavailable</li></ul></li></ul>|
 | Sample Call                 |$.ajax({url: “v1/docs/mailtoday/?{“token”:3861739164332”,"fname":"File3"}, dataType:"json", type:"DELETE",success:function(r){console.log(r);}});|
 
-| Add global tab         |   |
+| <a name="add-global-tab"></a>Add global tab         |   |
 |-----------------------------|---|
 | URL                         |/v1/docs/FOLDER_NAME?{“token”:ID,"name","TAB_PATIENT_NAME","ssn":LAST_4_DIGITS_SSN,"action":"tabs"}|
 | Method                      |POST|
@@ -92,7 +111,7 @@
 | Error Response              |<ul><li>Content: {error:”Error code”}</li><li>Valid response codes:<ul><li>400 Bad request</li><li>401 Unauthorized</li><li>403 Forbidden</li><li>405 Method not found</li><li>408 Timeout</li><li>422 Unprocessable entity</li><li>429 Too many requests</li><li>500 Internal server error</li><li>502 Bad gateway</li><li>503 Service unavailable</li></ul></li></ul>|
 | Sample Call                 |$.ajax({url: “v1/docs/mailtoday/?{“token”:3861739164332”,"name":"John Smith","ssn":1234}, dataType:"json", type:"POST",success:function(r){console.log(r);}});|
 
-| Edit global tab                      |   |
+| <a name="edit-global-tab"></a>Edit global tab                      |   |
 |-----------------------------|---|
 | URL                         |/v1/docs/FOLDER_NAME?{“token”:ID,"fname":"FILE_NAME"}|
 | Method                      |DELETE|
@@ -102,7 +121,7 @@
 | Error Response              |<ul><li>Content: {error:”Error code”}</li><li>Valid response codes:<ul><li>400 Bad request</li><li>401 Unauthorized</li><li>403 Forbidden</li><li>404 Not found</li><li>405 Method not found</li><li>408 Timeout</li><li>410 Gone</li><li>422 Unprocessable entity</li><li>429 Too many requests</li><li>500 Internal server error</li><li>502 Bad gateway</li><li>503 Service unavailable</li></ul></li></ul>|
 | Sample Call                 |$.ajax({url: “v1/docs/mailtoday/?{“token”:3861739164332}”,"fname":"File3", dataType:"json", type:"DELETE",success:function(r){console.log(r);}});|
 
-| Delete global tab                      |   |
+| <a name="delete-global-tab"></a>Delete global tab                      |   |
 |-----------------------------|---|
 | URL                         |/v1/docs/FOLDER_NAME?{“token”:ID,"fname":"FILE_NAME"}|
 | Method                      |DELETE|
@@ -112,7 +131,7 @@
 | Error Response              |<ul><li>Content: {error:”Error code”}</li><li>Valid response codes:<ul><li>400 Bad request</li><li>401 Unauthorized</li><li>403 Forbidden</li><li>404 Not found</li><li>405 Method not found</li><li>408 Timeout</li><li>410 Gone</li><li>422 Unprocessable entity</li><li>429 Too many requests</li><li>500 Internal server error</li><li>502 Bad gateway</li><li>503 Service unavailable</li></ul></li></ul>|
 | Sample Call                 |$.ajax({url: “v1/docs/mailtoday/?{“token”:3861739164332}”,"fname":"File3", dataType:"json", type:"DELETE",success:function(r){console.log(r);}});|
 
-| Edit global property                     |   |
+| <a name="edit-global-property"></a>Edit global property                     |   |
 |-----------------------------|---|
 | URL                         |/v1/docs/FOLDER_NAME?{“token”:ID,"fname":"FILE_NAME"}|
 | Method                      |DELETE|
@@ -125,7 +144,7 @@
 ***
 ##File Commands
 
-| Get file data                     |   |
+| <a name="get-file-data"></a>Get file data                     |   |
 |-----------------------------|---|
 | URL                         |/v1/docs/FOLDER_NAME?{“token”:ID,"fname":"FILE_NAME"}|
 | Method                      |DELETE|
@@ -135,7 +154,7 @@
 | Error Response              |<ul><li>Content: {error:”Error code”}</li><li>Valid response codes:<ul><li>400 Bad request</li><li>401 Unauthorized</li><li>403 Forbidden</li><li>404 Not found</li><li>405 Method not found</li><li>408 Timeout</li><li>410 Gone</li><li>422 Unprocessable entity</li><li>429 Too many requests</li><li>500 Internal server error</li><li>502 Bad gateway</li><li>503 Service unavailable</li></ul></li></ul>|
 | Sample Call                 |$.ajax({url: “v1/docs/mailtoday/?{“token”:3861739164332}”,"fname":"File3", dataType:"json", type:"DELETE",success:function(r){console.log(r);}});|
 
-| Add tab                      |   |
+| <a name="add-tab"></a>Add tab                      |   |
 |-----------------------------|---|
 | URL                         |/v1/docs/FOLDER_NAME?{“token”:ID,"fname":"FILE_NAME"}|
 | Method                      |DELETE|
@@ -145,7 +164,7 @@
 | Error Response              |<ul><li>Content: {error:”Error code”}</li><li>Valid response codes:<ul><li>400 Bad request</li><li>401 Unauthorized</li><li>403 Forbidden</li><li>404 Not found</li><li>405 Method not found</li><li>408 Timeout</li><li>410 Gone</li><li>422 Unprocessable entity</li><li>429 Too many requests</li><li>500 Internal server error</li><li>502 Bad gateway</li><li>503 Service unavailable</li></ul></li></ul>|
 | Sample Call                 |$.ajax({url: “v1/docs/mailtoday/?{“token”:3861739164332}”,"fname":"File3", dataType:"json", type:"DELETE",success:function(r){console.log(r);}});|
 
-| Edit tab                      |   |
+| <a name="edit-tab"></a>Edit tab                      |   |
 |-----------------------------|---|
 | URL                         |/v1/docs/FOLDER_NAME?{“token”:ID,"fname":"FILE_NAME"}|
 | Method                      |DELETE|
@@ -155,7 +174,7 @@
 | Error Response              |<ul><li>Content: {error:”Error code”}</li><li>Valid response codes:<ul><li>400 Bad request</li><li>401 Unauthorized</li><li>403 Forbidden</li><li>404 Not found</li><li>405 Method not found</li><li>408 Timeout</li><li>410 Gone</li><li>422 Unprocessable entity</li><li>429 Too many requests</li><li>500 Internal server error</li><li>502 Bad gateway</li><li>503 Service unavailable</li></ul></li></ul>|
 | Sample Call                 |$.ajax({url: “v1/docs/mailtoday/?{“token”:3861739164332}”,"fname":"File3", dataType:"json", type:"DELETE",success:function(r){console.log(r);}});|
 
-| Delete tab                      |   |
+| <a name="delete-tab"></a>Delete tab                      |   |
 |-----------------------------|---|
 | URL                         |/v1/docs/FOLDER_NAME?{“token”:ID,"fname":"FILE_NAME"}|
 | Method                      |DELETE|
@@ -165,7 +184,7 @@
 | Error Response              |<ul><li>Content: {error:”Error code”}</li><li>Valid response codes:<ul><li>400 Bad request</li><li>401 Unauthorized</li><li>403 Forbidden</li><li>404 Not found</li><li>405 Method not found</li><li>408 Timeout</li><li>410 Gone</li><li>422 Unprocessable entity</li><li>429 Too many requests</li><li>500 Internal server error</li><li>502 Bad gateway</li><li>503 Service unavailable</li></ul></li></ul>|
 | Sample Call                 |$.ajax({url: “v1/docs/mailtoday/?{“token”:3861739164332}”,"fname":"File3", dataType:"json", type:"DELETE",success:function(r){console.log(r);}});|
 
-| Edit property                      |   |
+| <a name="edit-property"></a>Edit property                      |   |
 |-----------------------------|---|
 | URL                         |/v1/docs/FOLDER_NAME?{“token”:ID,"fname":"FILE_NAME"}|
 | Method                      |DELETE|
