@@ -3,7 +3,7 @@ Vagrant.configure("2") do |config|
     config.vm.define "gfs3" do |gfs3|
         gfs3.vm.box = "precise64"
         gfs3.vm.box_url = "http://files.vagrantup.com/precise64.box"
-        gfs3.vm.provision :shell, :path => "../gfs-bootstrap.sh"
+        gfs3.vm.provision :shell, :path => "gfs-bootstrap-gfs3.sh"
         gfs3.vm.network :private_network, ip: "10.10.10.23"
         gfs3.vm.hostname = "gfs3"
         
