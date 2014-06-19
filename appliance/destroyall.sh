@@ -2,7 +2,7 @@
 for D in *; do
     if [[ -d "${D}" && -e "${D}/Vagrantfile" ]]; then
         cd "${D}"
-        vagrant destroy
+        vagrant destroy -f
         cd ..
     fi
 done
