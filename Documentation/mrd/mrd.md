@@ -82,7 +82,7 @@ The proposed appliance is a “private cloud” architecture, where multiple VMs
 Documents are stored under  tabs and described via taxonomy. Both tabs and taxonomy are user defined. For instance, the concept of a tab may be the first name, last name, and DOB of patient. A taxonomy could be location, diagnosis, day of service, insurance company, etc., as long as the main EHR system is not duplicated. Furthermore all documents will undergo OCR and full text indexing via Elasticsearch. The full text search together with tabs, taxonomy, and faceting will create multiple search dimensions across the entire file room. The process of creating and maintaining the virtual file room will be mapped after maintaining a real file room and will be very simple and flexible. The entire system will be on premises. It will provide security encryption and assess logs yet be accessible remotely via tunnel bridge or VPN, or may even be moved to the cloud when the technology will be secure enough. Backups shall be automated and available for off-site deposit. The entire system will provide flexible and adaptable APIs to integrate with 3rd party systems. The check in and checkout process will be on tablets, where the user can see and search the entire file room, to find exactly what is needed.
 
 ##Business Model
-We will supply a complete hardware/software appliance solution and service combination either via independent integrators or directly.  The appliance will be leased to the customer through a finance company. Services will be provided and priced with their appropriate tiers.
+We will trade cookies for profit
 
 ***
 ####<a name="refs"></a> References
