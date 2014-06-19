@@ -19,7 +19,7 @@ echo "10.10.10.30		api" >> /etc/hosts
 
 #setup config here
 sed -i 's/#cluster.name: elasticsearch/cluster.name: fileroom/g' /etc/elasticsearch/elasticsearch.yml 
-sed -i 's/#node.name: "Franz Kafka"/#node.name: "es3"/g' /etc/elasticsearch/elasticsearch.yml 
+sed -i 's/#node.name: "Franz Kafka"/#node.name: "es2"/g' /etc/elasticsearch/elasticsearch.yml 
 
 service elasticsearch start
 

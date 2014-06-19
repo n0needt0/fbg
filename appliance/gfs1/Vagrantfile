@@ -1,0 +1,15 @@
+Vagrant.configure("2") do |config|
+    
+    config.vm.define "gfs1" do |gfs1|
+        gfs1.vm.box = "precise64"
+        gfs1.vm.box_url = "http://files.vagrantup.com/precise64.box"
+        gfs1.vm.provision :shell, :path => "../gfs-bootstrap.sh"
+        gfs1.vm.network :private_network, ip: "10.10.10.21"
+        gfs1.vm.hostname = "gfs1"
+        
+        gfs1.vm.provider :virtualbox do |vb|
+            vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
+            vb.customize ["modifyvm", :id, "--memory", "1024"]
+        end
+    end
+end
