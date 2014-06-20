@@ -21,10 +21,12 @@ apt-get install glusterfs-client -y
 
 #setup config here
 sed -i 's/#cluster.name: elasticsearch/cluster.name: fileroom/g' /etc/elasticsearch/elasticsearch.yml 
-sed -i 's/#node.name: "Franz Kafka"/#node.name: "es2"/g' /etc/elasticsearch/elasticsearch.yml 
+sed -i 's/#node.name: "Franz Kafka"/node.name: "es2"/g' /etc/elasticsearch/elasticsearch.yml 
 
-service elasticsearch start
+/etc/init.d/elasticsearch restart
 
 cd /usr/share/elasticsearch
 
 bin/plugin -i elasticsearch/marvel/latest
+
+/etc/init.d/elasticsearch restart
