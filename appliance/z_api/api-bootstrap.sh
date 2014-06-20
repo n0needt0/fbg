@@ -1,13 +1,10 @@
 #!/usr/bin/env bash
 
 # Get root up in here
-sudo su
-
 apt-get update
 apt-get install python-software-properties
 add-apt-repository ppa:semiosis/ubuntu-glusterfs-3.4
 apt-get update
-
 apt-get install glusterfs-client -y
 
 echo "10.10.10.11		es1" >> /etc/hosts

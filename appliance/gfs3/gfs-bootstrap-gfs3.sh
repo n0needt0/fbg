@@ -24,3 +24,5 @@ gluster peer probe gfs1
 gluster peer probe gfs2
 
 gluster volume create gluster-volume replica 3 transport tcp gfs1:/gluster-storage gfs2:/gluster-storage gfs3:/gluster-storage
+
+gluster volume start gluster-volume
