@@ -1,52 +1,32 @@
-<html>
+<html ng-app="fileRoom">
 <head>
 	<link rel="stylesheet" type="text/css" href="./libs/semantic/css/semantic.min.css">
 	<link rel="stylesheet" type="text/css" href="./index.css">
 	<link href='http://fonts.googleapis.com/css?family=Fira+Sans:300,400' rel='stylesheet' type='text/css'>
-	<script src="./libs/jquery-2.1.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 	<script src="./libs/semantic/javascript/semantic.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.13/angular.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.13/angular-route.js"></script>
 	<script src="./index.js"></script>
 </head>
-<body>
+<body ng-controller="TabController as tabs">
 	<div class="ui three item inverted menu">
-		<a class="active item"><i class="big search icon"></i> Search</a>
-		<a class="item"><i class="big settings icon"></i>  Settings</a>
-		<a class="item"><i class="big help icon"></i>  Help</a>
+		<a class="item" ng-click="tabs.select(1)" ng-class="{'active': tabs.isSelected(1)}"><i class="big search icon"></i> Search</a>
+		<a class="item" ng-click="tabs.select(2)" ng-class="{'active': tabs.isSelected(2)}"><i class="big settings icon"></i>  Settings</a>
+		<a class="item" ng-click="tabs.select(3)" ng-class="{'active': tabs.isSelected(3)}"><i class="big help icon"></i>  Help</a>
 	</div>
-
-	<div class="ui two column doubling stackable grid">
+	<div class="ui two column doubling stackable grid" ng-controller="MenuController as menu" ng-show="tabs.isSelected(1)">
 		<div class="five wide column">
 			<div class="ui fluid inverted vertical menu">
 				<a class="header item">Facets</a>
-				<div class="ui item">
+				<div class="ui item" ng-repeat="menuItem in menu.items">
 					<div class="ui two column grid">
-						<div class="column"><p>Location</p></div>
+						<div class="column"><p>{{menuItem.name}}</p></div>
 						<div class="column">
 							<div class="ui fluid selection dropdown">
 								<div class="text">Select</div>
 								<div class="menu">
-									<div class="item">San Mateo</div>
-									<div class="item">San Francisco</div>
-									<div class="item">San Jose</div>
-									<div class="item">Berkeley</div>
-									<div class="item">Stanford</div>
-									<div class="item">Oakland</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="ui item">
-					<div class="ui two column grid">
-						<div class="column"><p>Date</p></div>
-						<div class="column">
-							<div class="ui fluid selection dropdown">
-								<div class="text">Select</div>
-								<div class="menu">
-									<div class="item">2/17/13</div>
-									<div class="item">7/3/14</div>
-									<div class="item">11/18/14</div>
-									<div class="item">2/25/12</div>
+									<div class="item" ng-repeat="selection in menuItem.list">{{selection}}</div>
 								</div>
 							</div>
 						</div>
@@ -56,9 +36,20 @@
 		</div>
 
 		<div class="eleven wide column">
-			<h1 class="ui header">Hello World!</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<h2 class="ui header">The File Room</h2>
+			<div class="ui fluid action input">
+				<input type="text" placeholder="Search...">
+				<div class="ui icon button"><i class="search icon"></i></div>
+			</div>
 		</div>
+	</div>
+
+	<div ng-show="tabs.isSelected(2)">
+		These are the settings!
+	</div>
+
+	<div ng-show="tabs.isSelected(3)">
+		This is the help!
 	</div>
 </body>
 </html>
