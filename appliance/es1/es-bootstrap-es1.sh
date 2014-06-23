@@ -4,7 +4,7 @@
 sudo su
 
 sudo apt-get update
-sudo apt-get install openjdk-7-jre-headless ganglia-monitor nagios-nrpe-server -y
+sudo apt-get install openjdk-7-jre-headless ganglia-monitor nagios-nrpe-server curl -y
 
 wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.2.1.deb
 sudo dpkg -i elasticsearch-1.2.1.deb

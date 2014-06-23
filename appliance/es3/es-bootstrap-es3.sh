@@ -18,15 +18,15 @@ echo "10.10.10.23		gfs3" >> /etc/hosts
 echo "10.10.10.31		api" >> /etc/hosts
 echo "10.10.10.41		monitor" >> /etc/hosts
 
-apt-get install glusterfs-client -y 
+apt-get install glusterfs-client -y
 
 #setup config here
 sed -i 's/#cluster.name: elasticsearch/cluster.name: fileroom/g' /etc/elasticsearch/elasticsearch.yml 
-sed -i 's/#node.name: "Franz Kafka"/node.name: "es2"/g' /etc/elasticsearch/elasticsearch.yml 
-sed -i 's/#network.host: 192.168.0.1/network.host: 10.10.10.12/g' /etc/elasticsearch/elasticsearch.yml 
+sed -i 's/#node.name: "Franz Kafka"/node.name: "es3"/g' /etc/elasticsearch/elasticsearch.yml 
+sed -i 's/#network.host: 192.168.0.1/network.host: 10.10.10.13/g' /etc/elasticsearch/elasticsearch.yml 
 sed -i 's/#transport.tcp.compress: true/transport.tcp.compress: true/g' /etc/elasticsearch/elasticsearch.yml 
 sed -i 's/#index.number_of_replicas: 1/index.number_of_replicas: 3/g' /etc/elasticsearch/elasticsearch.yml 
-sed -i 's/#discovery.zen.minimum_master_nodes: 1/discovery.zen.minimum_master_nodes: 2/g' /etc/elasticsearch/elasticsearch.yml
+sed -i 's/#discovery.zen.minimum_master_nodes: 1/discovery.zen.minimum_master_nodes: 2/g' /etc/elasticsearch/elasticsearch.yml 
 
 #sed -i 's//g' /etc/elasticsearch/elasticsearch.yml 
 
