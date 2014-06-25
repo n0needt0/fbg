@@ -827,9 +827,11 @@ search box - the end user will not know they are happening.
                 }
             }
             lines ? result += lines : result += JSON.stringify(record,"","    ");
-            result += "<button class=\"bigbutton\">Get all under tab</button>";
-            result += "<button class=\"bigbutton\">Get all in group</button>";
-            result += "<button class=\"bigbutton\">Get document</button>";
+            result += "<div class=\"button-container\">";
+            result += "<button class=\"big-button\">Get all under tab</button>";
+            result += "<button class=\"big-button\">Get all in group</button>";
+            result += "<button class=\"big-button\">Get document</button>";
+            result += "</div>";
             result += options.resultwrap_end;
             return result;
         };
