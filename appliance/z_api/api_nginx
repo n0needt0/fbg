@@ -19,10 +19,7 @@ server {
     }
 
     location / {
-            #if ($http_host !~ "^www\.fbg\.com$"){
-            #  rewrite ^(.*)$ http://www.fbg.com redirect;
-            #}
-           try_files $uri $uri/ /index.php?$query_string;
+            try_files $uri $uri/ /index.php?$query_string;
        }
 
     # pass the PHP scripts to FastCGI server listening on /var/run/php5-fpm.sock
@@ -69,3 +66,4 @@ server {
                         include fastcgi_params;
         }
  }
+
