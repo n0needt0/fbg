@@ -2,8 +2,10 @@
 
 # Get root up in here
 apt-get update
-apt-get install python-software-properties
-add-apt-repository ppa:semiosis/ubuntu-glusterfs-3.4
+apt-get install python-software-properties -y
+add-apt-repository ppa:semiosis/ubuntu-glusterfs-3.4 -y
+add-apt-repository ppa:duh/golang -y
+
 apt-get update
 apt-get install glusterfs-client ganglia-monitor nagios-nrpe-server curl -y
 
@@ -33,7 +35,4 @@ sudo mount -t glusterfs gfs1:/gluster-volume /gfs
 
 chmod 777 /gfs
 
-bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
-
-gvm install go1
-gvm use go1 
+apt-get install golang
