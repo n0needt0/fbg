@@ -128,8 +128,7 @@ return array(
                 'Illuminate\Validation\ValidationServiceProvider',
                 'Illuminate\View\ViewServiceProvider',
                 'Illuminate\Workbench\WorkbenchServiceProvider',
-		        'Cartalyst\Sentry\SentryServiceProvider',
-		        'Lj4\RedbeanLaravel4\RedbeanLaravel4ServiceProvider'
+		        'Cartalyst\Sentry\SentryServiceProvider'
 	),
 
 	/*
@@ -195,8 +194,7 @@ return array(
                 'URL' => 'Illuminate\Support\Facades\URL',
                 'Validator' => 'Illuminate\Support\Facades\Validator',
                 'View' => 'Illuminate\Support\Facades\View',
-		        'Sentry'		  => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
-		        'R' => 'Redbean\R',
+		        'Sentry'		  => 'Cartalyst\Sentry\Facades\Laravel\Sentry'
 	),
 
 );
