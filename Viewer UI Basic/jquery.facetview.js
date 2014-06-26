@@ -333,7 +333,7 @@ search box - the end user will not know they are happening.
 
 
 // now the facetview function
-(function($){ 
+(function($){
     $.fn.facetview = function(options) {
 
         // a big default value (pulled into options below)
@@ -342,51 +342,19 @@ search box - the end user will not know they are happening.
         var resdisplay = [
                 [
                     {
-                        "field": "author.name"
-                    },
-                    {
-                        "pre": "(",
-                        "field": "year",
-                        "post": ")"
-                    }
-                ],
-                [
-                    {
                         "pre": "<strong>",
-                        "field": "title",
-                        "post": "</strong>"
+                        "field": "Source",
+                        "post": "</strong> : "
+                    }, 
+                    {
+                        "pre": "<i>",
+                        "field": "Uri",
+                        "post": "</i>"
                     }
                 ],
                 [
                     {
-                        "field": "howpublished"
-                    },
-                    {
-                        "pre": "in <em>",
-                        "field": "journal.name",
-                        "post": "</em>,"
-                    },
-                    {
-                        "pre": "<em>",
-                        "field": "booktitle",
-                        "post": "</em>,"
-                    },
-                    {
-                        "pre": "vol. ",
-                        "field": "volume",
-                        "post": ","
-                    },
-                    {
-                        "pre": "p. ",
-                        "field": "pages"
-                    },
-                    {
-                        "field": "publisher"
-                    }
-                ],
-                [
-                    {
-                        "field": "link.url"
+                        "field": "highlight"
                     }
                 ]
             ];
@@ -435,7 +403,8 @@ search box - the end user will not know they are happening.
             "pushstate": true,
             "linkify": true,
             "default_operator": "OR",
-            "default_freetext_fuzzify": false
+            "default_freetext_fuzzify": false,
+            "highlight":true,
         };
 
 
@@ -726,12 +695,16 @@ search box - the end user will not know they are happening.
         // read the result object and return useful vals
         // returns an object that contains things like ["data"] and ["facets"]
         var parseresults = function(dataobj) {
+            
+            console.log(dataobj);
+            
             var resultobj = new Object();
             resultobj["records"] = new Array();
             resultobj["start"] = "";
             resultobj["found"] = "";
             resultobj["facets"] = new Object();
             for ( var item = 0; item < dataobj.hits.hits.length; item++ ) {
+              
                 if ( options.fields ) {
                     resultobj["records"].push(dataobj.hits.hits[item].fields);
                 } else if ( options.partial_fields ) {
@@ -741,9 +714,19 @@ search box - the end user will not know they are happening.
                     }
                     resultobj["records"].push(dataobj.hits.hits[item].fields[keys[0]]);
                 } else {
+                    
+                    for(hiitem in dataobj.hits.hits[item].highlight){
+                           hstr = hiitem + ":" + dataobj.hits.hits[item].highlight[hiitem];
+                    }
+
+                    dataobj.hits.hits[item]._source.highlight = hstr;
+                    
                     resultobj["records"].push(dataobj.hits.hits[item]._source);
                 }
             }
+            
+            console.log( options);
+            
             resultobj["start"] = "";
             resultobj["found"] = dataobj.hits.total;
             for (var item in dataobj.facets) {
@@ -844,6 +827,11 @@ search box - the end user will not know they are happening.
                 }
             }
             lines ? result += lines : result += JSON.stringify(record,"","    ");
+            result += "<div class=\"button-container\">";
+            result += "<button class=\"big-button\">Get all under tab</button>";
+            result += "<button class=\"big-button\">Get all in group</button>";
+            result += "<button class=\"big-button\">Get document</button>";
+            result += "</div>";
             result += options.resultwrap_end;
             return result;
         };
@@ -862,6 +850,9 @@ search box - the end user will not know they are happening.
             // get the data and parse from the es layout
             var data = parseresults(sdata);
             options.data = data;
+            
+            //AYTODO
+            console.log(data);
             
             // for each filter setup, find the results for it and append them to the relevant filter
             for ( var each = 0; each < options.facets.length; each++ ) {
@@ -1111,6 +1102,10 @@ search box - the end user will not know they are happening.
             if (options.filter) {
                 qs['filter'] = options.filter;
             }
+            
+            if(options.highlight){
+                qs['highlight'] = {"fields" : {"*" : {"type" : "plain"}}}
+            }
             //alert(JSON.stringify(qs,"","    "));
             qy = JSON.stringify(qs);
             if ( options.include_facets_in_querystring ) {
@@ -1120,6 +1115,7 @@ search box - the end user will not know they are happening.
                 options.querystring = JSON.stringify(qs)
             }
             options.sharesave_link ? $('.facetview_sharesaveurl', obj).val('http://' + window.location.host + window.location.pathname + '?source=' + options.querystring) : "";
+
             return qy;
         };
 
@@ -1139,6 +1135,7 @@ search box - the end user will not know they are happening.
                 var currurl = '?source=' + options.querystring;
                 window.history.pushState("","search",currurl);
             };
+
             $.ajax({
                 type: "get",
                 url: options.search_url,
@@ -1322,7 +1319,7 @@ search box - the end user will not know they are happening.
         if ( options.sharesave_link ) {
             thefacetview += '<a class="btn facetview_sharesave" title="share or save this search" style="margin:0 0 21px 5px;" href=""><i class="icon-share-alt"></i></a>';
             thefacetview += '<div class="facetview_sharesavebox alert alert-info" style="display:none;"> \
-                <button type="button" class="facetview_sharesave close">×</button> \
+                <button type="button" class="facetview_sharesave close">Ã—</button> \
                 <p>Share or save this search:</p> \
                 <textarea class="facetview_sharesaveurl" style="width:100%;height:100px;">http://' + window.location.host + 
                 window.location.pathname + '?source=' + options.querystring + '</textarea> \
