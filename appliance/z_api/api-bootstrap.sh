@@ -19,8 +19,8 @@ apt-get install nginx php5-fpm php5-mysql php5-curl php5-gd php5-intl php-pear p
 rm /etc/nginx/sites-enabled/*
 rm /etc/nginx/sites-available/*
 
-cat /vagrant/etc.nginx.sites-enabled.api >> /etc/nginx/sites-enabled/api
-cat /vagrant/etc.nginx.conf.d.microcache.conf >> >> /etc/nginx/conf.d/microcache.conf
+cat /vagrant/etc.nginx.sites-enabled.api > /etc/nginx/sites-enabled/api
+cat /vagrant/etc.nginx.conf.d.microcache.conf > /etc/nginx/conf.d/microcache.conf
 
 /etc/init.d/php5-fpm reload
 /etc/init.d/nginx reload
