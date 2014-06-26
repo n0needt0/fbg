@@ -12,8 +12,11 @@ apt-get install glusterfs-client ganglia-monitor nagios-nrpe-server curl -y
 sudo apt-get install git -y
 
 export DEBIAN_FRONTEND=noninteractive
-apt-get -q -y install mysql-server
-apt-get install php5-mysql apache2 php5 libapache2-mod-php5 php5-mcrypt php5-cli php5-mcrypt php5-fpm -y
+apt-get -q -y install mysql-server mysql-client
+apt-get install nginx php5-fpm php5-mysql php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-ps php5-pspell php5-recode php-apc php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl -y
+
+/etc/init.d/php5-fpm reload
+/etc/init.d/nginx reload
 
 echo "10.10.10.11		es1" >> /etc/hosts
 echo "10.10.10.12		es2" >> /etc/hosts
