@@ -3,3 +3,14 @@
 	font-family: 'Fira Sans', sans-serif;
 	font-size: 20px;
 }
+
+.section
+{
+	text-align: center;
+}
+
+.centered
+{
+	margin:0 auto;
+	width:50%;
+}

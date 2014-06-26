@@ -1,28 +1,36 @@
-var menuList = 
-[
+(function()
+{
+	var menuList = 
+	[
 	{name : "Location", list : ["San Mateo", "San Francisco", "San Jose", "Berkeley", "Stanford", "Oakland"]},
 	{name : "Date", list : ["2/17/13", "7/3/14", "11/18/14", "2/25/12"]}
-];
+	];
 
-var app = angular.module("fileRoom", ["ngRoute"]);
+	var app = angular.module("fileRoom", ["ngRoute"]);
 
-var menuController = app.controller("MenuController", function()
-{
-	this.items = menuList;
-});
-
-var tabController = app.controller("TabController", function()
-{
-	this.selected = 1;
-	this.select = function(numTab)
+	var menuController = app.controller("MenuController", function()
 	{
-		this.selected = numTab;
-	};
-	this.isSelected = function(numTab)
+		this.items = menuList;
+	});
+
+	var tabController = app.controller("TabController", function()
 	{
-		return this.selected === numTab;
-	};
-})
+		this.selected = 1;
+		this.select = function(numTab)
+		{
+			this.selected = numTab;
+		};
+		this.isSelected = function(numTab)
+		{
+			return this.selected === numTab;
+		};
+	});
+
+	var resultsController = app.controller("ResultsController", function()
+	{
+		// this.results = $.get("", );
+	});
+})($);
 
 $(document).ready(function()
 {
