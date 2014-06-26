@@ -1,0 +1,30 @@
+{
+	"require": {
+		"laravel/framework": "4.1.*",
+		"cartalyst/sentry": "2.0.*",
+		"lj4/redbean-laravel4": "dev-master",
+		"omnipay/paypal": "~2.0",
+		"mtdowling/cron-expression": "1.0.*"
+		
+	},
+	"autoload": {
+		"classmap": [
+			"app/commands",
+			"app/controllers",
+			"app/models",
+			"app/libraries",
+			"app/database/migrations",
+			"app/database/seeds",
+			"app/tests/TestCase.php"
+		]
+	},
+	
+	"psr-0": {
+         "Lasdorf": "app/libraries"
+    },
+    
+	"scripts": {
+		"post-update-cmd": "php artisan optimize"
+	},
+	"minimum-stability": "dev"
+}
