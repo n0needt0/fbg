@@ -52,6 +52,6 @@ return array(
 	|
 	*/
 
-	'storage' => '/opt/cronrat_cache',
+	'storage' => '/tmp',
 
 );

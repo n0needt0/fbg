@@ -26,8 +26,8 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('andrewy-laptop','localhost','cronrat.this.com'),
-    'production' => array('www.cronrat.com')
+	'local' => array('localhost','fbg.this.com'),
+    'production' => array('www.fbg.com')
 ));
 
 /*

@@ -33,6 +33,9 @@ sed -i 's/;listen.mode = 0660/listen.mode = 0660/g' /etc/php5/fpm/pool.d/www.con
 cat /vagrant/etc.nginx.sites-enabled.api > /etc/nginx/sites-enabled/api
 cat /vagrant/etc.nginx.conf.d.microcache.conf > /etc/nginx/conf.d/microcache.conf
 
+#add ganglia
+#add nagios
+
 echo "10.10.10.11		es1" >> /etc/hosts
 echo "10.10.10.12		es2" >> /etc/hosts
 echo "10.10.10.13		es3" >> /etc/hosts
