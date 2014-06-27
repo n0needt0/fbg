@@ -8,12 +8,8 @@ apt-get update
 apt-get install python-software-properties -y
 #add-apt-repository ppa:semiosis/ubuntu-glusterfs-3.4
 apt-get update
-apt-get install ganglia-monitor rrdtool gmetad curl -y 
+apt-get install ganglia-monitor rrdtool gmetad curl git -y 
 apt-get install ganglia-webfrontend -qq -y
-apt-get install nginx php5-fpm git -y
-
-rm /etc/nginx/sites-enabled/*
-rm /etc/nginx/sites-available/*
 
 sed -i 's/localhost/monitor/g' /etc/hosts
 
@@ -29,12 +25,12 @@ echo "10.10.10.41		monitor" >> /etc/hosts
 cp /etc/ganglia-webfrontend/apache.conf /etc/apache2/sites-enabled/ganglia.conf
 cp /vagrant/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
 cp /vagrant/etc/ganglia/gmetad.conf /etc/ganglia/gmetad.conf
-cp /vagrant/etc/nagios/sites-enabled/nagios /etc/nagios/sites/enabled/nagios
+cp /vagrant/etc/apache2/sites-enabled/nagios.conf /etc/apache2/sites-enabled/nagios.conf
+
 cp /vagrant/etc/nagios3/htpasswd.users /etc/nagios3/htpasswd.users
 cp /vagrant/etc/nagios3/conf.d/contacts_nagios2.cfg /etc/nagios3/conf.d/contacts_nagios2.cfg
 cp /vagrant/etc/nagios3/conf.d/fbg-servers.cfg /etc/nagios3/conf.d/fbg-servers.cfg
 
-/etc/init.d/nginx restart
 /etc/init.d/apache2 restart
 /etc/init.d/ganglia-monitor restart
 /etc/init.d/gmetad restart
