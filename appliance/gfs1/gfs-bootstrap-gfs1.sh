@@ -18,5 +18,5 @@ echo "10.10.10.23		gfs3" >> /etc/hosts
 echo "10.10.10.31		api" >> /etc/hosts
 echo "10.10.10.41		monitor" >> /etc/hosts
 
-#setup config here
-#sed -i 's/#cluster.name: elasticsearch/cluster.name: fileroom/g' /etc/elasticsearch/elasticsearch.yml 
+cp /vagrant/etc.ganglia.gmond.conf /etc/ganglia/gmond.conf
+/etc/init.d/ganglia-monitor restart

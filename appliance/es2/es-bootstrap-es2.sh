@@ -40,4 +40,5 @@ echo "marvel.agent.exporter.es.hosts: [\"10.10.10.11:9200\",\"10.10.10.12:9200\"
 
 /etc/init.d/elasticsearch restart
 
-#ADD NAGIOS AND GANGLIA CONFIGS
+cp /vagrant/etc.ganglia.gmond.conf /etc/ganglia/gmond.conf
+/etc/init.d/ganglia-monitor restart
