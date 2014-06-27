@@ -52,6 +52,6 @@ return array(
 	|
 	*/
 
-	'storage' => '/tmp',
+	'storage' => '/opt/fbg_cache',
 
 );

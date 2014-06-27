@@ -56,3 +56,12 @@ sudo mount -t glusterfs gfs1:/gluster-volume /gfs
 
 chmod 777 /gfs
 
+#add laravel dirs
+mkdir -p /opt/fbg_cache 
+mkdir -p /opt/fbg_cache/sessions
+mkdir -p /opt/fbg_cache/meta
+mkdir -p /opt/fbg_cache/views
+mkdir -p /opt/fbg_cache/cache
+
+chown -R www-data:root /opt/fbg_cache
+chown -R www-data:root /var/log/nginx
