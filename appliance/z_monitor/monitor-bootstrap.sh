@@ -8,7 +8,7 @@ apt-get update
 apt-get install python-software-properties -y
 add-apt-repository ppa:semiosis/ubuntu-glusterfs-3.4
 apt-get update
-apt-get install glusterfs-client ganglia-monitor ganglia-webfrontend nagios3 nagios-nrpe-plugin curl -y
+apt-get install glusterfs-client ganglia-monitor rrdtool gmetad ganglia-webfrontend apache2 nagios3 nagios-nrpe-plugin curl -y
 apt-get install git -y
 
 echo "10.10.10.11		es1" >> /etc/hosts
@@ -20,9 +20,11 @@ echo "10.10.10.23		gfs3" >> /etc/hosts
 echo "10.10.10.31		api" >> /etc/hosts
 echo "10.10.10.41		monitor" >> /etc/hosts
 
-cat /vagrant/etc.ganglia.gmond.conf > /etc/ganglia/gmond.conf
-cat /vagrant/etc.ganglia.gmetad.conf > /etc/ganglia/gmetad.conf
+cp /etc/ganglia-webfrontend/apache.conf /etc/apache2/sites-enabled/ganglia.conf
+cp /vagrant/etc.ganglia.gmond.conf /etc/ganglia/gmond.conf
+cp /vagrant/etc.ganglia.gmetad.conf /etc/ganglia/gmetad.conf
 
+/etc/init.d/apache2 restart
 /etc/init.d/ganglia-monitor restart
 /etc/init.d/gmetad restart
 
