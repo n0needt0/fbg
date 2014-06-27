@@ -12,6 +12,8 @@ apt-get install ganglia-monitor rrdtool gmetad curl -y
 apt-get install ganglia-webfrontend -y
 apt-get install git -y
 
+sed -i 's/localhost/monitor/g' /etc/hosts
+
 echo "10.10.10.11		es1" >> /etc/hosts
 echo "10.10.10.12		es2" >> /etc/hosts
 echo "10.10.10.13		es3" >> /etc/hosts
