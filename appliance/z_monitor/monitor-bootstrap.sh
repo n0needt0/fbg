@@ -6,9 +6,10 @@ sudo su
 
 apt-get update
 apt-get install python-software-properties -y
-add-apt-repository ppa:semiosis/ubuntu-glusterfs-3.4
+#add-apt-repository ppa:semiosis/ubuntu-glusterfs-3.4
 apt-get update
-apt-get install glusterfs-client ganglia-monitor rrdtool gmetad ganglia-webfrontend apache2 curl -y
+apt-get install ganglia-monitor rrdtool gmetad curl -y 
+apt-get install ganglia-webfrontend -y
 apt-get install git -y
 
 echo "10.10.10.11		es1" >> /etc/hosts
