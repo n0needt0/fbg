@@ -9,7 +9,7 @@ apt-get install python-software-properties -y
 #add-apt-repository ppa:semiosis/ubuntu-glusterfs-3.4
 apt-get update
 apt-get install ganglia-monitor rrdtool gmetad curl git -y 
-apt-get install ganglia-webfrontend -qq -y
+apt-get install ganglia-webfrontend -y
 
 sed -i 's/localhost/monitor/g' /etc/hosts
 
@@ -36,3 +36,5 @@ cp /vagrant/etc/nagios3/conf.d/fbg-servers.cfg /etc/nagios3/conf.d/fbg-servers.c
 /etc/init.d/gmetad restart
 
 #configure ganglia and nagios
+
+reset
