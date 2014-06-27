@@ -35,8 +35,8 @@ echo "10.10.10.23		gfs3" >> /etc/hosts
 echo "10.10.10.31		api" >> /etc/hosts
 echo "10.10.10.41		monitor" >> /etc/hosts
 
-/etc/init.d/php5-fpm reload
-/etc/init.d/nginx reload
+/etc/init.d/php5-fpm restart
+/etc/init.d/nginx restart
 
 mkdir /gfs
 
