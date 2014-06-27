@@ -11,9 +11,11 @@ apt-get update
 apt-get install ganglia-monitor rrdtool gmetad curl git -y 
 apt-get install ganglia-webfrontend -y
 
-reset
+apt-get install nginx php5-fpm php5-mysql php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-ps php5-pspell php5-recode php-apc php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl -y
 
-rm /etc/apache2/sites-enabled/*
+apt-get remove apache2
+
+rm /etc/nginx/sites-enabled/*
 
 sed -i 's/localhost/monitor/g' /etc/hosts
 
@@ -26,24 +28,16 @@ echo "10.10.10.23		gfs3" >> /etc/hosts
 echo "10.10.10.31		api" >> /etc/hosts
 echo "10.10.10.41		monitor" >> /etc/hosts
 
-a2enmod rewrite
-
-cp /vagrant/etc/apache2/ports.conf /etc/apache2/ports.conf 
-
-cp /etc/apache2/ganglia-webfrontend/apache.conf /etc/apache2/sites-enabled/ganglia.conf
+#cp /etc/ganglia-webfrontend/apache.conf /etc/apache2/sites-enabled/ganglia.conf
 
 cp /vagrant/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
 cp /vagrant/etc/ganglia/gmetad.conf /etc/ganglia/gmetad.conf
-cp /vagrant/etc/apache2/sites-enabled/nagios.conf /etc/apache2/sites-enabled/nagios.conf
+cp /vagrant/etc/nginx/sites-enabled/nagios /etc/nginx/sites-enabled/nagios
 
 cp /vagrant/etc/nagios3/htpasswd.users /etc/nagios3/htpasswd.users
 cp /vagrant/etc/nagios3/conf.d/contacts_nagios2.cfg /etc/nagios3/conf.d/contacts_nagios2.cfg
 cp /vagrant/etc/nagios3/conf.d/fbg-servers.cfg /etc/nagios3/conf.d/fbg-servers.cfg
 
-/etc/init.d/apache2 restart
+/etc/init.d/nginx restart
 /etc/init.d/ganglia-monitor restart
 /etc/init.d/gmetad restart
-
-#configure ganglia and nagios
-
-reset
