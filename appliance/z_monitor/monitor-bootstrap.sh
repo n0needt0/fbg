@@ -11,6 +11,8 @@ apt-get update
 apt-get install ganglia-monitor rrdtool gmetad curl git -y 
 apt-get install ganglia-webfrontend -y
 
+reset
+
 rm /etc/apache2/sites-enabled/*
 
 sed -i 's/localhost/monitor/g' /etc/hosts
