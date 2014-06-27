@@ -15,14 +15,13 @@ export DEBIAN_FRONTEND=noninteractive
 apt-get -q -y install mysql-server mysql-client
 apt-get install nginx php5-fpm php5-mysql php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-ps php5-pspell php5-recode php-apc php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl -y
 
-
 rm /etc/nginx/sites-enabled/*
 rm /etc/nginx/sites-available/*
 
-sed -i 's/listen = 127\.0\.0\.1:9000/listen = \/var\/run\/php5-fpm\.sock/g' /etc/php5/fpm/pool.d/www.conf
-sed -i 's/;listen.owner = www-data/listen.owner = www-data/g' /etc/php5/fpm/pool.d/www.conf
-sed -i 's/;listen.group = www-data/listen.group = www-data/g' /etc/php5/fpm/pool.d/www.conf
-sed -i 's/;listen.mode = 0660/listen.mode = 0660/g' /etc/php5/fpm/pool.d/www.conf
+sed -i 's/listen = 127\.0\.0\.1:9000/listen = \/tmp\/run\/php5-fpm\.sock/g' /etc/php5/fpm/pool.d/www.conf
+#sed -i 's/;listen.owner = www-data/listen.owner = www-data/g' /etc/php5/fpm/pool.d/www.conf
+#sed -i 's/;listen.group = www-data/listen.group = www-data/g' /etc/php5/fpm/pool.d/www.conf
+#sed -i 's/;listen.mode = 0660/listen.mode = 0660/g' /etc/php5/fpm/pool.d/www.conf
 
 cat /vagrant/etc.nginx.sites-enabled.api > /etc/nginx/sites-enabled/api
 cat /vagrant/etc.nginx.conf.d.microcache.conf > /etc/nginx/conf.d/microcache.conf
@@ -38,12 +37,6 @@ echo "10.10.10.41		monitor" >> /etc/hosts
 
 /etc/init.d/php5-fpm reload
 /etc/init.d/nginx reload
-
-chmod 666 /var/run/php5-fpm.sock
-
-/etc/init.d/php5-fpm reload
-/etc/init.d/nginx reload
-
 
 mkdir /gfs
 
