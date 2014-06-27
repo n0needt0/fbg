@@ -8,7 +8,7 @@ apt-get update
 apt-get install python-software-properties -y
 add-apt-repository ppa:semiosis/ubuntu-glusterfs-3.4
 apt-get update
-apt-get install glusterfs-client ganglia-monitor rrdtool gmetad ganglia-webfrontend apache2 nagios3 nagios-nrpe-plugin curl -y
+apt-get install glusterfs-client ganglia-monitor rrdtool gmetad ganglia-webfrontend apache2 curl -y
 apt-get install git -y
 
 echo "10.10.10.11		es1" >> /etc/hosts
