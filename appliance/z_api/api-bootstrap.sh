@@ -38,6 +38,8 @@ echo "10.10.10.41		monitor" >> /etc/hosts
 /etc/init.d/php5-fpm restart
 /etc/init.d/nginx restart
 
+chmod 666 /tmp/php5-fpm.sock
+
 mkdir /gfs
 
 sudo mount -t glusterfs gfs1:/gluster-volume /gfs
