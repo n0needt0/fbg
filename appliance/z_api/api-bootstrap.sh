@@ -30,12 +30,9 @@ sed -i 's/;listen.owner = www-data/listen.owner = www-data/g' /etc/php5/fpm/pool
 sed -i 's/;listen.group = www-data/listen.group = www-data/g' /etc/php5/fpm/pool.d/www.conf
 sed -i 's/;listen.mode = 0660/listen.mode = 0660/g' /etc/php5/fpm/pool.d/www.conf
 
-cp /vagrant/etc.nginx.sites-enabled.api /etc/nginx/sites-enabled/api
-cp /vagrant/etc.nginx.conf.d.microcache.conf /etc/nginx/conf.d/microcache.conf
-cp /vagrant/etc.ganglia.gmond.conf /etc/ganglia/gmond.conf
-
-#add ganglia
-#add nagios
+cp /vagrant/etc/nginx/sites-enabled/api /etc/nginx/sites-enabled/api
+cp /vagrant/etc/nginx/conf.d/microcache.conf /etc/nginx/conf.d/microcache.conf
+cp /vagrant/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
 
 echo "10.10.10.11		es1" >> /etc/hosts
 echo "10.10.10.12		es2" >> /etc/hosts

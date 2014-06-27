@@ -28,5 +28,5 @@ gluster volume create gluster-volume replica 3 transport tcp gfs1:/gluster-stora
 
 gluster volume start gluster-volume
 
-cp /vagrant/etc.ganglia.gmond.conf /etc/ganglia/gmond.conf
+cp /vagrant/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
 /etc/init.d/ganglia-monitor restart
