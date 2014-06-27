@@ -16,4 +16,10 @@ echo "10.10.10.23		gfs3" >> /etc/hosts
 echo "10.10.10.31		api" >> /etc/hosts
 echo "10.10.10.41		monitor" >> /etc/hosts
 
+cat /vagrant/etc.ganglia.gmond.conf > /etc/ganglia/gmond.conf
+cat /vagrant/etc.ganglia.gmetad.conf > /etc/ganglia/gmetad.conf
+
+/etc/init.d/ganglia-monitor restart
+/etc/init.d/gmetad restart
+
 #configure ganglia and nagios
