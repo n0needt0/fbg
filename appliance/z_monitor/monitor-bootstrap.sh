@@ -11,6 +11,8 @@ apt-get update
 apt-get install ganglia-monitor rrdtool gmetad curl git -y 
 apt-get install ganglia-webfrontend -y
 
+rm /etc/apache2/sites-enabled/*
+
 sed -i 's/localhost/monitor/g' /etc/hosts
 
 echo "10.10.10.11		es1" >> /etc/hosts
@@ -22,7 +24,12 @@ echo "10.10.10.23		gfs3" >> /etc/hosts
 echo "10.10.10.31		api" >> /etc/hosts
 echo "10.10.10.41		monitor" >> /etc/hosts
 
-cp /etc/ganglia-webfrontend/apache.conf /etc/apache2/sites-enabled/ganglia.conf
+a2enmod rewrite
+
+cp /vagrant/etc/apache2/ports.conf /etc/apache2/ports.conf 
+
+cp /etc/apache2/ganglia-webfrontend/apache.conf /etc/apache2/sites-enabled/ganglia.conf
+
 cp /vagrant/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
 cp /vagrant/etc/ganglia/gmetad.conf /etc/ganglia/gmetad.conf
 cp /vagrant/etc/apache2/sites-enabled/nagios.conf /etc/apache2/sites-enabled/nagios.conf
