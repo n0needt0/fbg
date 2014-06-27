@@ -28,7 +28,7 @@ echo "10.10.10.23		gfs3" >> /etc/hosts
 echo "10.10.10.31		api" >> /etc/hosts
 echo "10.10.10.41		monitor" >> /etc/hosts
 
-#cp /etc/ganglia-webfrontend/apache.conf /etc/apache2/sites-enabled/ganglia.conf
+cp /vagrant/etc/nginx/sites-enabled/ganglia /etc/nginx/sites-enabled/ganglia
 
 cp /vagrant/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
 cp /vagrant/etc/ganglia/gmetad.conf /etc/ganglia/gmetad.conf
