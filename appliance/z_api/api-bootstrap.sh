@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 # Get root up in here
+sudo su
+
 apt-get update
 apt-get install python-software-properties -y
 add-apt-repository ppa:semiosis/ubuntu-glusterfs-3.4 -y
@@ -10,8 +12,6 @@ apt-get update
 apt-get install glusterfs-client ganglia-monitor nagios-nrpe-server curl -y
 
 sudo apt-get install git -y
-
-#export DEBIAN_FRONTEND=noninteractive
 
 debconf-set-selections <<< 'mysql-server mysql-server/root_password password MYPASSWORD'
 debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password MYPASSWORD'
@@ -32,6 +32,7 @@ sed -i 's/;listen.mode = 0660/listen.mode = 0660/g' /etc/php5/fpm/pool.d/www.con
 
 cat /vagrant/etc.nginx.sites-enabled.api > /etc/nginx/sites-enabled/api
 cat /vagrant/etc.nginx.conf.d.microcache.conf > /etc/nginx/conf.d/microcache.conf
+cat /vagrant/etc.ganglia.gmond.conf > /etc/ganglia/gmond.conf
 
 #add ganglia
 #add nagios
@@ -47,6 +48,7 @@ echo "10.10.10.41		monitor" >> /etc/hosts
 
 /etc/init.d/php5-fpm restart
 /etc/init.d/nginx restart
+/etc/init.d/ganglia-monitor restart
 
 chmod 666 /tmp/php5-fpm.sock
 
