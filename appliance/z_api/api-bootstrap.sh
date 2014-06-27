@@ -11,8 +11,15 @@ apt-get install glusterfs-client ganglia-monitor nagios-nrpe-server curl -y
 
 sudo apt-get install git -y
 
-export DEBIAN_FRONTEND=noninteractive
-apt-get -q -y install mysql-server mysql-client
+#export DEBIAN_FRONTEND=noninteractive
+
+debconf-set-selections <<< 'mysql-server mysql-server/root_password password MYPASSWORD'
+debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password MYPASSWORD'
+apt-get -y install mysql-server
+
+apt-get -q -y mysql-client
+
+mysql -u root -pMYPASSWORD  < /vagrant/fbg.sql
 apt-get install nginx php5-fpm php5-mysql php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-ps php5-pspell php5-recode php-apc php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl -y
 
 rm /etc/nginx/sites-enabled/*
