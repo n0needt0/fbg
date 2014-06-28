@@ -4,13 +4,15 @@
 
 sudo su
 
+export DEBIAN_FRONTEND=noninteractive ; 
+
 apt-get update
 apt-get install python-software-properties -y
 
 apt-get update
 apt-get install nagios3 nagios-nrpe-plugin ganglia-monitor rrdtool gmetad curl git -y
 
-export DEBIAN_FRONTEND=noninteractive ; 
+
  
 apt-get install ganglia-webfrontend -y
 
