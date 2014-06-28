@@ -4,7 +4,7 @@ server {
 
     sendfile off;
 
-    root/usr/share/ganglia-webfrontend;
+    root /usr/share/ganglia-webfrontend;
     index index.php index.html index.htm;
 
     location ~ /\. {
@@ -22,7 +22,7 @@ server {
             try_files $uri $uri/ /index.php?$query_string;
        }
 
-    # pass the PHP scripts to FastCGI server listening on /var/run/php5-fpm.sock
+    # pass the PHP scripts to FastCGI server listening on /tmp
     location ~ \.php$ {
                         #cache section
                         set $no_cache "";

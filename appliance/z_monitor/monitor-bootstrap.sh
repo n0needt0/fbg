@@ -13,9 +13,17 @@ apt-get install ganglia-webfrontend -y
 
 apt-get install nginx php5-fpm php5-mysql php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-ps php5-pspell php5-recode php-apc php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl -y
 
-apt-get remove apache2
+apt-get remove apache2 -y
 
 rm /etc/nginx/sites-enabled/*
+rm /etc/nginx/sites-available/*
+
+sed -i 's/listen = 127\.0\.0\.1:9000/listen = \/tmp\/php5-fpm\.sock/g' /etc/php5/fpm/pool.d/www.conf
+sed -i 's/;listen.owner = www-data/listen.owner = www-data/g' /etc/php5/fpm/pool.d/www.conf
+sed -i 's/;listen.group = www-data/listen.group = www-data/g' /etc/php5/fpm/pool.d/www.conf
+sed -i 's/;listen.mode = 0660/listen.mode = 0660/g' /etc/php5/fpm/pool.d/www.conf
+
+cp /vagrant/etc/nginx/conf.d/microcache.conf /etc/nginx/conf.d/microcache.conf
 
 sed -i 's/localhost/monitor/g' /etc/hosts
 
