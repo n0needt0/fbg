@@ -2,6 +2,9 @@ server {
     listen 0.0.0.0:3000 default deferred;
     server_name www.fbg.com
 
+    access_log  /var/log/nginx/ganglia.access.log;
+    error_log   /var/log/nginx/ganglia.error.log info;
+ 
     sendfile off;
 
     root /usr/share/ganglia-webfrontend;

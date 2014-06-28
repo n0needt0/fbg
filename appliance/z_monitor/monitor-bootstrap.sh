@@ -18,6 +18,8 @@ apt-get install ganglia-webfrontend -y
 
 apt-get install nginx php5-fpm php5-mysql php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-ps php5-pspell php5-recode php-apc php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl -y
 
+/etc/init.d/apache2 stop
+
 apt-get remove apache2 -y
 
 rm /etc/nginx/sites-enabled/*
@@ -53,6 +55,7 @@ cp /vagrant/etc/nagios3/conf.d/fbg-servers.cfg /etc/nagios3/conf.d/fbg-servers.c
 
 sed -i 's/url_html_path=\/nagios3/url_html_path=\//g' /etc/nagios3/cgi.cfg
 
+/etc/init.d/php5-fpm restart
 /etc/init.d/nginx restart
 /etc/init.d/ganglia-monitor restart
 /etc/init.d/gmetad restart
