@@ -8,7 +8,10 @@ apt-get update
 apt-get install python-software-properties -y
 #add-apt-repository ppa:semiosis/ubuntu-glusterfs-3.4
 apt-get update
-apt-get install ganglia-monitor rrdtool gmetad curl git -y 
+apt-get install ganglia-monitor rrdtool gmetad curl git -y
+
+export DEBIAN_FRONTEND=noninteractive ; 
+ 
 apt-get install ganglia-webfrontend -y
 
 apt-get install nginx php5-fpm php5-mysql php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-ps php5-pspell php5-recode php-apc php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl -y
