@@ -38,6 +38,8 @@ cp /vagrant/etc/nagios3/htpasswd.users /etc/nagios3/htpasswd.users
 cp /vagrant/etc/nagios3/conf.d/contacts_nagios2.cfg /etc/nagios3/conf.d/contacts_nagios2.cfg
 cp /vagrant/etc/nagios3/conf.d/fbg-servers.cfg /etc/nagios3/conf.d/fbg-servers.cfg
 
+sed -i 's/url_html_path=\/nagios3/url_html_path=\//g' /etc/nagios3/cgi.cfg
+
 /etc/init.d/nginx restart
 /etc/init.d/ganglia-monitor restart
 /etc/init.d/gmetad restart
