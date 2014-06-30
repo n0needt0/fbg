@@ -1,6 +1,5 @@
 #this is main set up file
 #it will create apliance
-sudo su
 
 if [ $(id -u) -eq 0 ]; then
     
@@ -9,7 +8,6 @@ if [ $(id -u) -eq 0 ]; then
     egrep "^$username" /etc/passwd >/dev/null
     if [ $? -eq 0 ]; then
         echo "$username exists!"
-        exit 1
     else
         pass=$(perl -e 'print crypt($ARGV[0], "password")' $password)
         useradd -m -p $pass $username
@@ -22,25 +20,31 @@ fi
 
 apt-get update
 apt-get install python-software-properties -y
-apt-get update
+apt-get updatecd /
+
 apt-get install ganglia-monitor nagios-nrpe-server curl -y
 sudo apt-get install git -y
 apt-get install nginx -y
 
+rm -rf fbg_tmp
+
+git clone https://github.com/n0needt0/fbg fbg_tmp
+
 # doo other things then switch to fbg user to start things up
 
-cp appliance/config/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
-cat appliance/config/hosts >> /etc/hosts
+cp fbg_tmp/etc/nginx/sites-enabled/proxy /etc/nginx/sites-enabled/proxy
+cp fbg_tmp/appliance/config/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
+cat fbg_tmp/appliance/config/hosts >> /etc/hosts
 /etc/init.d/ganglia-monitor restart
+/etc/init.d/nginx restart
 
-echo "Installing under $username!"
-
+echo "Exiting root and dropping to user $username"
 su $username
+
 cd ~
-git clone  https://github.com/n0needt0/fbg fbg
+git clone https://github.com/n0needt0/fbg 
 
 cd fbg/appliance
 
-#bash startall.sh
-
+#this needs to happen because use
 #configure nginx, gaglia and nagios

@@ -6,25 +6,12 @@
         server 10.10.10.41:80;
     }
 
-# the nginx server instance
 server {
     listen 0.0.0.0:80;
     server_name fbg.this.com;
     access_log /var/log/nginx/fbg.log;
 
-    # pass the request to the node.js server with the correct headers and much more can be added, see nginx config options
-    location /ganglia/ {
-      proxy_set_header X-Real-IP $remote_addr;
-      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-      proxy_set_header Host $http_host;
-      proxy_set_header X-NginX-Proxy true;
-
-      proxy_pass http://ganglia_servers/;
-      proxy_redirect off;
-    }
-
-
-    # pass the request to the node.js server with the correct headers and much more can be added, see nginx config options
+    # pass the request to api
     location / {
       proxy_set_header X-Real-IP $remote_addr;
       proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -35,3 +22,38 @@ server {
       proxy_redirect off;
     }
  }
+
+ server {
+    listen 0.0.0.0:3000;
+    server_name ganglia.fbg.com;
+    access_log /var/log/nginx/ganglia.log;
+
+    # pass the request to ganglia
+    location / {
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header Host $http_host;
+      proxy_set_header X-NginX-Proxy true;
+
+      proxy_pass http://ganglia_server/;
+      proxy_redirect off;
+    }
+ }
+ 
+  server {
+    listen 0.0.0.0:4000;
+    server_name nagios.fbg.com;
+    access_log /var/log/nginx/nagios.log;
+
+    # pass the request to ganglia
+    location / {
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header Host $http_host;
+      proxy_set_header X-NginX-Proxy true;
+
+      proxy_pass http://nagios_server/;
+      proxy_set_header Authorization "Basic a2luZzppc25ha2Vk";
+    }
+ }
+ 
