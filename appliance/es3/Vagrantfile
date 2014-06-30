@@ -7,6 +7,8 @@ Vagrant.configure("2") do |config|
         es3.vm.network :private_network, ip: "10.10.10.13"
         es3.vm.hostname = "es3"
         
+        config.vm.synced_folder "../config", "/var/config",  owner: "root", group: "root"
+        
         es3.vm.provider :virtualbox do |vb|
             vb.customize ["modifyvm", :id, "--memory", "1024"]
         end

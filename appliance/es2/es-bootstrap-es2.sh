@@ -9,14 +9,7 @@ sudo apt-get install openjdk-7-jre-headless ganglia-monitor nagios-nrpe-server c
 wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.2.1.deb
 sudo dpkg -i elasticsearch-1.2.1.deb
 
-echo "10.10.10.11		es1" >> /etc/hosts
-echo "10.10.10.12		es2" >> /etc/hosts
-echo "10.10.10.13		es3" >> /etc/hosts
-echo "10.10.10.21		gfs1" >> /etc/hosts
-echo "10.10.10.22		gfs2" >> /etc/hosts
-echo "10.10.10.23		gfs3" >> /etc/hosts
-echo "10.10.10.31		api" >> /etc/hosts
-echo "10.10.10.41		monitor" >> /etc/hosts
+cat /var/config/hosts >> /etc/hosts
 
 apt-get install glusterfs-client -y 
 
@@ -40,5 +33,5 @@ echo "marvel.agent.exporter.es.hosts: [\"10.10.10.11:9200\",\"10.10.10.12:9200\"
 
 /etc/init.d/elasticsearch restart
 
-cp /vagrant/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
+cp /var/config/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
 /etc/init.d/ganglia-monitor restart

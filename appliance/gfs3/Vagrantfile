@@ -7,6 +7,8 @@ Vagrant.configure("2") do |config|
         gfs3.vm.network :private_network, ip: "10.10.10.23"
         gfs3.vm.hostname = "gfs3"
         
+        config.vm.synced_folder "../config", "/var/config",  owner: "root", group: "root"
+        
         gfs3.vm.provider :virtualbox do |vb|
             vb.customize ["modifyvm", :id, "--memory", "1024"]
         end

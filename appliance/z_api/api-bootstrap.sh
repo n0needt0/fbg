@@ -32,7 +32,7 @@ sed -i 's/;listen.mode = 0660/listen.mode = 0660/g' /etc/php5/fpm/pool.d/www.con
 
 cp /vagrant/etc/nginx/sites-enabled/api /etc/nginx/sites-enabled/api
 cp /vagrant/etc/nginx/conf.d/microcache.conf /etc/nginx/conf.d/microcache.conf
-cp /vagrant/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
+cp /var/config/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
 
 cat /var/config/hosts >> /etc/hosts
 

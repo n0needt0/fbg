@@ -34,14 +34,7 @@ cp /vagrant/etc/nginx/conf.d/microcache.conf /etc/nginx/conf.d/microcache.conf
 
 sed -i 's/localhost/monitor/g' /etc/hosts
 
-echo "10.10.10.11		es1" >> /etc/hosts
-echo "10.10.10.12		es2" >> /etc/hosts
-echo "10.10.10.13		es3" >> /etc/hosts
-echo "10.10.10.21		gfs1" >> /etc/hosts
-echo "10.10.10.22		gfs2" >> /etc/hosts
-echo "10.10.10.23		gfs3" >> /etc/hosts
-echo "10.10.10.31		api" >> /etc/hosts
-echo "10.10.10.41		monitor" >> /etc/hosts
+cat /var/config/hosts >> /etc/hosts
 
 cp /vagrant/etc/nginx/sites-enabled/ganglia /etc/nginx/sites-enabled/ganglia
 
