@@ -34,14 +34,7 @@ cp /vagrant/etc/nginx/sites-enabled/api /etc/nginx/sites-enabled/api
 cp /vagrant/etc/nginx/conf.d/microcache.conf /etc/nginx/conf.d/microcache.conf
 cp /vagrant/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
 
-echo "10.10.10.11		es1" >> /etc/hosts
-echo "10.10.10.12		es2" >> /etc/hosts
-echo "10.10.10.13		es3" >> /etc/hosts
-echo "10.10.10.21		gfs1" >> /etc/hosts
-echo "10.10.10.22		gfs2" >> /etc/hosts
-echo "10.10.10.23		gfs3" >> /etc/hosts
-echo "10.10.10.31		api" >> /etc/hosts
-echo "10.10.10.41		monitor" >> /etc/hosts
+cat /var/config/hosts >> /etc/hosts
 
 /etc/init.d/php5-fpm restart
 /etc/init.d/nginx restart

@@ -6,6 +6,7 @@ Vagrant.configure("2") do |config|
         api.vm.provision :shell, :path => "api-bootstrap.sh"
         api.vm.network :private_network, ip: "10.10.10.31"
         api.vm.hostname = "api"
+        config.vm.synced_folder "../config", "/var/config",  owner: "root", group: "root"
         config.vm.synced_folder "../../backend/code/var/api", "/var/www/api",  owner: "www-data", group: "www-data"
         
         api.vm.provider :virtualbox do |vb|
