@@ -47,6 +47,7 @@ cp /vagrant/etc/nagios3/conf.d/contacts_nagios2.cfg /etc/nagios3/conf.d/contacts
 cp /vagrant/etc/nagios3/conf.d/fbg-servers.cfg /etc/nagios3/conf.d/fbg-servers.cfg
 
 sed -i 's/url_html_path=\/nagios3/url_html_path=\//g' /etc/nagios3/cgi.cfg
+sed -i 's/use_authentication=1/use_authentication=0/g' /etc/nagios3/cgi.cfg
 
 /etc/init.d/php5-fpm restart
 /etc/init.d/nginx restart

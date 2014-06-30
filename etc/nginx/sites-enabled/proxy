@@ -1,9 +1,13 @@
-    upstream backend_servers{
+upstream backend_servers{
         server 10.10.10.31:3000;
     }
     
-    upstream ganglia_servers{
-        server 10.10.10.41:80;
+upstream ganglia_server{
+        server 10.10.10.41:3000;
+    }
+    
+upstream nagios_server{
+        server 10.10.10.41:4000;
     }
 
 server {
