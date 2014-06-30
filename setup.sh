@@ -1,8 +1,10 @@
 #this is main set up file
 #it will create apliance
+sudo su
 
 if [ $(id -u) -eq 0 ]; then
-    read -p "Enter username : " username
+    
+    read -p "Enter username to install under: " username
     read -s -p "Enter password : " password
     egrep "^$username" /etc/passwd >/dev/null
     if [ $? -eq 0 ]; then
@@ -27,6 +29,10 @@ apt-get install nginx -y
 
 # doo other things then switch to fbg user to start things up
 
+cp appliance/config/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
+cat appliance/config/hosts >> /etc/hosts
+/etc/init.d/ganglia-monitor restart
+
 echo "Installing under $username!"
 
 su $username
@@ -35,6 +41,6 @@ git clone  https://github.com/n0needt0/fbg fbg
 
 cd fbg/appliance
 
-bash startall.sh
+#bash startall.sh
 
 #configure nginx, gaglia and nagios
