@@ -1,9 +1,9 @@
 upstream php {
-     server unix:/tmp/php5-fpm.socket;
+     server unix:/var/run/php5-fpm.socket;
  }
 
  upstream fcgiwrap {
-     server unix:/tmp/fcgiwrap.socket;
+     server unix:/var/run/fcgiwrap.socket;
  }
  
  server {

@@ -25,7 +25,7 @@ apt-get remove apache2 -y
 rm /etc/nginx/sites-enabled/*
 rm /etc/nginx/sites-available/*
 
-sed -i 's/listen = 127\.0\.0\.1:9000/listen = \/tmp\/php5-fpm\.sock/g' /etc/php5/fpm/pool.d/www.conf
+sed -i 's/listen = 127\.0\.0\.1:9000/listen = \/var\/run\/php5-fpm\.sock/g' /etc/php5/fpm/pool.d/www.conf
 sed -i 's/;listen.owner = www-data/listen.owner = www-data/g' /etc/php5/fpm/pool.d/www.conf
 sed -i 's/;listen.group = www-data/listen.group = www-data/g' /etc/php5/fpm/pool.d/www.conf
 sed -i 's/;listen.mode = 0660/listen.mode = 0660/g' /etc/php5/fpm/pool.d/www.conf
