@@ -82,3 +82,40 @@ server {
     }
  }
  
+ server {
+    listen 0.0.0.0:5000 default deferred;
+    server_name vbox.fbg.com;
+
+    access_log  /var/log/nginx/vbox.access.log;
+    error_log   /var/log/nginx/vbox.error.log info;
+ 
+    sendfile off;
+
+    root /var/www/vbox;
+    index index.php index.html index.htm;
+
+    location ~ /\. {
+        deny all;
+    }
+
+    #now the website
+    location ~* \.(?:ico|css|js|gif|jpe?g|png)$ {
+    # Some basic cache-control for static files to be sent to the browser
+       add_header Vary Accept-Encoding;
+       expires max;
+    }
+
+    location / {
+            try_files $uri $uri/ /index.php?$query_string;
+       }
+
+    # pass the PHP scripts to FastCGI server listening on /tmp
+    location ~ \.php$ {
+                        try_files $uri /index.php =404;
+                        fastcgi_pass php;
+                        fastcgi_index index.php;
+                        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+                        include fastcgi_params;
+        }
+ }
+ 

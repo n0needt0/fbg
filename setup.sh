@@ -34,6 +34,11 @@ git clone https://github.com/n0needt0/fbg fbg_tmp
 cp fbg_tmp/etc/nginx/sites-enabled/proxy /etc/nginx/sites-enabled/proxy
 cp fbg_tmp/appliance/config/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
 
+mkdir -p /var/www
+cp -r fbg_tmp/vbox /var/www
+
+chown -r www-data:www-data /var/www/vbox
+
 #configure fpm
 sed -i 's/listen = 127\.0\.0\.1:9000/listen = \/var\/run\/php5-fpm\.sock/g' /etc/php5/fpm/pool.d/www.conf
 sed -i 's/;listen.owner = www-data/listen.owner = www-data/g' /etc/php5/fpm/pool.d/www.conf
