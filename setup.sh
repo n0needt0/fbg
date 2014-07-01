@@ -45,10 +45,6 @@ sed -i 's/;listen.owner = www-data/listen.owner = www-data/g' /etc/php5/fpm/pool
 sed -i 's/;listen.group = www-data/listen.group = www-data/g' /etc/php5/fpm/pool.d/www.conf
 sed -i 's/;listen.mode = 0660/listen.mode = 0660/g' /etc/php5/fpm/pool.d/www.conf
 
-/etc/init.d/php5-fpm restart
-/etc/init.d/nginx restart
-/etc/init.d/ganglia-monitor restart
-
 #updating host file skipping empties and duplicates
  
 cat fbg_tmp/appliance/config/hosts | while read line
@@ -65,8 +61,9 @@ do
     fi
 done
 
-/etc/init.d/ganglia-monitor restart
+/etc/init.d/php5-fpm restart
 /etc/init.d/nginx restart
+/etc/init.d/ganglia-monitor restart
 
 #echo "Exiting root and dropping to user $username"
 
