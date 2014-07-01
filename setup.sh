@@ -44,8 +44,8 @@ cp fbg_tmp/appliance/config/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
 mkdir -p /var/www
 cp -r fbg_tmp/vbox /var/www
 
-sed -i 's/\$username = \'vbox\'/$username = "$username"/g' /etc/php5/fpm/pool.d/www.conf
-sed -i 's/\$password = 'pass'/var $password = "$password"/g' /etc/php5/fpm/pool.d/www.conf
+sed -i 's/\$username = \'vbox\'/\$username = "$username"/g' /var/www/vbox/config.php
+sed -i 's/\$password = \'pass\'/var \$password = "$password"/g' /var/www/vbox/config.php
 
 
 chown -R www-data:www-data /var/www/vbox
