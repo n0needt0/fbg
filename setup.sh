@@ -44,7 +44,7 @@ cp fbg_tmp/appliance/config/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
 mkdir -p /var/www
 cp -r fbg_tmp/vbox /var/www
 
-sed -i 's/\$username = \'vbox\'/\$username = "$username"/g' /var/www/vbox/config.php
+sed -i 's/\$username ='\''vbox'\''/\$username = "$username"/g' /var/www/vbox/config.php
 sed -i 's/\$password = \'pass\'/var \$password = "$password"/g' /var/www/vbox/config.php
 
 
@@ -78,8 +78,8 @@ done
 
 #echo "Exiting root and dropping to user $username"
 
-#su -c "cd /home/$username/fbg/appliance; bash destroyall.sh" -m "$username"
-#su -c "cd /home/$username; git clone https://github.com/n0needt0/fbg" -m "$username" 
-#su -c "cd /home/$username/fbg/appliance; bash startall.sh" -m "$username"
+su -c "cd /home/$username/fbg/appliance; bash destroyall.sh" -m "$username"
+su -c "cd /home/$username; git clone https://github.com/n0needt0/fbg" -m "$username" 
+su -c "cd /home/$username/fbg/appliance; bash startall.sh" -m "$username"
 
 rm -rf fbg_tmp
