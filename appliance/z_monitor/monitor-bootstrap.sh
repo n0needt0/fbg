@@ -40,6 +40,8 @@ sed -i 's/localhost/monitor/g' /etc/hosts
 
 cat /var/config/hosts >> /etc/hosts
 
+cp /vagrant/etc/nginx/sites-enabled/common /etc/nginx/sites-enabled/common
+
 cp /vagrant/etc/nginx/sites-enabled/ganglia /etc/nginx/sites-enabled/ganglia
 
 cp /vagrant/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
