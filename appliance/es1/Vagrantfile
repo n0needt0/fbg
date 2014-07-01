@@ -1,4 +1,5 @@
 require 'yaml'
+
 vconfig = YAML::load_file("../config/vagrant_config.yml")
 
 Vagrant.configure("2") do |config|

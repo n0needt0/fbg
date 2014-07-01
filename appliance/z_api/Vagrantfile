@@ -1,3 +1,7 @@
+require 'yaml'
+
+vconfig = YAML::load_file("../config/vagrant_config.yml")
+
 Vagrant.configure("2") do |config|
     
     config.vm.define "api" do |api|
@@ -10,7 +14,7 @@ Vagrant.configure("2") do |config|
         config.vm.synced_folder "../../backend/code/var/api", "/var/www/api",  owner: "www-data", group: "www-data"
         
         api.vm.provider :virtualbox do |vb|
-            vb.customize ["modifyvm", :id, "--memory", "512"]
+            vb.customize ["modifyvm", :id, "--memory", vconfig['fbg']['memory']]
         end
     end
 end
