@@ -78,7 +78,7 @@ server {
       proxy_set_header X-NginX-Proxy true;
 
       proxy_pass http://nagios_server/;
-      proxy_set_header Authorization "Basic a2luZzppc25ha2Vk";
+      proxy_set_header Authorization "Basic bmFnaW9zYWRtaW46V2VsY29tZTE=";
     }
  }
  

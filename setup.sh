@@ -23,10 +23,9 @@ apt-get install python-software-properties -y
 apt-get updatecd /
 
 apt-get install ganglia-monitor nagios-nrpe-server curl -y
+apt-get install spawn-fcgi fcgiwrap -y
+apt-get install nginx php5-fpm php5-mysql php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-ps php5-pspell php5-recode php-apc php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl -y
 sudo apt-get install git -y
-apt-get install nginx -y
-
-rm -rf fbg_tmp
 
 git clone https://github.com/n0needt0/fbg fbg_tmp
 
@@ -35,6 +34,15 @@ git clone https://github.com/n0needt0/fbg fbg_tmp
 cp fbg_tmp/etc/nginx/sites-enabled/proxy /etc/nginx/sites-enabled/proxy
 cp fbg_tmp/appliance/config/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
 
+#configure fpm
+sed -i 's/listen = 127\.0\.0\.1:9000/listen = \/var\/run\/php5-fpm\.sock/g' /etc/php5/fpm/pool.d/www.conf
+sed -i 's/;listen.owner = www-data/listen.owner = www-data/g' /etc/php5/fpm/pool.d/www.conf
+sed -i 's/;listen.group = www-data/listen.group = www-data/g' /etc/php5/fpm/pool.d/www.conf
+sed -i 's/;listen.mode = 0660/listen.mode = 0660/g' /etc/php5/fpm/pool.d/www.conf
+
+/etc/init.d/php5-fpm restart
+/etc/init.d/nginx restart
+/etc/init.d/ganglia-monitor restart
 
 #updating host file skipping empties and duplicates
  
