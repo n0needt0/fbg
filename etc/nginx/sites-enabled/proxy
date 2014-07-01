@@ -1,13 +1,17 @@
 upstream backend_servers{
-        server 10.10.10.31:3000;
+        server api:3000;
     }
-    
+
+upstream es_server{
+        server es1:9200;
+    }
+
 upstream ganglia_server{
-        server 10.10.10.41:3000;
+        server monitor:3000;
     }
-    
+
 upstream nagios_server{
-        server 10.10.10.41:4000;
+        server monitor:4000;
     }
 
 server {
@@ -23,6 +27,23 @@ server {
       proxy_set_header X-NginX-Proxy true;
 
       proxy_pass http://backend_servers/;
+      proxy_redirect off;
+    }
+ }
+
+server {
+    listen 0.0.0.0:9200;
+    server_name ganglia.fbg.com;
+    access_log /var/log/nginx/es.log;
+
+    # pass the request to es servers
+    location / {
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header Host $http_host;
+      proxy_set_header X-NginX-Proxy true;
+
+      proxy_pass http://es_server/;
       proxy_redirect off;
     }
  }
