@@ -30,7 +30,7 @@ sed -i 's/;listen.owner = www-data/listen.owner = www-data/g' /etc/php5/fpm/pool
 sed -i 's/;listen.group = www-data/listen.group = www-data/g' /etc/php5/fpm/pool.d/www.conf
 sed -i 's/;listen.mode = 0660/listen.mode = 0660/g' /etc/php5/fpm/pool.d/www.conf
 
-#configure nagios
+#configure nNGINX
 cp /vagrant/etc/nginx/conf.d/microcache.conf /etc/nginx/conf.d/microcache.conf
 cp /vagrant/etc/nginx/sites-enabled/common /etc/nginx/sites-enabled/common
 cp /vagrant/etc/nginx/sites-enabled/ganglia /etc/nginx/sites-enabled/ganglia
@@ -45,6 +45,8 @@ cp /vagrant/etc/nagios3/htpasswd.users /etc/nagios3/htpasswd.users
 cp -r /etc/nagios3/stylesheets /usr/share/nagios3/htdocs
 rm /etc/nagios3/conf.d/*
 cp /vagrant/etc/nagios3/conf.d/* /etc/nagios3/conf.d/
+cp /var/config/etc/nagios3/conf.d/* /etc/nagios3/conf.d/
+
 sed -i 's/url_html_path=\/nagios3/url_html_path=\//g' /etc/nagios3/cgi.cfg
 sed -i 's/use_authentication=1/use_authentication=0/g' /etc/nagios3/cgi.cfg
 
