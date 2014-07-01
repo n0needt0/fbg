@@ -46,5 +46,6 @@ git clone https://github.com/n0needt0/fbg
 
 cd fbg/appliance
 
+bash startall.sh
 #this needs to happen because use
 #configure nginx, gaglia and nagios
