@@ -34,18 +34,30 @@ git clone https://github.com/n0needt0/fbg fbg_tmp
 
 cp fbg_tmp/etc/nginx/sites-enabled/proxy /etc/nginx/sites-enabled/proxy
 cp fbg_tmp/appliance/config/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
-cat fbg_tmp/appliance/config/hosts >> /etc/hosts
+
+
+#updating host file skipping empties and duplicates
+ 
+cat fbg_tmp/appliance/config/hosts | while read line
+do
+    if [ ! -z "$line" ]; then
+    #skip empty
+    FILE="/tmp/fbg.1.txt"; 
+    FILE2="/tmp/fbg.2.txt"; 
+    cat /etc/hosts > $FILE 2> /dev/null; 
+    cat $FILE | grep -v "$line" > $FILE2; 
+    echo "$line" >> $FILE2; 
+    cp $FILE2 /etc/hosts;
+    rm  $FILE $FILE2;
+    fi
+done
+
 /etc/init.d/ganglia-monitor restart
 /etc/init.d/nginx restart
 
 #echo "Exiting root and dropping to user $username"
-#su $username
 
-#cd ~
-#git clone https://github.com/n0needt0/fbg 
+su -c "cd /home/$username; git clone https://github.com/n0needt0/fbg" -m "$username" 
+su -c "cd /home/$username/fbg/appliance; bash startall.sh" -m "$username"
 
-#cd fbg/appliance
-
-#bash startall.sh
-#this needs to happen because use
-#configure nginx, gaglia and nagios
+rm -rf fbg_tmp
