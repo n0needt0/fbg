@@ -51,5 +51,6 @@ sed -i 's/use_authentication=1/use_authentication=0/g' /etc/nagios3/cgi.cfg
 #restart 
 /etc/init.d/php5-fpm restart
 /etc/init.d/nginx restart
+/etc/init.d/nagios3 restart
 /etc/init.d/ganglia-monitor restart
 /etc/init.d/gmetad restart
