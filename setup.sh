@@ -38,14 +38,14 @@ cat fbg_tmp/appliance/config/hosts >> /etc/hosts
 /etc/init.d/ganglia-monitor restart
 /etc/init.d/nginx restart
 
-echo "Exiting root and dropping to user $username"
-su $username
+#echo "Exiting root and dropping to user $username"
+#su $username
 
-cd ~
-git clone https://github.com/n0needt0/fbg 
+#cd ~
+#git clone https://github.com/n0needt0/fbg 
 
-cd fbg/appliance
+#cd fbg/appliance
 
-bash startall.sh
+#bash startall.sh
 #this needs to happen because use
 #configure nginx, gaglia and nagios
