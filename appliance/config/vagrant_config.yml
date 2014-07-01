@@ -1,0 +1,7 @@
+# vagrant_config.yml
+
+fbg:
+
+box: 'precise64'
+memory: '512'
+

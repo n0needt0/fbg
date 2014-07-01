@@ -1,3 +1,6 @@
+require ‘yaml’
+vconfig = YAML::load_file(“../config/vagrant_config.yml”)
+
 Vagrant.configure("2") do |config|
     
     config.vm.define "es1" do |es1|
@@ -10,7 +13,7 @@ Vagrant.configure("2") do |config|
         config.vm.synced_folder "../config", "/var/config",  owner: "root", group: "root"
 
         es1.vm.provider :virtualbox do |vb|
-            vb.customize ["modifyvm", :id, "--memory", "512"]
+            vb.customize ["modifyvm", :id, "--memory", vconfig['fbg']['memory']]
         end
     end
 end
