@@ -1,46 +1,40 @@
 upstream php {
-     server unix:/var/run/php5-fpm.socket;
+     server unix:/var/run/php5-fpm.sock;
  }
 
  upstream fcgiwrap {
      server unix:/var/run/fcgiwrap.socket;
  }
- 
+
  server {
-    listen   4000;
+    listen   4000 default deferred;
     server_name  nagios.example.tld;
- 
+
     access_log  /var/log/nginx/nagios.access.log;
     error_log   /var/log/nginx/nagios.error.log info;
- 
-    expires 31d;
- 
-    root /usr/share/nagios3/htdocs; 
+
+    auth_basic "Nagios Restricted Access";
+    auth_basic_user_file /etc/nagios3/htpasswd.users;
+
+    root /usr/share/nagios3/htdocs/;
     index index.php index.html;
- 
-        auth_basic "Nagios Restricted Access";
-        auth_basic_user_file /etc/nagios3/htpasswd.users;
-    
-    location /stylesheets {
-        alias /etc/nagios3/stylesheets;
+
+    location ~ /\. {
+                try_files $uri $uri/ index.php;
     }
- 
-        location ~ \.cgi$ {
-                root /usr/lib/cgi-bin/nagios3;
- 
-        rewrite ^/cgi-bin/nagios3/(.*)$ /$1;
-    
-        include /etc/nginx/fastcgi_params;
-                
-        fastcgi_param AUTH_USER $remote_user;
-                fastcgi_param REMOTE_USER $remote_user;
-                fastcgi_param SCRIPT_FILENAME /usr/lib/cgi-bin/nagios3$fastcgi_script_name; 
-        
-        fastcgi_pass fcgiwrap;
-        }
- 
+
+    location ~ \.cgi$ {
+                 root /usr/lib/cgi-bin/nagios3;
+                 rewrite ^/cgi-bin/nagios3/(.*)$ /$1;
+                 include /etc/nginx/fastcgi_params;
+                 fastcgi_param AUTH_USER $remote_user;
+                 fastcgi_param REMOTE_USER $remote_user;
+                 fastcgi_param SCRIPT_FILENAME /usr/lib/cgi-bin/nagios3$fastcgi_script_name;
+                 fastcgi_pass fcgiwrap;
+    }
+
     location ~ \.php$ {
                 include /etc/nginx/fastcgi_params;
                 fastcgi_pass php;
-        }
+    }
 }

@@ -14,7 +14,7 @@ apt-get install nagios3 nagios-nrpe-plugin ganglia-monitor rrdtool gmetad curl g
 
 
  
-apt-get install ganglia-webfrontend -y
+apt-get install ganglia-webfrontend spawn-fcgi fcgiwrap -y
 
 apt-get install nginx php5-fpm php5-mysql php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-ps php5-pspell php5-recode php-apc php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl -y
 
@@ -31,6 +31,10 @@ sed -i 's/;listen.group = www-data/listen.group = www-data/g' /etc/php5/fpm/pool
 sed -i 's/;listen.mode = 0660/listen.mode = 0660/g' /etc/php5/fpm/pool.d/www.conf
 
 cp /vagrant/etc/nginx/conf.d/microcache.conf /etc/nginx/conf.d/microcache.conf
+#put nagios style in write place
+
+cp -r /etc/nagios3/stylesheets /usr/share/nagios3/htdocs
+
 
 sed -i 's/localhost/monitor/g' /etc/hosts
 
