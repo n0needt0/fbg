@@ -13,9 +13,6 @@ fi
 
 cd /tmp
 
-apt-get update -y
-apt-get upgrade -y
-
 if [ $(id -u) -eq 0 ]; then
     
     read -p "Enter username to install under: " username
@@ -32,6 +29,8 @@ else
     echo "Only root may add a user to the system"
     exit 2
 fi
+apt-get update -y
+apt-get upgrade -y
 
 cd /home/$username
 
