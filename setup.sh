@@ -31,6 +31,8 @@ else
     exit 2
 fi
 
+cd /home/$username
+
 adduser $username vboxusers
 
 grep -q 'deb http://download.virtualbox.org/virtualbox/debian precise contrib' /etc/apt/sources.list || echo 'deb http://download.virtualbox.org/virtualbox/debian precise contrib' >>  /etc/apt/sources.list
@@ -94,13 +96,12 @@ wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_x86_64.deb
 dpkg -i vagrant_1.6.3_x86_64.deb
 vagrant plugin install vagrant-vbguest
 
-#install vagrant and guess additions
-echo "Exiting root and dropping to user $username"
-
 rm -rf fbg_tmp
 
-#su -c "cd /home/$username/fbg/appliance; bash destroyall.sh" -m "$username"
-#su -c "cd /home/$username; git clone https://github.com/n0needt0/fbg" -m "$username"
-#su -c "cd /home/$username/fbg/appliance; bash destroyall.sh" -m "$username" 
-#su -c "cd /home/$username/fbg/appliance; bash startall.sh" -m "$username"
+vagrant plugin install vagrant-vbguest
+
+su -c "cd /home/$username; vagrant plugin install vagrant-vbguest" -m "$username"
+su -c "cd /home/$username; git clone https://github.com/n0needt0/fbg" -m "$username"
+su -c "cd /home/$username/fbg/appliance; bash destroyall.sh" -m "$username"
+su -c "cd /home/$username/fbg/appliance; bash startall.sh" -m "$username"
 
