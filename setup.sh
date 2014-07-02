@@ -92,7 +92,11 @@ done
 /etc/init.d/ganglia-monitor restart
 
 wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_x86_64.deb
+
 dpkg -i vagrant_1.6.3_x86_64.deb
+
+rm vagrant_1.6.3_x86_64.deb
+
 vagrant plugin install vagrant-vbguest
 
 rm -rf fbg_tmp
