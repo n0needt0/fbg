@@ -60,8 +60,8 @@ cp fbg_tmp/appliance/config/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
 mkdir -p /var/www
 cp -r fbg_tmp/vbox /var/www
 
-sed -i 's/\$username = \x27vbox\x27/\$username = "$username"/g' /var/www/vbox/config.php
-sed -i 's/\$password = \x27pass\x27/\$password = "$password"/g' /var/www/vbox/config.php
+sed -i 's/\$username = \x27vbox\x27/\$username = \"$username\"/g' /var/www/vbox/config.php
+sed -i 's/\$password = \x27pass\x27/\$password = \"$password\"/g' /var/www/vbox/config.php
 
 chown -R www-data:www-data /var/www/vbox
 
@@ -90,6 +90,7 @@ done
 /etc/init.d/php5-fpm restart
 /etc/init.d/nginx restart
 /etc/init.d/ganglia-monitor restart
+/etc/init.d/vboxweb-service start
 
 wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_x86_64.deb
 
