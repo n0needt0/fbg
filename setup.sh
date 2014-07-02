@@ -13,8 +13,8 @@ fi
 
 cd /tmp
 
-apt-get update
-apt-get upgrade
+apt-get update -y
+apt-get upgrade -y
 
 if [ $(id -u) -eq 0 ]; then
     
