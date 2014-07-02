@@ -3,7 +3,7 @@
     
     read -p "Running this script will DESTROY existing appliances!!! Continue Yes/No: " yes
     
-    if[ "$yes" != "Yes" ]; 
+    if [[ "$yes" != "Yes" ]]; 
     then
         echo "Bye for now..."
         exit 1;
