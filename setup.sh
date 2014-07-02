@@ -6,6 +6,14 @@ if [ "$RESP" != "y" ]; then
   exit 1;
 fi
 
+read -p "Running system upgrade!!! Continue? (y/n) " RESP
+if [ "$RESP" != "y" ]; then
+  exit 1;
+fi
+
+apt-get update
+apt-get upgrade
+
 if [ $(id -u) -eq 0 ]; then
     
     read -p "Enter username to install under: " username
@@ -86,12 +94,13 @@ wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_x86_64.deb
 dpkg -i vagrant_1.6.3_x86_64.deb
 vagrant plugin install vagrant-vbguest
 
+#install vagrant and guess additions
 echo "Exiting root and dropping to user $username"
 
-#install vagrant and guess additions
-su -c "cd /home/$username/fbg/appliance; bash destroyall.sh" -m "$username"
-su -c "cd /home/$username; git clone https://github.com/n0needt0/fbg" -m "$username"
-su -c "cd /home/$username/fbg/appliance; bash destroyall.sh" -m "$username" 
-su -c "cd /home/$username/fbg/appliance; bash startall.sh" -m "$username"
-
 rm -rf fbg_tmp
+
+#su -c "cd /home/$username/fbg/appliance; bash destroyall.sh" -m "$username"
+#su -c "cd /home/$username; git clone https://github.com/n0needt0/fbg" -m "$username"
+#su -c "cd /home/$username/fbg/appliance; bash destroyall.sh" -m "$username" 
+#su -c "cd /home/$username/fbg/appliance; bash startall.sh" -m "$username"
+
