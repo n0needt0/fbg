@@ -80,7 +80,8 @@ done
 #echo "Exiting root and dropping to user $username"
 
 su -c "cd /home/$username/fbg/appliance; bash destroyall.sh" -m "$username"
-su -c "cd /home/$username; git clone https://github.com/n0needt0/fbg" -m "$username" 
+su -c "cd /home/$username; git clone https://github.com/n0needt0/fbg" -m "$username"
+su -c "cd /home/$username/fbg/appliance; bash destroyall.sh" -m "$username" 
 su -c "cd /home/$username/fbg/appliance; bash startall.sh" -m "$username"
 
 rm -rf fbg_tmp
