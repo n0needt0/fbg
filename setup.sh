@@ -1,14 +1,10 @@
 #this is main set up file
 #it will create apliance
     
-    read -p "Running this script will DESTROY existing appliances!!! Continue Yes/No: " yes
-    
-    if [[ "$yes" != "Yes" ]]; 
-    then
-        echo "Bye for now..."
-        exit 1;
-    fi
-    
+read -p "Running this script will DESTROY existing appliances!!! Continue? (y/n) " RESP
+if [ "$RESP" != "y" ]; then
+  exit 1;
+fi
 
 if [ $(id -u) -eq 0 ]; then
     
