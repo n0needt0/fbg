@@ -62,8 +62,8 @@ cp fbg_tmp/appliance/config/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
 mkdir -p /var/www
 cp -r fbg_tmp/vbox /var/www
 
-sed -i 's/\$username = \x27vbox\x27/\$username = \"$username\"/g' /var/www/vbox/config.php
-sed -i 's/\$password = \x27pass\x27/\$password = \"$password\"/g' /var/www/vbox/config.php
+sed -i "s/\$username = \x27vbox\x27/\$username = \'$username\'/g" /var/www/vbox/config.php
+sed -i "s/\$password = \x27pass\x27/\$password = \'$password\'/g" /var/www/vbox/config.php
 
 grep -q "VBOXWEB_USER=$username" /etc/apt/sources.list || echo "VBOXWEB_USER=$username" >> /etc/default/virtualbox
 
