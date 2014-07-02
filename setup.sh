@@ -23,12 +23,14 @@ adduser $username vboxusers
 grep -q 'deb http://download.virtualbox.org/virtualbox/debian precise contrib' /etc/apt/sources.list || echo 'deb http://download.virtualbox.org/virtualbox/debian precise contrib' >>  /etc/apt/sources.list
 
 wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
-
 apt-get update
-#apt-get install linux-headers-$(uname -r) build-essential virtualbox-4.2 dkms -y
-#cd /tmp
-#wget http://download.virtualbox.org/virtualbox/4.1.18/Oracle_VM_VirtualBox_Extension_Pack-4.1.18-78361.vbox-extpack
-#VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-4.1.18-78361.vbox-extpack
+
+#install virtual box here
+apt-get install linux-headers-$(uname -r) build-essential virtualbox-4.2 dkms -y
+
+wget http://download.virtualbox.org/virtualbox/4.2.24/Oracle_VM_VirtualBox_Extension_Pack-4.2.24-92790.vbox-extpack
+VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-4.2.24-92790.vbox-extpack
+rm Oracle_VM_VirtualBox_Extension_Pack-4.2.24-92790.vbox-extpack
 
 apt-get install python-software-properties -y
 apt-get install ganglia-monitor nagios-nrpe-server curl -y
@@ -44,9 +46,8 @@ cp fbg_tmp/appliance/config/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
 mkdir -p /var/www
 cp -r fbg_tmp/vbox /var/www
 
-sed -i 's/\$username ='\''vbox'\''/\$username = "$username"/g' /var/www/vbox/config.php
-sed -i 's/\$password = \'pass\'/var \$password = "$password"/g' /var/www/vbox/config.php
-
+sed -i 's/\$username = \x27vbox\x27/\$username = "$username"/g' /var/www/vbox/config.php
+sed -i 's/\$password = \x27pass\x27/\$password = "$password"/g' /var/www/vbox/config.php
 
 chown -R www-data:www-data /var/www/vbox
 
