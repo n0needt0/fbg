@@ -29,6 +29,7 @@ grep -q 'deb http://download.virtualbox.org/virtualbox/debian precise contrib' /
 
 wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
 apt-get update
+apt-get upgrade
 
 #install virtual box here
 apt-get install linux-headers-$(uname -r) build-essential virtualbox-4.2 dkms -y
