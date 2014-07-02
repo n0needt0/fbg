@@ -65,7 +65,11 @@ cp -r fbg_tmp/vbox /var/www
 sed -i "s/\$username = \x27vbox\x27/\$username = \'$username\'/g" /var/www/vbox/config.php
 sed -i "s/\$password = \x27pass\x27/\$password = \'$password\'/g" /var/www/vbox/config.php
 
-grep -q "VBOXWEB_USER=$username" /etc/apt/sources.list || echo "VBOXWEB_USER=$username" >> /etc/default/virtualbox
+rm /etc/default/virtualbox
+echo "LOAD_VBOXDRV_MODULE=1" >> /etc/default/virtualbox
+echo "VBOXWEB_USER=$username" >> /etc/default/virtualbox
+echo "SHUTDOWN_USERS=\"\"" >> /etc/default/virtualbox
+echo "SHUTDOWN=poweroff" >> /etc/default/virtualbox
 
 chown -R www-data:www-data /var/www/vbox
 
