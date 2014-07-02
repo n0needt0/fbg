@@ -43,12 +43,6 @@ apt-get install spawn-fcgi fcgiwrap -y
 apt-get install nginx php5-fpm php5-mysql php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-ps php5-pspell php5-recode php-apc php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl -y
 sudo apt-get install git -y
 
-#install vagrant and guess additions
-wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_x86_64.deb
-dpkg vagrant_1.6.3_x86_64.deb -y
-
-vagrant plugin install vagrant-vbguest
-
 git clone https://github.com/n0needt0/fbg fbg_tmp
 
 cp fbg_tmp/etc/nginx/sites-enabled/proxy /etc/nginx/sites-enabled/proxy
@@ -89,6 +83,11 @@ done
 /etc/init.d/ganglia-monitor restart
 
 echo "Exiting root and dropping to user $username"
+
+#install vagrant and guess additions
+su -c "cd /home/$username; wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_x86_64.deb" -m "$username"
+su -c "cd /home/$username; dpkg vagrant_1.6.3_x86_64.deb -y" -m "$username"
+su -c "cd /home/$username; vagrant plugin install vagrant-vbguest" -m "$username"
 
 su -c "cd /home/$username/fbg/appliance; bash destroyall.sh" -m "$username"
 su -c "cd /home/$username; git clone https://github.com/n0needt0/fbg" -m "$username"
