@@ -29,8 +29,6 @@ else
     echo "Only root may add a user to the system"
     exit 2
 fi
-apt-get update -y
-apt-get upgrade -y
 
 cd /home/$username
 
@@ -98,8 +96,3 @@ dpkg -i vagrant_1.6.3_x86_64.deb
 vagrant plugin install vagrant-vbguest
 
 rm -rf fbg_tmp
-
-su -c "cd /home/$username; vagrant plugin install vagrant-vbguest" -m "$username"
-su -c "cd /home/$username; git clone https://github.com/n0needt0/fbg" -m "$username"
-su -c "cd /home/$username/fbg/appliance; bash destroyall.sh" -m "$username"
-su -c "cd /home/$username/fbg/appliance; bash startall.sh" -m "$username"
