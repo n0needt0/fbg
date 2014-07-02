@@ -82,13 +82,13 @@ done
 /etc/init.d/nginx restart
 /etc/init.d/ganglia-monitor restart
 
+wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_x86_64.deb
+dpkg -i vagrant_1.6.3_x86_64.deb
+vagrant plugin install vagrant-vbguest
+
 echo "Exiting root and dropping to user $username"
 
 #install vagrant and guess additions
-su -c "cd /home/$username; wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_x86_64.deb" -m "$username"
-su -c "cd /home/$username; dpkg -i vagrant_1.6.3_x86_64.deb -y" -m "$username"
-su -c "cd /home/$username; vagrant plugin install vagrant-vbguest" -m "$username"
-
 su -c "cd /home/$username/fbg/appliance; bash destroyall.sh" -m "$username"
 su -c "cd /home/$username; git clone https://github.com/n0needt0/fbg" -m "$username"
 su -c "cd /home/$username/fbg/appliance; bash destroyall.sh" -m "$username" 
