@@ -11,6 +11,8 @@ if [ "$RESP" != "y" ]; then
   exit 1;
 fi
 
+cd /tmp
+
 apt-get update
 apt-get upgrade
 
