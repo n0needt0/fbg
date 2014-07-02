@@ -57,11 +57,15 @@ git clone https://github.com/n0needt0/fbg fbg_tmp
 cp fbg_tmp/etc/nginx/sites-enabled/proxy /etc/nginx/sites-enabled/proxy
 cp fbg_tmp/appliance/config/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
 
+#configure vbox service
+
 mkdir -p /var/www
 cp -r fbg_tmp/vbox /var/www
 
 sed -i 's/\$username = \x27vbox\x27/\$username = \"$username\"/g' /var/www/vbox/config.php
 sed -i 's/\$password = \x27pass\x27/\$password = \"$password\"/g' /var/www/vbox/config.php
+
+grep -q "VBOXWEB_USER=$username" /etc/apt/sources.list || echo "VBOXWEB_USER=$username" >> /etc/default/virtualbox
 
 chown -R www-data:www-data /var/www/vbox
 
@@ -90,7 +94,7 @@ done
 /etc/init.d/php5-fpm restart
 /etc/init.d/nginx restart
 /etc/init.d/ganglia-monitor restart
-/etc/init.d/vboxweb-service start
+/etc/init.d/vboxweb-service restart
 
 wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_x86_64.deb
 
