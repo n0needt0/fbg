@@ -98,8 +98,6 @@ vagrant plugin install vagrant-vbguest
 
 rm -rf fbg_tmp
 
-vagrant plugin install vagrant-vbguest
-
 su -c "cd /home/$username; vagrant plugin install vagrant-vbguest" -m "$username"
 su -c "cd /home/$username; git clone https://github.com/n0needt0/fbg" -m "$username"
 su -c "cd /home/$username/fbg/appliance; bash destroyall.sh" -m "$username"
