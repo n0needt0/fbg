@@ -11,6 +11,8 @@ if [ "$RESP" != "y" ]; then
   exit 1;
 fi
 
+read -p "Enter cluster side (1/2): " clusterside
+
 cd /tmp
 
 if [ $(id -u) -eq 0 ]; then
