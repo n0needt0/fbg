@@ -120,8 +120,6 @@ if [ "$RESP" != "y" ]; then
   exit 1;
 fi
 
-cd /tmp
-
 if [ $(id -u) -eq 0 ]; then
     
     read -p "Enter username to install under: " username
@@ -161,15 +159,13 @@ apt-get install spawn-fcgi fcgiwrap -y
 apt-get install nginx php5-fpm php5-mysql php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-ps php5-pspell php5-recode php-apc php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl -y
 sudo apt-get install git -y
 
-git clone https://github.com/n0needt0/fbg fbg_tmp
-
-cp fbg_tmp/config/etc/nginx/sites-enabled/proxy /etc/nginx/sites-enabled/proxy
-cp fbg_tmp/config/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
+cp config/etc/nginx/sites-enabled/proxy /etc/nginx/sites-enabled/proxy
+cp config/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
 
 #configure vbox service
 
 mkdir -p /var/www
-cp -r fbg_tmp/vbox /var/www
+cp -r vbox /var/www
 
 sed -i "s/\$username = \x27vbox\x27/\$username = \'$username\'/g" /var/www/vbox/config.php
 sed -i "s/\$password = \x27pass\x27/\$password = \'$password\'/g" /var/www/vbox/config.php
@@ -190,7 +186,7 @@ sed -i 's/;listen.mode = 0660/listen.mode = 0660/g' /etc/php5/fpm/pool.d/www.con
 
 #updating host file skipping empties and duplicates
  
-cat fbg_tmp/appliance/config/hosts | while read line
+cat config/common/hosts | while read line
 do
     if [ ! -z "$line" ]; then
     #skip empty
@@ -217,4 +213,4 @@ rm vagrant_1.6.3_x86_64.deb
 
 vagrant plugin install vagrant-vbguest
 
-rm -rf fbg_tmp
+

@@ -16,6 +16,10 @@ cd fbginstall && bash setup.sh
 
 #and then 
 
+cd ..
+
+rm -rf fbginstall
+
 switch to specified user (in this case fbguser) and his home directory
 
 like so
