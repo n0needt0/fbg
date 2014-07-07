@@ -220,7 +220,8 @@ mkdir /home/$username/fbg
 mv appliance /home/$username/fbg
 mv config /home/$username/fbg
 mv backend /home/$username/fbg
-chown -R $username:$username /home/$username/fbg
+
+chown -R $username:$username /home/$username
 
 rm -rf $DIR
 
