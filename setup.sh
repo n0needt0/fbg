@@ -223,7 +223,5 @@ mv backend /home/$username/fbg
 
 chown -R $username:$username /home/$username
 
-rm -rf $DIR
-
 echo "run the following command as user: $username"
 echo "su $username && cd /home/$username/fbg/appliance/ && bash startall.sh"
