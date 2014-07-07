@@ -11,7 +11,11 @@ if [ "$RESP" != "y" ]; then
   exit 1;
 fi
 
-read -p "Enter cluster side (1/2): " clusterside
+read -p "Is it (C)luster or (S)tandalone installation? " CLUSTER
+
+if [ "$CLUSTER" != "C" ]; then
+  read -p "What side of cluster is it (L)eft or (R)right? " CLUSTERSIDE
+fi 
 
 cd /tmp
 

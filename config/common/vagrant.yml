@@ -1,0 +1,21 @@
+#Vagrant setup
+ eth: eth0
+memory:512
+es1_name:es1b
+es1_ip:10.1.1.111
+es2_name:es2b
+es2_ip:10.1.1.112
+es3_name:es3b
+es3_ip:10.1.1.113
+gfs1_name:gfs1b
+gfs1_ip:10.1.1.121
+gfs2_name:gfs2b
+gfs2_ip:10.1.1.122
+gfs3_name:gfs3b
+gfs3_ip:10.1.1.123
+gfs1_name:gfs1b
+gfs1_ip:10.1.1.121
+api_name:apib
+api_ip:10.1.1.131
+monitor_name:monitorb
+monitor_ip:10.1.1.141

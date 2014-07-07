@@ -3,23 +3,18 @@
 # Get root up in here
 sudo su
 
-apt-get update
-apt-get install python-software-properties
-add-apt-repository ppa:semiosis/ubuntu-glusterfs-3.4
-apt-get update
-apt-get install glusterfs-server glusterfs-client ganglia-monitor nagios-nrpe-server curl -y
-
-cat /var/config/hosts >> /etc/hosts
+#run install script
+source /var/config/bash/gfs.sh
 
 #setup config here
-#sed -i 's/#cluster.name: elasticsearch/cluster.name: fileroom/g' /etc/elasticsearch/elasticsearch.yml 
-gluster peer probe gfs1
 
-gluster peer probe gfs2
+gluster peer probe gfs1a
+gluster peer probe gfs2a
+gluster peer probe gfs3a
+gluster peer probe gfs1b
+gluster peer probe gfs2b
+gluster peer probe gfs3b
 
-gluster volume create gluster-volume replica 3 transport tcp gfs1:/gluster-storage gfs2:/gluster-storage gfs3:/gluster-storage
+gluster volume create gluster-volume replica 3 transport tcp gfs1a:/gluster-storage gfs2a:/gluster-storage gfs3a:/gluster-storage gfs1b:/gluster-storage gfs2b:/gluster-storage gfs3b:/gluster-storage
 
 gluster volume start gluster-volume
-
-cp /var/config/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
-/etc/init.d/ganglia-monitor restart

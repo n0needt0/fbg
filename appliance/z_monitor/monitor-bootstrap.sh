@@ -17,8 +17,8 @@ apt-get install nginx php5-fpm php5-mysql php5-curl php5-gd php5-intl php-pear p
 apt-get remove apache2 -y
 
 #fixup hosts
-sed -i 's/localhost/monitor/g' /etc/hosts
-cat /var/config/hosts >> /etc/hosts
+
+cat /var/config/common/hosts >> /etc/hosts
 
 #clean nginx
 rm /etc/nginx/sites-enabled/*
