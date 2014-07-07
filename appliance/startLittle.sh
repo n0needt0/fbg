@@ -1,5 +1,4 @@
 ## start only the VMs that we want
-##do
 ## start z_api
 cd z_api
 echo "Installing z_api virtual machine..."
@@ -25,4 +24,3 @@ sleep 2
 vagrant up
 cd ..
 ## finish
-done
