@@ -1,5 +1,5 @@
 ## start only the VMs that we want
-do
+##do
 ## start z_api
 cd z_api
 echo "Installing z_api virtual machine..."
