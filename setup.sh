@@ -1,21 +1,124 @@
 #this is main set up file
 #it will create apliance
-    
-read -p "Running this script will DESTROY existing appliances!!! Continue? (y/n) " RESP
-if [ "$RESP" != "y" ]; then
-  exit 1;
-fi
+
+source ./config.cfg
+
+#generate hosts file
+echo "" > config/common/hosts
+
+echo "$NODE_A        nodea" >> config/common/hosts
+echo "$NODE_B        nodeb" >> config/common/hosts
+
+echo "$ES1_A        es1a" >> config/common/hosts
+echo "$ES1_B        es1b" >> config/common/hosts
+
+echo "$ES2_A        es2a" >> config/common/hosts
+echo "$ES2_B        es2b" >> config/common/hosts
+
+echo "$ES3_A        es3a" >> config/common/hosts
+echo "$ES3_B        es3b" >> config/common/hosts
+
+echo "$GFS1_A        gfs1a" >> config/common/hosts
+echo "$GFS1_B        gfs1b" >> config/common/hosts
+
+echo "$GFS2_A        gfs2a" >> config/common/hosts
+echo "$GFS2_B        gfs2b" >> config/common/hosts
+
+echo "$GFS3_A        gfs3a" >> config/common/hosts
+echo "$GFS3_B        gfs3b" >> config/common/hosts
+
+echo "$API_A        apia" >> config/common/hosts
+echo "$API_B        apib" >> config/common/hosts
+
+echo "$MONITOR_A        monitora" >> config/common/hosts
+echo "$MONITOR_B        monitorb" >> config/common/hosts
+
+#generate vagrant configs
+echo "#Vagrant setup" > config/common/vagrant.yml
+echo "#Vagrant setup" > config/common/vagrant.sh
 
 read -p "Running system upgrade!!! Continue? (y/n) " RESP
 if [ "$RESP" != "y" ]; then
   exit 1;
 fi
 
-read -p "Is it (C)luster or (S)tandalone installation? " CLUSTER
+read -p "What node are you installing (A/B)? " CLUSTERSIDE
+ 
+#generate HOST CONFIG files
 
-if [ "$CLUSTER" != "C" ]; then
-  read -p "What side of cluster is it (L)eft or (R)right? " CLUSTERSIDE
-fi 
+if [ "$CLUSTERSIDE" == "A" ]; then
+  echo "Generating Cluster node A..."
+  
+  echo "$ES1_A        es0" >> config/common/hosts
+  echo "$API_A        api0" >> config/common/hosts
+  echo "$MONITOR_A        monitor0" >> config/common/hosts
+  
+  echo " eth: $ETH_A" >> config/common/vagrant.yml
+  echo " memory: $APPLIANCE_MEMORY_A" >> config/common/vagrant.yml
+  echo " es1_name: es1a" >> config/common/vagrant.yml
+  echo " es1_ip: $ES1_A" >> config/common/vagrant.yml
+  echo " es2_name: es2a" >> config/common/vagrant.yml
+  echo " es2_ip: $ES2_A" >> config/common/vagrant.yml
+  echo " es3_name: es3a" >> config/common/vagrant.yml
+  echo " es3_ip: $ES3_A" >> config/common/vagrant.yml
+  echo " gfs1_name: gfs1a" >> config/common/vagrant.yml
+  echo " gfs1_ip: $GFS1_A" >> config/common/vagrant.yml
+  echo " gfs2_name: gfs2a" >> config/common/vagrant.yml
+  echo " gfs2_ip: $GFS2_A" >> config/common/vagrant.yml
+  echo " gfs3_name: gfs3a" >> config/common/vagrant.yml
+  echo " gfs3_ip: $GFS3_A" >> config/common/vagrant.yml
+  echo " api_name: apia" >> config/common/vagrant.yml
+  echo " api_ip: $API_A" >> config/common/vagrant.yml
+  echo " monitor_name: monitora" >> config/common/vagrant.yml
+  echo " monitor_ip: $MONITOR_A" >> config/common/vagrant.yml
+  
+elif [ "$CLUSTERSIDE" == "B" ]; then
+  echo "Generating Cluster node B..."
+  echo " eth: $ETH_B" >> config/common/vagrant.yml
+  echo "memory:$APPLIANCE_MEMORY_B" >> config/common/vagrant.yml
+  echo "es1_name:es1b" >> config/common/vagrant.yml
+  echo "es1_ip:$ES1_B" >> config/common/vagrant.yml
+  echo "es2_name:es2b" >> config/common/vagrant.yml
+  echo "es2_ip:$ES2_B" >> config/common/vagrant.yml
+  echo "es3_name:es3b" >> config/common/vagrant.yml
+  echo "es3_ip:$ES3_B" >> config/common/vagrant.yml
+  echo "gfs1_name:gfs1b" >> config/common/vagrant.yml
+  echo "gfs1_ip:$GFS1_B" >> config/common/vagrant.yml
+  echo "gfs2_name:gfs2b" >> config/common/vagrant.yml
+  echo "gfs2_ip:$GFS2_B" >> config/common/vagrant.yml
+  echo "gfs3_name:gfs3b" >> config/common/vagrant.yml
+  echo "gfs3_ip:$GFS3_B" >> config/common/vagrant.yml
+  echo "gfs1_name:gfs1b" >> config/common/vagrant.yml
+  echo "gfs1_ip:$GFS1_B" >> config/common/vagrant.yml
+  echo "api_name:apib" >> config/common/vagrant.yml
+  echo "api_ip:$API_B" >> config/common/vagrant.yml
+  echo "monitor_name:monitorb" >> config/common/vagrant.yml
+  echo "monitor_ip:$MONITOR_B" >> config/common/vagrant.yml
+  
+  echo "$ES1_B        es1" >> config/common/hosts
+  echo "$ES2_B        es2" >> config/common/hosts
+  echo "$ES3_B        es3" >> config/common/hosts
+  echo "$GFS1_B        gfs1" >> config/common/hosts
+  echo "$GFS2_B        gfs2" >> config/common/hosts
+  echo "$GFS3_B        gfs3" >> config/common/hosts
+  echo "$API_B        api" >> config/common/hosts
+  echo "$MONITOR_B        monitor" >> config/common/hosts
+  
+else
+    echo "Unknown node. Exiting....";
+    exit 0;  
+fi
+
+sed -e 's/:[^:\/\/]/="/g;s/$/"/g;s/ *=/=/g' config/common/vagrant.yml > config/common/vagrant.sh
+
+echo "Continued with generated cluster addresses, please check..."
+cat config/common/vagrant.yml
+cat config/common/hosts
+
+read -p "Continue? (y/n) " RESP
+if [ "$RESP" != "y" ]; then
+  exit 1;
+fi
 
 cd /tmp
 
@@ -60,8 +163,8 @@ sudo apt-get install git -y
 
 git clone https://github.com/n0needt0/fbg fbg_tmp
 
-cp fbg_tmp/etc/nginx/sites-enabled/proxy /etc/nginx/sites-enabled/proxy
-cp fbg_tmp/appliance/config/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
+cp fbg_tmp/config/etc/nginx/sites-enabled/proxy /etc/nginx/sites-enabled/proxy
+cp fbg_tmp/config/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
 
 #configure vbox service
 
