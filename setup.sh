@@ -137,8 +137,6 @@ else
     exit 2
 fi
 
-cd /home/$username
-
 adduser $username vboxusers
 
 grep -q 'deb http://download.virtualbox.org/virtualbox/debian precise contrib' /etc/apt/sources.list || echo 'deb http://download.virtualbox.org/virtualbox/debian precise contrib' >>  /etc/apt/sources.list
@@ -217,12 +215,14 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 #change properties to appliance
 
-mkdir -p /home/$username/fbg
+mkdir /home/$username/fbg
+
 mv appliance /home/$username/fbg
 mv config /home/$username/fbg
 mv backend /home/$username/fbg
-chown -R $username:$username /home/$username/fbg/appliance
-chown -R $username:$username /home/$username/fbg/fbg
-chown -R $username:$username /home/$username/fbg/config
+chown -R $username:$username /home/$username/fbg
 
 rm -rf $DIR
+
+echo "run the following command as user: $username"
+echo "su $username && cd /home/$username/fbg/appliance/ && bash startall.sh"

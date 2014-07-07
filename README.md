@@ -3,10 +3,12 @@
 #Run as root on both nodes A and B
 
 apt-get update -y
+
 apt-get install git
+
 apt-get upgrade -y
 
-git clone https://github.com/n0needt0/fbg /fbginstall 
+git clone https://github.com/n0needt0/fbg fbginstall 
 
 edit config.cfg file per your network requirements, basically you want free private network block
 
