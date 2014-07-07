@@ -224,3 +224,5 @@ mv backend /home/$username/fbg
 chown -R $username:$username /home/$username/fbg/appliance
 chown -R $username:$username /home/$username/fbg/fbg
 chown -R $username:$username /home/$username/fbg/config
+
+rm -rf $DIR
