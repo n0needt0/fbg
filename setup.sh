@@ -213,4 +213,14 @@ rm vagrant_1.6.3_x86_64.deb
 
 vagrant plugin install vagrant-vbguest
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+#change properties to appliance
+
+mkdir -p /home/$username/fbg
+mv appliance /home/$username/fbg
+mv config /home/$username/fbg
+mv backend /home/$username/fbg
+chown -R $username:$username /home/$username/fbg/appliance
+chown -R $username:$username /home/$username/fbg/fbg
+chown -R $username:$username /home/$username/fbg/config
