@@ -219,8 +219,7 @@ chown -R $username:$username /home/$username
 
 su $username
 
-
-cd /home/$username/appliance
+cd /home/$username/fbg/appliance
 
 #turn on vagrants
 for D in *; do
