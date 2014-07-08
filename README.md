@@ -36,21 +36,6 @@ vagrant plugin install vagrant-vbguest
 
 #clone the repo
 
-git clone https://github.com/n0needt0/fbg && cd fbg/appliance && bash startall.sh
+cd fbg/appliance 
 
-#REINSTALL Instructions
-
-su fbguser
-
-#clean this mess up
-
-cd /home/fbguser/fbg/appliance && bash destroyall.sh
-
-rm -rf /home/fbguser/fbg
-
-rm -rf /home/fbuser/.vagrant*
-
-#clone the repo
-
-git clone https://github.com/n0needt0/fbg && cd fbg/appliance && bash startall.sh
-
+bash startall.sh
