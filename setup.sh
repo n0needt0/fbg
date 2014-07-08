@@ -215,7 +215,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 #change properties to appliance
 
-mkdir /home/$username/fbg
+mkdir -p /home/$username/fbg
 
 mv appliance /home/$username/fbg
 mv config /home/$username/fbg
