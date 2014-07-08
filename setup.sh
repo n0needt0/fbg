@@ -187,7 +187,6 @@ sed -i 's/;listen.group = www-data/listen.group = www-data/g' /etc/php5/fpm/pool
 sed -i 's/;listen.mode = 0660/listen.mode = 0660/g' /etc/php5/fpm/pool.d/www.conf
 
 #updating host file skipping empties and duplicates
- echo "#FBGHOSTS" >> /etc/hosts
  
 cat config/common/hosts | while read line
 do
@@ -202,8 +201,6 @@ do
     rm  $FILE $FILE2;
     fi
 done
-
-echo "#FBGHOSTS" >> /etc/hosts
 
 /etc/init.d/php5-fpm restart
 /etc/init.d/nginx restart
