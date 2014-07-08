@@ -221,9 +221,9 @@ rm -rf /home/$username/fbg
 
 mkdir -p /home/$username/fbg
 
-mv appliance /home/$username/fbg
-mv config /home/$username/fbg
-mv backend /home/$username/fbg
+cp -r appliance /home/$username/fbg
+cp -r config /home/$username/fbg
+mv -r backend /home/$username/fbg
 
 chown -R $username:$username /home/$username
 
