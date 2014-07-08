@@ -49,10 +49,6 @@ read -p "What node are you installing (A/B)? " CLUSTERSIDE
 if [ "$CLUSTERSIDE" == "A" ]; then
   echo "Generating Cluster node A..."
   
-  echo "$ES1_A        es0" >> config/common/hosts
-  echo "$API_A        api0" >> config/common/hosts
-  echo "$MONITOR_A        monitor0" >> config/common/hosts
-  
   echo " eth: $ETH_A" >> config/common/vagrant.yml
   echo " memory: $APPLIANCE_MEMORY_A" >> config/common/vagrant.yml
   echo " es1_name: es1a" >> config/common/vagrant.yml
@@ -72,17 +68,18 @@ if [ "$CLUSTERSIDE" == "A" ]; then
   echo " monitor_name: monitora" >> config/common/vagrant.yml
   echo " monitor_ip: $MONITOR_A" >> config/common/vagrant.yml
   
-  echo "$ES1_B        es1" >> config/common/hosts
-  echo "$ES2_B        es2" >> config/common/hosts
-  echo "$ES3_B        es3" >> config/common/hosts
-  echo "$GFS1_B        gfs1" >> config/common/hosts
-  echo "$GFS2_B        gfs2" >> config/common/hosts
-  echo "$GFS3_B        gfs3" >> config/common/hosts
-  echo "$API_B        api" >> config/common/hosts
-  echo "$MONITOR_B        monitor" >> config/common/hosts
+  echo "$ES1_A        es1" >> config/common/hosts
+  echo "$ES2_A        es2" >> config/common/hosts
+  echo "$ES3_A        es3" >> config/common/hosts
+  echo "$GFS1_A        gfs1" >> config/common/hosts
+  echo "$GFS2_A        gfs2" >> config/common/hosts
+  echo "$GFS3_A        gfs3" >> config/common/hosts
+  echo "$API_A        api" >> config/common/hosts
+  echo "$MONITOR_A        monitor" >> config/common/hosts
   
 elif [ "$CLUSTERSIDE" == "B" ]; then
   echo "Generating Cluster node B..."
+  
   echo " eth: $ETH_B" >> config/common/vagrant.yml
   echo " memory: $APPLIANCE_MEMORY_B" >> config/common/vagrant.yml
   echo " es1_name: es1b" >> config/common/vagrant.yml
