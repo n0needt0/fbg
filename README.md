@@ -24,10 +24,8 @@ like so
 
 su fbguser
 
-cd /home/fbguser
+cd /home/fbguser/fbg/appliance 
 
 vagrant plugin install vagrant-vbguest
-
-cd fbg/appliance 
 
 bash startall.sh
