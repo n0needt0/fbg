@@ -67,16 +67,7 @@ if [ "$CLUSTERSIDE" == "A" ]; then
   echo " api_ip: $API_A" >> config/common/vagrant.yml
   echo " monitor_name: monitora" >> config/common/vagrant.yml
   echo " monitor_ip: $MONITOR_A" >> config/common/vagrant.yml
-  
-  echo "$ES1_A        es1" >> config/common/hosts
-  echo "$ES2_A        es2" >> config/common/hosts
-  echo "$ES3_A        es3" >> config/common/hosts
-  echo "$GFS1_A        gfs1" >> config/common/hosts
-  echo "$GFS2_A        gfs2" >> config/common/hosts
-  echo "$GFS3_A        gfs3" >> config/common/hosts
-  echo "$API_A        api" >> config/common/hosts
-  echo "$MONITOR_A        monitor" >> config/common/hosts
-  
+    
 elif [ "$CLUSTERSIDE" == "B" ]; then
   echo "Generating Cluster node B..."
   
@@ -99,20 +90,21 @@ elif [ "$CLUSTERSIDE" == "B" ]; then
   echo " monitor_name: monitorb" >> config/common/vagrant.yml
   echo " monitor_ip: $MONITOR_B" >> config/common/vagrant.yml
   
-  echo "$ES1_B        es1" >> config/common/hosts
-  echo "$ES2_B        es2" >> config/common/hosts
-  echo "$ES3_B        es3" >> config/common/hosts
-  echo "$GFS1_B        gfs1" >> config/common/hosts
-  echo "$GFS2_B        gfs2" >> config/common/hosts
-  echo "$GFS3_B        gfs3" >> config/common/hosts
-  echo "$API_B        api" >> config/common/hosts
-  echo "$MONITOR_B        monitor" >> config/common/hosts
-  
 else
     echo "Unknown node. Exiting....";
     exit 0;  
 fi
-
+  #add interal ips
+  
+  echo "10.10.10.11        es1" >> config/common/hosts
+  echo "10.10.10.12        es2" >> config/common/hosts
+  echo "10.10.10.13        es3" >> config/common/hosts
+  echo "10.10.10.21        gfs1" >> config/common/hosts
+  echo "10.10.10.22        gfs2" >> config/common/hosts
+  echo "10.10.10.23        gfs3" >> config/common/hosts
+  echo "10.10.10.31       api" >> config/common/hosts
+  echo "10.10.10.41       monitor" >> config/common/hosts
+  
 sed -e 's/:[^:\/\/]/="/g;s/$/"/g;s/ *=/=/g' config/common/vagrant.yml > config/common/vagrant.sh
 
 echo "Continued with generated cluster addresses, please check..."
@@ -216,15 +208,17 @@ rm vagrant_1.6.3_x86_64.deb
 vagrant plugin install vagrant-vbguest
 
 #change properties to appliance
+#rm -rf /home/$username/fbg
+#mkdir -p /home/$username/fbg
+#cp -r appliance /home/$username/fbg
+#cp -r config /home/$username/fbg
+#cp -r backend /home/$username/fbg
+#chown -R $username:$username /home/$username
 
-rm -rf /home/$username/fbg
+#beam me up Scotty
 
-mkdir -p /home/$username/fbg
+cd appliance
 
-cp -r appliance /home/$username/fbg
-cp -r config /home/$username/fbg
-cp -r backend /home/$username/fbg
-
-chown -R $username:$username /home/$username
+bash startall.sh
 
 /etc/init.d/vboxweb-service restart
