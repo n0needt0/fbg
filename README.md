@@ -28,4 +28,4 @@ cd /home/fbguser/fbg/appliance
 
 vagrant plugin install vagrant-vbguest
 
-bash startall.sh
+bash initall.sh
