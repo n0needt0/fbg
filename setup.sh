@@ -223,7 +223,7 @@ mkdir -p /home/$username/fbg
 
 cp -r appliance /home/$username/fbg
 cp -r config /home/$username/fbg
-mv -r backend /home/$username/fbg
+cp -r backend /home/$username/fbg
 
 chown -R $username:$username /home/$username
 
