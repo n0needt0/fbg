@@ -75,25 +75,23 @@ if [ "$CLUSTERSIDE" == "A" ]; then
 elif [ "$CLUSTERSIDE" == "B" ]; then
   echo "Generating Cluster node B..."
   echo " eth: $ETH_B" >> config/common/vagrant.yml
-  echo "memory:$APPLIANCE_MEMORY_B" >> config/common/vagrant.yml
-  echo "es1_name:es1b" >> config/common/vagrant.yml
-  echo "es1_ip:$ES1_B" >> config/common/vagrant.yml
-  echo "es2_name:es2b" >> config/common/vagrant.yml
-  echo "es2_ip:$ES2_B" >> config/common/vagrant.yml
-  echo "es3_name:es3b" >> config/common/vagrant.yml
-  echo "es3_ip:$ES3_B" >> config/common/vagrant.yml
-  echo "gfs1_name:gfs1b" >> config/common/vagrant.yml
-  echo "gfs1_ip:$GFS1_B" >> config/common/vagrant.yml
-  echo "gfs2_name:gfs2b" >> config/common/vagrant.yml
-  echo "gfs2_ip:$GFS2_B" >> config/common/vagrant.yml
-  echo "gfs3_name:gfs3b" >> config/common/vagrant.yml
-  echo "gfs3_ip:$GFS3_B" >> config/common/vagrant.yml
-  echo "gfs1_name:gfs1b" >> config/common/vagrant.yml
-  echo "gfs1_ip:$GFS1_B" >> config/common/vagrant.yml
-  echo "api_name:apib" >> config/common/vagrant.yml
-  echo "api_ip:$API_B" >> config/common/vagrant.yml
-  echo "monitor_name:monitorb" >> config/common/vagrant.yml
-  echo "monitor_ip:$MONITOR_B" >> config/common/vagrant.yml
+  echo " memory: $APPLIANCE_MEMORY_B" >> config/common/vagrant.yml
+  echo " es1_name: es1b" >> config/common/vagrant.yml
+  echo " es1_ip: $ES1_B" >> config/common/vagrant.yml
+  echo " es2_name: es2b" >> config/common/vagrant.yml
+  echo " es2_ip: $ES2_B" >> config/common/vagrant.yml
+  echo " es3_name: es3b" >> config/common/vagrant.yml
+  echo " es3_ip: $ES3_B" >> config/common/vagrant.yml
+  echo " gfs1_name: gfs1b" >> config/common/vagrant.yml
+  echo " gfs1_ip: $GFS1_B" >> config/common/vagrant.yml
+  echo " gfs2_name: gfs2b" >> config/common/vagrant.yml
+  echo " gfs2_ip:$ GFS2_B" >> config/common/vagrant.yml
+  echo " gfs3_name: gfs3b" >> config/common/vagrant.yml
+  echo " gfs3_ip: $GFS3_B" >> config/common/vagrant.yml
+  echo " api_name: apib" >> config/common/vagrant.yml
+  echo " api_ip: $API_B" >> config/common/vagrant.yml
+  echo " monitor_name: monitorb" >> config/common/vagrant.yml
+  echo " monitor_ip: $MONITOR_B" >> config/common/vagrant.yml
   
   echo "$ES1_B        es1" >> config/common/hosts
   echo "$ES2_B        es2" >> config/common/hosts
