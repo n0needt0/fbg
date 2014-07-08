@@ -219,6 +219,15 @@ vagrant plugin install vagrant-vbguest
 
 cd appliance
 
-bash startall.sh
+#turn on vagrants
+for D in *; do
+    if [[ -d "${D}" && -e "${D}/Vagrantfile" ]]; then
+        cd "${D}"
+        echo "Installing ${D} virtual machine..."
+        sleep 1
+        vagrant up
+        cd ..
+    fi
+done
 
 /etc/init.d/vboxweb-service restart
