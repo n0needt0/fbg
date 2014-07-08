@@ -18,10 +18,6 @@ cd fbginstall && bash setup.sh
 
 #and then 
 
-cd ..
-
-rm -rf fbginstall
-
 switch to specified user (in this case fbguser) and his home directory
 
 like so
@@ -30,11 +26,7 @@ su fbguser
 
 cd /home/fbguser
 
-#update vagrant plugins
-
 vagrant plugin install vagrant-vbguest
-
-#clone the repo
 
 cd fbg/appliance 
 
