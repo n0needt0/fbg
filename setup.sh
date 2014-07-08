@@ -208,16 +208,19 @@ rm vagrant_1.6.3_x86_64.deb
 vagrant plugin install vagrant-vbguest
 
 #change properties to appliance
-#rm -rf /home/$username/fbg
-#mkdir -p /home/$username/fbg
-#cp -r appliance /home/$username/fbg
-#cp -r config /home/$username/fbg
-#cp -r backend /home/$username/fbg
-#chown -R $username:$username /home/$username
+rm -rf /home/$username/fbg
+mkdir -p /home/$username/fbg
+cp -r appliance /home/$username/fbg
+cp -r config /home/$username/fbg
+cp -r backend /home/$username/fbg
+chown -R $username:$username /home/$username
 
 #beam me up Scotty
 
-cd appliance
+su $username
+
+
+cd /home/$username/appliance
 
 #turn on vagrants
 for D in *; do
@@ -230,4 +233,4 @@ for D in *; do
     fi
 done
 
-/etc/init.d/vboxweb-service restart
+#/etc/init.d/vboxweb-service restart
