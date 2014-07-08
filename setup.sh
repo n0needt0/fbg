@@ -118,7 +118,7 @@ fi
 
 if [ $(id -u) -eq 0 ]; then
     
-    read -p "Enter username to install under: " username
+    read -p "Enter username to use for VBox webservice access:" username
     read -s -p "Enter password : " password
     egrep "^$username" /etc/passwd >/dev/null
     if [ $? -eq 0 ]; then
