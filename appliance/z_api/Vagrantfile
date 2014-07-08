@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
         bx.vm.box_url = "http://files.vagrantup.com/precise64.box"
         bx.vm.provision :shell, :path => "api-bootstrap.sh"
         bx.vm.network "public_network", bridge: vconfig['eth'], ip: vconfig['api_ip']
-        #bx.vm.network :private_network, ip: "10.10.10.31"
+        bx.vm.network :private_network, ip: "10.10.10.31"
         bx.vm.hostname = vconfig['api_name']
         bx.vm.synced_folder "../../config", "/var/config",  owner: "root", group: "root"
         bx.vm.synced_folder "../../backend/code/var/api", "/var/www/api",  owner: "www-data", group: "www-data"

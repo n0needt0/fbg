@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
         bx.vm.box_url = "http://files.vagrantup.com/precise64.box"
         bx.vm.provision :shell, :path => "es-bootstrap-es2.sh"
         bx.vm.network "public_network", bridge: vconfig['eth'], ip: vconfig['es2_ip']
-        #bx.vm.network :private_network, ip: "10.10.10.12"
+        bx.vm.network :private_network, ip: "10.10.10.12"
         bx.vm.hostname = vconfig['es2_name']
 
         bx.vm.synced_folder "../../config", "/var/config",  owner: "root", group: "root"
