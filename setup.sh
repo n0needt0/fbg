@@ -85,7 +85,7 @@ elif [ "$CLUSTERSIDE" == "B" ]; then
   echo " gfs1_name: gfs1b" >> config/common/vagrant.yml
   echo " gfs1_ip: $GFS1_B" >> config/common/vagrant.yml
   echo " gfs2_name: gfs2b" >> config/common/vagrant.yml
-  echo " gfs2_ip:$ GFS2_B" >> config/common/vagrant.yml
+  echo " gfs2_ip: $GFS2_B" >> config/common/vagrant.yml
   echo " gfs3_name: gfs3b" >> config/common/vagrant.yml
   echo " gfs3_ip: $GFS3_B" >> config/common/vagrant.yml
   echo " api_name: apib" >> config/common/vagrant.yml
@@ -209,8 +209,6 @@ rm vagrant_1.6.3_x86_64.deb
 
 vagrant plugin install vagrant-vbguest
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
 #change properties to appliance
 
 rm -rf /home/$username/fbg
@@ -223,5 +221,4 @@ mv backend /home/$username/fbg
 
 chown -R $username:$username /home/$username
 
-echo "run the following command as user: $username"
-echo "su $username && cd /home/$username/fbg/appliance/ && bash startall.sh"
+/etc/init.d/vboxweb-service restart
