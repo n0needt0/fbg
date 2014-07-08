@@ -72,6 +72,15 @@ if [ "$CLUSTERSIDE" == "A" ]; then
   echo " monitor_name: monitora" >> config/common/vagrant.yml
   echo " monitor_ip: $MONITOR_A" >> config/common/vagrant.yml
   
+  echo "$ES1_B        es1" >> config/common/hosts
+  echo "$ES2_B        es2" >> config/common/hosts
+  echo "$ES3_B        es3" >> config/common/hosts
+  echo "$GFS1_B        gfs1" >> config/common/hosts
+  echo "$GFS2_B        gfs2" >> config/common/hosts
+  echo "$GFS3_B        gfs3" >> config/common/hosts
+  echo "$API_B        api" >> config/common/hosts
+  echo "$MONITOR_B        monitor" >> config/common/hosts
+  
 elif [ "$CLUSTERSIDE" == "B" ]; then
   echo "Generating Cluster node B..."
   echo " eth: $ETH_B" >> config/common/vagrant.yml
