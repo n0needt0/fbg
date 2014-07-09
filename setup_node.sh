@@ -12,21 +12,6 @@ echo "$NODE_B        nodeb" >> config/common/hosts
 echo "$ES1_A        es1a" >> config/common/hosts
 echo "$ES1_B        es1b" >> config/common/hosts
 
-echo "$ES2_A        es2a" >> config/common/hosts
-echo "$ES2_B        es2b" >> config/common/hosts
-
-echo "$ES3_A        es3a" >> config/common/hosts
-echo "$ES3_B        es3b" >> config/common/hosts
-
-echo "$GFS1_A        gfs1a" >> config/common/hosts
-echo "$GFS1_B        gfs1b" >> config/common/hosts
-
-echo "$GFS2_A        gfs2a" >> config/common/hosts
-echo "$GFS2_B        gfs2b" >> config/common/hosts
-
-echo "$GFS3_A        gfs3a" >> config/common/hosts
-echo "$GFS3_B        gfs3b" >> config/common/hosts
-
 echo "$API_A        apia" >> config/common/hosts
 echo "$API_B        apib" >> config/common/hosts
 
