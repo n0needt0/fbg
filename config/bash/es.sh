@@ -24,7 +24,7 @@ cd /usr/share/elasticsearch
 
 bin/plugin -i elasticsearch/marvel/latest
 
-echo "marvel.agent.exporter.es.hosts: [\"es1.a:9200\",\"es1.b:9200\",\"es2.a:9200\",\"es2.b:9200\",\"es3.a:9200\",\"es3.b:9200\"]" >> /etc/elasticsearch/elasticsearch.yml
+echo "marvel.agent.exporter.es.hosts: [\"es1.a:9200\",\"es1.b:9200\"]" >> /etc/elasticsearch/elasticsearch.yml
 
 /etc/init.d/elasticsearch restart
 

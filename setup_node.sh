@@ -53,16 +53,6 @@ if [ "$CLUSTERSIDE" == "A" ]; then
   echo " memory: $APPLIANCE_MEMORY_A" >> config/common/vagrant.yml
   echo " es1_name: es1a" >> config/common/vagrant.yml
   echo " es1_ip: $ES1_A" >> config/common/vagrant.yml
-  echo " es2_name: es2a" >> config/common/vagrant.yml
-  echo " es2_ip: $ES2_A" >> config/common/vagrant.yml
-  echo " es3_name: es3a" >> config/common/vagrant.yml
-  echo " es3_ip: $ES3_A" >> config/common/vagrant.yml
-  echo " gfs1_name: gfs1a" >> config/common/vagrant.yml
-  echo " gfs1_ip: $GFS1_A" >> config/common/vagrant.yml
-  echo " gfs2_name: gfs2a" >> config/common/vagrant.yml
-  echo " gfs2_ip: $GFS2_A" >> config/common/vagrant.yml
-  echo " gfs3_name: gfs3a" >> config/common/vagrant.yml
-  echo " gfs3_ip: $GFS3_A" >> config/common/vagrant.yml
   echo " api_name: apia" >> config/common/vagrant.yml
   echo " api_ip: $API_A" >> config/common/vagrant.yml
   echo " monitor_name: monitora" >> config/common/vagrant.yml
@@ -75,16 +65,6 @@ elif [ "$CLUSTERSIDE" == "B" ]; then
   echo " memory: $APPLIANCE_MEMORY_B" >> config/common/vagrant.yml
   echo " es1_name: es1b" >> config/common/vagrant.yml
   echo " es1_ip: $ES1_B" >> config/common/vagrant.yml
-  echo " es2_name: es2b" >> config/common/vagrant.yml
-  echo " es2_ip: $ES2_B" >> config/common/vagrant.yml
-  echo " es3_name: es3b" >> config/common/vagrant.yml
-  echo " es3_ip: $ES3_B" >> config/common/vagrant.yml
-  echo " gfs1_name: gfs1b" >> config/common/vagrant.yml
-  echo " gfs1_ip: $GFS1_B" >> config/common/vagrant.yml
-  echo " gfs2_name: gfs2b" >> config/common/vagrant.yml
-  echo " gfs2_ip: $GFS2_B" >> config/common/vagrant.yml
-  echo " gfs3_name: gfs3b" >> config/common/vagrant.yml
-  echo " gfs3_ip: $GFS3_B" >> config/common/vagrant.yml
   echo " api_name: apib" >> config/common/vagrant.yml
   echo " api_ip: $API_B" >> config/common/vagrant.yml
   echo " monitor_name: monitorb" >> config/common/vagrant.yml
@@ -96,12 +76,7 @@ else
 fi
   #add interal ips
   
-  echo "10.10.10.11        es1" >> config/common/hosts
-  echo "10.10.10.12        es2" >> config/common/hosts
-  echo "10.10.10.13        es3" >> config/common/hosts
-  echo "10.10.10.21        gfs1" >> config/common/hosts
-  echo "10.10.10.22        gfs2" >> config/common/hosts
-  echo "10.10.10.23        gfs3" >> config/common/hosts
+  echo "10.10.10.11       es1" >> config/common/hosts
   echo "10.10.10.31       api" >> config/common/hosts
   echo "10.10.10.41       monitor" >> config/common/hosts
   
@@ -152,6 +127,10 @@ apt-get install ganglia-monitor nagios-nrpe-server curl -y
 apt-get install spawn-fcgi fcgiwrap -y
 apt-get install nginx php5-fpm php5-mysql php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-ps php5-pspell php5-recode php-apc php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl -y
 sudo apt-get install git -y
+
+add-apt-repository ppa:semiosis/ubuntu-glusterfs-3.4
+apt-get update
+apt-get install glusterfs-server glusterfs-client -y
 
 cp config/etc/nginx/sites-enabled/proxy /etc/nginx/sites-enabled/proxy
 cp config/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
