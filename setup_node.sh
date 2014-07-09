@@ -3,6 +3,12 @@
 
 source ./config.cfg
 
+apt-get install python-software-properties -y
+add-apt-repository ppa:semiosis/ubuntu-glusterfs-3.4
+apt-get update
+
+apt-get install glusterfs-server glusterfs-client curl -y
+
 #generate hosts file
 echo "" > config/common/hosts
 
@@ -112,10 +118,6 @@ apt-get install ganglia-monitor nagios-nrpe-server curl -y
 apt-get install spawn-fcgi fcgiwrap -y
 apt-get install nginx php5-fpm php5-mysql php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-ps php5-pspell php5-recode php-apc php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl -y
 sudo apt-get install git -y
-
-add-apt-repository ppa:semiosis/ubuntu-glusterfs-3.4
-apt-get update
-apt-get install glusterfs-server glusterfs-client -y
 
 cp config/etc/nginx/sites-enabled/proxy /etc/nginx/sites-enabled/proxy
 cp config/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
