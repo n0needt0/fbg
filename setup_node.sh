@@ -1,12 +1,49 @@
 #this is main set up file
 #it will create apliance
 
+read -p "Continue? (y/n) " RESP
+if [ "$RESP" != "y" ]; then
+  exit 1;
+fi
+
+if [ $(id -u) -eq 0 ]; then
+    read -p "Enter username to use for VBox webservice access:" username
+    read -s -p "Enter password : " password
+    egrep "^$username" /etc/passwd >/dev/null
+    if [ $? -eq 0 ]; then
+        echo "$username exists!"
+    else
+        pass=$(perl -e 'print crypt($ARGV[0], "password")' $password)
+        useradd -m -p $pass $username
+        [ $? -eq 0 ] && echo "User has been added to system!" || echo "Failed to add a user!"
+    fi
+else
+    echo "Only root may add a user to the system"
+    exit 2
+fi
+
+adduser $username vboxusers
+
 source ./config.cfg
 
 apt-get install python-software-properties -y
 add-apt-repository ppa:semiosis/ubuntu-glusterfs-3.4
 apt-get update
+
 apt-get install glusterfs-server glusterfs-client curl git -y
+grep -q 'deb http://download.virtualbox.org/virtualbox/debian precise contrib' /etc/apt/sources.list || echo 'deb http://download.virtualbox.org/virtualbox/debian precise contrib' >>  /etc/apt/sources.list
+wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
+apt-get update
+
+#install virtual box here
+apt-get install linux-headers-$(uname -r) build-essential virtualbox-4.2 dkms -y
+wget http://download.virtualbox.org/virtualbox/4.2.24/Oracle_VM_VirtualBox_Extension_Pack-4.2.24-92790.vbox-extpack
+VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-4.2.24-92790.vbox-extpack
+rm Oracle_VM_VirtualBox_Extension_Pack-4.2.24-92790.vbox-extpack
+
+apt-get install ganglia-monitor nagios-nrpe-server -y
+apt-get install spawn-fcgi fcgiwrap -y
+apt-get install nginx php5-fpm php5-mysql php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-ps php5-pspell php5-recode php-apc php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl -y
 
 
 #generate hosts file
@@ -45,6 +82,8 @@ if [ "$CLUSTERSIDE" == "A" ]; then
   echo " monitor_name: monitora" >> config/common/vagrant.yml
   echo " monitor_ip: $MONITOR_A" >> config/common/vagrant.yml
   
+  #copy proxy files
+  cat config/etc/nginx/sites-enabled/nodea config/etc/nginx/sites-enabled/proxy > /etc/nginx/sites-enabled/proxy
   
 elif [ "$CLUSTERSIDE" == "B" ]; then
   echo "Generating Cluster node B..."
@@ -57,6 +96,9 @@ elif [ "$CLUSTERSIDE" == "B" ]; then
   echo " monitor_name: monitorb" >> config/common/vagrant.yml
   echo " monitor_ip: $MONITOR_B" >> config/common/vagrant.yml
   
+  #copy proxy file
+  cat config/etc/nginx/sites-enabled/nodeb config/etc/nginx/sites-enabled/proxy > /etc/nginx/sites-enabled/proxy
+  
 else
     echo "Unknown node. Exiting....";
     exit 0;  
@@ -67,43 +109,6 @@ echo "Continued with generated cluster addresses, please check..."
 cat config/common/vagrant.yml
 cat config/common/hosts
 
-read -p "Continue? (y/n) " RESP
-if [ "$RESP" != "y" ]; then
-  exit 1;
-fi
-
-if [ $(id -u) -eq 0 ]; then
-    read -p "Enter username to use for VBox webservice access:" username
-    read -s -p "Enter password : " password
-    egrep "^$username" /etc/passwd >/dev/null
-    if [ $? -eq 0 ]; then
-        echo "$username exists!"
-    else
-        pass=$(perl -e 'print crypt($ARGV[0], "password")' $password)
-        useradd -m -p $pass $username
-        [ $? -eq 0 ] && echo "User has been added to system!" || echo "Failed to add a user!"
-    fi
-else
-    echo "Only root may add a user to the system"
-    exit 2
-fi
-
-adduser $username vboxusers
-grep -q 'deb http://download.virtualbox.org/virtualbox/debian precise contrib' /etc/apt/sources.list || echo 'deb http://download.virtualbox.org/virtualbox/debian precise contrib' >>  /etc/apt/sources.list
-wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
-apt-get update
-
-#install virtual box here
-apt-get install linux-headers-$(uname -r) build-essential virtualbox-4.2 dkms -y
-wget http://download.virtualbox.org/virtualbox/4.2.24/Oracle_VM_VirtualBox_Extension_Pack-4.2.24-92790.vbox-extpack
-VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-4.2.24-92790.vbox-extpack
-rm Oracle_VM_VirtualBox_Extension_Pack-4.2.24-92790.vbox-extpack
-
-apt-get install ganglia-monitor nagios-nrpe-server -y
-apt-get install spawn-fcgi fcgiwrap -y
-apt-get install nginx php5-fpm php5-mysql php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-ps php5-pspell php5-recode php-apc php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl -y
-
-cp config/etc/nginx/sites-enabled/proxy /etc/nginx/sites-enabled/proxy
 cp config/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
 
 #configure vbox service
@@ -150,13 +155,9 @@ done
 service glusterfs-server restart
 
 #install vagrant
-
 wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_x86_64.deb
-
 dpkg -i vagrant_1.6.3_x86_64.deb
-
 rm vagrant_1.6.3_x86_64.deb
-
 vagrant plugin install vagrant-vbguest
 
 #change properties to appliance

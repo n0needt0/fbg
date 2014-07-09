@@ -1,21 +1,5 @@
 #THIS IS TEMPLATE FILE
 
-upstream backend_servers{
-        server api:3000;
-    }
-
-upstream es_server{
-        server es1:9200;
-    }
-
-upstream ganglia_server{
-        server monitor:3000;
-    }
-
-upstream nagios_server{
-        server monitor:4000;
-    }
-
 upstream php {
      server unix:/var/run/php5-fpm.sock;
  }

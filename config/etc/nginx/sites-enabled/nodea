@@ -1,0 +1,15 @@
+upstream backend_servers{
+        server apia:3000;
+    }
+
+upstream es_server{
+        server es1a:9200;
+    }
+
+upstream ganglia_server{
+        server monitora:3000;
+    }
+
+upstream nagios_server{
+        server monitora:4000;
+    }
