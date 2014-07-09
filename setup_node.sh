@@ -1,10 +1,14 @@
 #this is main set up file
 #it will create apliance
 
-read -p "Continue? (y/n) " RESP
+/usr/sbin/ntpdate pool.ntp.org
+
+read -p "Running Install !!! Continue? (y/n) " RESP
 if [ "$RESP" != "y" ]; then
   exit 1;
 fi
+
+read -p "What node are you installing (A/B)? " CLUSTERSIDE
 
 if [ $(id -u) -eq 0 ]; then
     read -p "Enter username to use for VBox webservice access:" username
@@ -62,13 +66,6 @@ echo "$MONITOR_B        monitorb" >> config/common/hosts
 echo "#Vagrant setup" > config/common/vagrant.yml
 echo "#Vagrant setup" > config/common/vagrant.sh
 
-read -p "Running system upgrade!!! Continue? (y/n) " RESP
-if [ "$RESP" != "y" ]; then
-  exit 1;
-fi
-
-read -p "What node are you installing (A/B)? " CLUSTERSIDE
- 
 #generate HOST CONFIG files
 if [ "$CLUSTERSIDE" == "A" ]; then
   echo "Generating Cluster node A..."
