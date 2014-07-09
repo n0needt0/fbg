@@ -82,6 +82,8 @@ if [ "$CLUSTERSIDE" == "A" ]; then
   echo " monitor_name: monitora" >> config/common/vagrant.yml
   echo " monitor_ip: $MONITOR_A" >> config/common/vagrant.yml
   
+  echo "$MONITOR_A        monitor" >> config/common/hosts
+  
   #copy proxy files
   cat config/etc/nginx/sites-enabled/nodea config/etc/nginx/sites-enabled/proxy > /etc/nginx/sites-enabled/proxy
   
@@ -98,6 +100,8 @@ elif [ "$CLUSTERSIDE" == "B" ]; then
   echo " api_ip: $API_B" >> config/common/vagrant.yml
   echo " monitor_name: monitorb" >> config/common/vagrant.yml
   echo " monitor_ip: $MONITOR_B" >> config/common/vagrant.yml
+  
+  echo "$MONITOR_B        monitor" >> config/common/hosts
   
   #copy proxy file
   cat config/etc/nginx/sites-enabled/nodeb config/etc/nginx/sites-enabled/proxy > /etc/nginx/sites-enabled/proxy
