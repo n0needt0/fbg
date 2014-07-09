@@ -19,17 +19,27 @@ cd /opt
 
 git clone https://github.com/n0needt0/fbg fbg
 
-edit config.cfg file per your network requirements, basically you want free private network block
+cd /opt/fbg
+
+edit config.cfg file per your network requirements, 
+
+basically you want free private network block see example config
 
 #then
 
-cd /opt/fbginstall
+on each of the nodes A and B
+
+cd /opt/fbg
 
 bash setup_node.sh
 
 #test Step 1.
 
 check that...
+
+node A can ping nodeb
+
+and node B can ping nodea
 
 #Step 2. Run on each node after completing step 1 on both nodes
 
