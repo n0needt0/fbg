@@ -6,6 +6,42 @@ Add private address to eth0 from same network you will use in config in Step 1.
 
 to each of host nodes and restart networking
 
+Example /etc/network/interfaces
+
+#nodeA
+
+auto lo
+iface lo inet loopback
+
+auto eth0 eth0:0
+
+iface eth0 inet dhcp
+
+iface eth0:0 inet static
+
+    address 10.1.1.2
+
+    network 10.1.1.0
+
+    netmask 255.255.255.0
+
+#nodeB
+
+auto lo
+iface lo inet loopback
+
+auto eth0 eth0:0
+
+iface eth0 inet dhcp
+
+iface eth0:0 inet static
+
+    address 10.1.1.3
+
+    network 10.1.1.0
+
+    netmask 255.255.255.0
+
 
 #Step 1. Run as root on both nodes A and B first
 
