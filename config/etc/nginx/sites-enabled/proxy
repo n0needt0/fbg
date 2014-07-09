@@ -1,4 +1,3 @@
-#THIS IS TEMPLATE FILE
 
 upstream php {
      server unix:/var/run/php5-fpm.sock;

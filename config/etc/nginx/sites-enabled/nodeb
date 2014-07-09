@@ -13,3 +13,4 @@ upstream ganglia_server{
 upstream nagios_server{
         server monitorb:4000;
     }
+    

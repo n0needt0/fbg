@@ -15,10 +15,9 @@ apt-get install git
 
 apt-get upgrade -y
 
-
 cd /opt
 
-git clone https://github.com/n0needt0/fbg fbginstall 
+git clone https://github.com/n0needt0/fbg fbg
 
 edit config.cfg file per your network requirements, basically you want free private network block
 
