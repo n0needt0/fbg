@@ -8,6 +8,8 @@ to each of host nodes and restart networking
 
 Example /etc/network/interfaces
 
+edit and restart network, ping each other node
+
 #nodeA
 
 auto lo
