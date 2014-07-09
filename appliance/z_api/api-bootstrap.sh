@@ -42,13 +42,8 @@ cat /var/config/common/hosts >> /etc/hosts
 
 
 #fireup glustr fs
-#setup config here
-
 mkdir /gfs
-
 sudo mount -t glusterfs gfs1:/gluster-volume /gfs
-
-chmod 777 /gfs
 
 #add laravel dirs
 mkdir -p /opt/fbg_cache 

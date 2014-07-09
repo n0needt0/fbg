@@ -6,21 +6,18 @@ source ./config.cfg
 apt-get install python-software-properties -y
 add-apt-repository ppa:semiosis/ubuntu-glusterfs-3.4
 apt-get update
+apt-get install glusterfs-server glusterfs-client curl git -y
 
-apt-get install glusterfs-server glusterfs-client curl -y
 
 #generate hosts file
 echo "" > config/common/hosts
 
 echo "$NODE_A        nodea" >> config/common/hosts
 echo "$NODE_B        nodeb" >> config/common/hosts
-
 echo "$ES1_A        es1a" >> config/common/hosts
 echo "$ES1_B        es1b" >> config/common/hosts
-
 echo "$API_A        apia" >> config/common/hosts
 echo "$API_B        apib" >> config/common/hosts
-
 echo "$MONITOR_A        monitora" >> config/common/hosts
 echo "$MONITOR_B        monitorb" >> config/common/hosts
 
@@ -36,7 +33,6 @@ fi
 read -p "What node are you installing (A/B)? " CLUSTERSIDE
  
 #generate HOST CONFIG files
-
 if [ "$CLUSTERSIDE" == "A" ]; then
   echo "Generating Cluster node A..."
   
@@ -48,10 +44,10 @@ if [ "$CLUSTERSIDE" == "A" ]; then
   echo " api_ip: $API_A" >> config/common/vagrant.yml
   echo " monitor_name: monitora" >> config/common/vagrant.yml
   echo " monitor_ip: $MONITOR_A" >> config/common/vagrant.yml
-    
+  
+  
 elif [ "$CLUSTERSIDE" == "B" ]; then
   echo "Generating Cluster node B..."
-  
   echo " eth: $ETH_B" >> config/common/vagrant.yml
   echo " memory: $APPLIANCE_MEMORY_B" >> config/common/vagrant.yml
   echo " es1_name: es1b" >> config/common/vagrant.yml
@@ -65,15 +61,8 @@ else
     echo "Unknown node. Exiting....";
     exit 0;  
 fi
-  #add interal ips
-  
-  echo "10.10.10.1       host" >> config/common/hosts
-  echo "10.10.10.11       es1" >> config/common/hosts
-  echo "10.10.10.31       api" >> config/common/hosts
-  echo "10.10.10.41       monitor" >> config/common/hosts
-  
-sed -e 's/:[^:\/\/]/="/g;s/$/"/g;s/ *=/=/g' config/common/vagrant.yml > config/common/vagrant.sh
 
+sed -e 's/:[^:\/\/]/="/g;s/$/"/g;s/ *=/=/g' config/common/vagrant.yml > config/common/vagrant.sh
 echo "Continued with generated cluster addresses, please check..."
 cat config/common/vagrant.yml
 cat config/common/hosts
@@ -84,7 +73,6 @@ if [ "$RESP" != "y" ]; then
 fi
 
 if [ $(id -u) -eq 0 ]; then
-    
     read -p "Enter username to use for VBox webservice access:" username
     read -s -p "Enter password : " password
     egrep "^$username" /etc/passwd >/dev/null
@@ -101,30 +89,24 @@ else
 fi
 
 adduser $username vboxusers
-
 grep -q 'deb http://download.virtualbox.org/virtualbox/debian precise contrib' /etc/apt/sources.list || echo 'deb http://download.virtualbox.org/virtualbox/debian precise contrib' >>  /etc/apt/sources.list
-
 wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
 apt-get update
 
 #install virtual box here
 apt-get install linux-headers-$(uname -r) build-essential virtualbox-4.2 dkms -y
-
 wget http://download.virtualbox.org/virtualbox/4.2.24/Oracle_VM_VirtualBox_Extension_Pack-4.2.24-92790.vbox-extpack
 VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-4.2.24-92790.vbox-extpack
 rm Oracle_VM_VirtualBox_Extension_Pack-4.2.24-92790.vbox-extpack
 
-apt-get install python-software-properties -y
-apt-get install ganglia-monitor nagios-nrpe-server curl -y
+apt-get install ganglia-monitor nagios-nrpe-server -y
 apt-get install spawn-fcgi fcgiwrap -y
 apt-get install nginx php5-fpm php5-mysql php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-ps php5-pspell php5-recode php-apc php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl -y
-sudo apt-get install git -y
 
 cp config/etc/nginx/sites-enabled/proxy /etc/nginx/sites-enabled/proxy
 cp config/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
 
 #configure vbox service
-
 mkdir -p /var/www
 cp -r vbox /var/www
 
@@ -165,6 +147,9 @@ done
 /etc/init.d/nginx restart
 /etc/init.d/ganglia-monitor restart
 /etc/init.d/vboxweb-service start
+service glusterfs-server restart
+
+#install vagrant
 
 wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_x86_64.deb
 
@@ -183,3 +168,5 @@ cp -r backend /home/$username/fbg
 chown -R $username:$username /home/$username
 
 /etc/init.d/vboxweb-service start
+
+echo "follow the yellow brick road..."
