@@ -1,0 +1,7 @@
+{
+	"name": "Anne",
+	"date": "12/10/10",
+	"pageNumber": 11,
+	"type": "interview",
+	"cc": ["Fred", "Andrew", "Beth", "Mary", "Sue"]
+}

@@ -1,0 +1,7 @@
+{
+	"name": "Bob",
+	"date": "3/12/12",
+	"pageNumber": 5,
+	"type": "picture",
+	"cc": ["Bob", "Fred", "Anne"]
+}

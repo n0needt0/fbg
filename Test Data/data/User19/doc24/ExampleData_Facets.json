@@ -1,0 +1,7 @@
+{
+	"name": "Nick",
+	"date": "6/21/13",
+	"pageNumber": 10,
+	"type": "letter",
+	"cc": ["Nick", "Sue"]
+}
