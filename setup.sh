@@ -197,7 +197,7 @@ done
 /etc/init.d/php5-fpm restart
 /etc/init.d/nginx restart
 /etc/init.d/ganglia-monitor restart
-/etc/init.d/vboxweb-service restart
+/etc/init.d/vboxweb-service start
 
 wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_x86_64.deb
 
@@ -215,4 +215,4 @@ cp -r config /home/$username/fbg
 cp -r backend /home/$username/fbg
 chown -R $username:$username /home/$username
 
-/etc/init.d/vboxweb-service restart
+/etc/init.d/vboxweb-service start
