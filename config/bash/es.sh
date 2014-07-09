@@ -12,7 +12,7 @@ apt-get install glusterfs-client -y
 
 #setup config here
 sed -i "s/#cluster.name: elasticsearch/cluster.name: fileroom/g" /etc/elasticsearch/elasticsearch.yml 
-sed -i "s/#node.name: "Franz Kafka"/node.name: \'$ESNAME\'/g" /etc/elasticsearch/elasticsearch.yml 
+sed -i "s/#node.name: \"Franz Kafka\"/node.name: \'$ESNAME\'/g" /etc/elasticsearch/elasticsearch.yml 
 sed -i "s/#network.host: 192.168.0.1/network.host: \'$ESIP\'/g" /etc/elasticsearch/elasticsearch.yml 
 sed -i "s/#transport.tcp.compress: true/transport.tcp.compress: true/g" /etc/elasticsearch/elasticsearch.yml 
 sed -i "s/#index.number_of_replicas: 1/index.number_of_replicas: 3/g" /etc/elasticsearch/elasticsearch.yml 
@@ -24,7 +24,7 @@ cd /usr/share/elasticsearch
 
 bin/plugin -i elasticsearch/marvel/latest
 
-echo "marvel.agent.exporter.es.hosts: [\"es1.a:9200\",\"es1.b:9200\"]" >> /etc/elasticsearch/elasticsearch.yml
+echo "marvel.agent.exporter.es.hosts: [\"es1a:9200\",\"es1b:9200\"]" >> /etc/elasticsearch/elasticsearch.yml
 
 /etc/init.d/elasticsearch restart
 

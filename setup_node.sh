@@ -67,6 +67,7 @@ else
 fi
   #add interal ips
   
+  echo "10.10.10.1       host" >> config/common/hosts
   echo "10.10.10.11       es1" >> config/common/hosts
   echo "10.10.10.31       api" >> config/common/hosts
   echo "10.10.10.41       monitor" >> config/common/hosts
