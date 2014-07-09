@@ -3,6 +3,9 @@
 # Get root up in here
 sudo su
 
+#grab some vars
+source /var/config/common/vagrant.sh
+
 apt-get update
 apt-get install python-software-properties -y
 add-apt-repository ppa:semiosis/ubuntu-glusterfs-3.4 -y
@@ -40,10 +43,9 @@ cat /var/config/common/hosts >> /etc/hosts
 /etc/init.d/nginx restart
 /etc/init.d/ganglia-monitor restart
 
-
-#fireup glustr fs
+#fireup glustrefs
 mkdir /gfs
-sudo mount -t glusterfs gfs1:/gluster-volume /gfs
+sudo mount -t glusterfs $node_name:/gluster-volume /gfs
 
 #add laravel dirs
 mkdir -p /opt/fbg_cache 

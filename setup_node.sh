@@ -72,6 +72,9 @@ if [ "$CLUSTERSIDE" == "A" ]; then
   
   echo " eth: $ETH_A" >> config/common/vagrant.yml
   echo " memory: $APPLIANCE_MEMORY_A" >> config/common/vagrant.yml
+  echo " node_name: nodea" >> config/common/vagrant.yml
+  echo " node_ip: $NODE_A" >> config/common/vagrant.yml
+  
   echo " es1_name: es1a" >> config/common/vagrant.yml
   echo " es1_ip: $ES1_A" >> config/common/vagrant.yml
   echo " api_name: apia" >> config/common/vagrant.yml
@@ -84,6 +87,9 @@ if [ "$CLUSTERSIDE" == "A" ]; then
   
 elif [ "$CLUSTERSIDE" == "B" ]; then
   echo "Generating Cluster node B..."
+  echo " node_name: nodeb" >> config/common/vagrant.yml
+  echo " node_ip: $NODE_B" >> config/common/vagrant.yml
+  
   echo " eth: $ETH_B" >> config/common/vagrant.yml
   echo " memory: $APPLIANCE_MEMORY_B" >> config/common/vagrant.yml
   echo " es1_name: es1b" >> config/common/vagrant.yml
