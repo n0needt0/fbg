@@ -34,13 +34,15 @@ cp /vagrant/etc/nginx/sites-enabled/api /etc/nginx/sites-enabled/api
 cp /vagrant/etc/nginx/conf.d/microcache.conf /etc/nginx/conf.d/microcache.conf
 cp /var/config/etc/ganglia/gmond.conf /etc/ganglia/gmond.conf
 
-cat /var/config/hosts >> /etc/hosts
+cat /var/config/common/hosts >> /etc/hosts
 
 /etc/init.d/php5-fpm restart
 /etc/init.d/nginx restart
 /etc/init.d/ganglia-monitor restart
 
-#chmod 666 /tmp/php5-fpm.sock
+
+#fireup glustr fs
+#setup config here
 
 mkdir /gfs
 

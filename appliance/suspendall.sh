@@ -2,9 +2,9 @@
 for D in *; do
     if [[ -d "${D}" && -e "${D}/Vagrantfile" ]]; then
         cd "${D}"
-        echo "Installing ${D} virtual machine..."
+        echo "Halting ${D} virtual machine..."
         sleep 1
-        vagrant up
+        vagrant suspend
         cd ..
     fi
 done

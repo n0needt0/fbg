@@ -1,20 +1,22 @@
 require 'yaml'
 
-vconfig = YAML::load_file("../config/vagrant_config.yml")
+vconfig = YAML::load_file("../../config/common/vagrant.yml")
 
 Vagrant.configure("2") do |config|
     
-    config.vm.define "es1" do |es1|
-        es1.vm.box = "precise64"
-        es1.vm.box_url = "http://files.vagrantup.com/precise64.box"
-        es1.vm.provision :shell, :path => "es-bootstrap-es1.sh"
-        es1.vm.network :private_network, ip: "10.10.10.11"
-        es1.vm.hostname = "es1"
+    config.vm.define vconfig['es1_name'] do |bx|
+        bx.vm.box = "precise64"
+        bx.vm.box_url = "http://files.vagrantup.com/precise64.box"
+        bx.vm.provision :shell, :path => "es-bootstrap-es1.sh"
+        bx.vm.network "public_network", bridge: vconfig['eth'], ip: vconfig['es1_ip']
+        bx.vm.network :private_network, ip: "10.10.10.11"
+        bx.vm.hostname = vconfig['es1_name']
+        
+        bx.vm.synced_folder "../../config", "/var/config",  owner: "root", group: "root"
 
-        config.vm.synced_folder "../config", "/var/config",  owner: "root", group: "root"
-
-        es1.vm.provider :virtualbox do |vb|
-            vb.customize ["modifyvm", :id, "--memory", vconfig['fbg']['memory']]
+        bx.vm.provider :virtualbox do |vb|
+            vb.customize ["modifyvm", :id, "--memory", vconfig['memory']]
+            vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
         end
     end
 end
