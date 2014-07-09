@@ -1,0 +1,7 @@
+{
+	"name": "Nick",
+	"date": "7/16/10",
+	"pageNumber": 24,
+	"type": "fax",
+	"cc": ["Joe", "Nick", "Reave", "Anne"]
+}

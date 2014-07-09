@@ -1,0 +1,7 @@
+{
+	"name": "Fred",
+	"date": "6/1/10",
+	"pageNumber": 10,
+	"type": "planning",
+	"cc": ["Bob", "Nick", "Andrew", "Reave", "Sally", "Sue"]
+}
