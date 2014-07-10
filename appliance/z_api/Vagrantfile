@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
         bx.vm.synced_folder "../../backend/code/var/api", "/var/www/api",  owner: "www-data", group: "www-data"
         
         bx.vm.provider :virtualbox do |vb|
-            vb.customize ["modifyvm", :id, "--memory", vconfig['memory']]
+            vb.customize ["modifyvm", :id, "--memory", 1024]
             vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
         end
     end
