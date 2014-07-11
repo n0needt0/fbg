@@ -1,0 +1,130 @@
+#DO NOT USE
+upstream backend_servers{
+        server apia:3000;
+    }
+
+upstream es_server{
+        server es1a:9200;
+    }
+
+upstream ganglia_server{
+        server monitora:3000;
+    }
+
+upstream nagios_server{
+        server monitora:4000;
+    }
+    
+upstream php {
+     server unix:/var/run/php5-fpm.sock;
+ }
+
+ upstream fcgiwrap {
+     server unix:/var/run/fcgiwrap.socket;
+ }
+
+server {
+    listen 0.0.0.0:80;
+    server_name fbg.this.com;
+    access_log /var/log/nginx/fbg.log;
+
+    # pass the request to api
+    location / {
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header Host $http_host;
+      proxy_set_header X-NginX-Proxy true;
+
+      proxy_pass http://backend_servers/;
+      proxy_redirect off;
+    }
+ }
+
+server {
+    listen 0.0.0.0:9200;
+    server_name ganglia.fbg.com;
+    access_log /var/log/nginx/es.log;
+
+    # pass the request to es servers
+    location / {
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header Host $http_host;
+      proxy_set_header X-NginX-Proxy true;
+
+      proxy_pass http://es_server/;
+      proxy_redirect off;
+    }
+ }
+
+ server {
+    listen 0.0.0.0:3000;
+    server_name ganglia.fbg.com;
+    access_log /var/log/nginx/ganglia.log;
+
+    # pass the request to ganglia
+    location / {
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header Host $http_host;
+      proxy_set_header X-NginX-Proxy true;
+
+      proxy_pass http://ganglia_server/;
+      proxy_redirect off;
+    }
+ }
+ 
+  server {
+    listen 0.0.0.0:4000;
+    server_name nagios.fbg.com;
+    access_log /var/log/nginx/nagios.log;
+
+    # pass the request to ganglia
+    location / {
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header Host $http_host;
+      proxy_set_header X-NginX-Proxy true;
+
+      proxy_pass http://nagios_server/;
+      proxy_set_header Authorization "Basic bmFnaW9zYWRtaW46V2VsY29tZTE=";
+    }
+ }
+ 
+ server {
+    listen 0.0.0.0:5000 default deferred;
+    server_name vbox.fbg.com;
+
+    access_log  /var/log/nginx/vbox.access.log;
+    error_log   /var/log/nginx/vbox.error.log info;
+ 
+    sendfile off;
+
+    root /var/www/vbox;
+    index index.php index.html index.htm;
+
+    location ~ /\. {
+        deny all;
+    }
+
+    #now the website
+    location ~* \.(?:ico|css|js|gif|jpe?g|png)$ {
+    # Some basic cache-control for static files to be sent to the browser
+       add_header Vary Accept-Encoding;
+       expires max;
+    }
+
+    location / {
+            try_files $uri $uri/ /index.php?$query_string;
+       }
+
+    # pass the PHP scripts to FastCGI server listening on /tmp
+    location ~ \.php$ {
+                        try_files $uri /index.php =404;
+                        fastcgi_pass php;
+                        fastcgi_index index.php;
+                        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+                        include fastcgi_params;
+        }
+ }
+ 
