@@ -1,70 +1,14 @@
-require 'json'
-
-json = File.read('./config.json')
-conf = JSON.parse(json)
-
-#rearrange write out env vars, that will be used later
-
-#this where current node env will go
-cnode = String.new("")
-
-#this where all nodes will go 
-nodes = String.new("")
-
-#this where all node ips will go
-ips = String.new("")
-
-#this where elasticnodes will go 
-esnodes = String.new("")
-
-#this where hosts flle will go
-hosts = String.new("")
-    
-cnode.concat("echo export FBGCNODE=#{conf['node']} >> /etc/profile.d/vagrant.sh\n")
-cnode.concat("echo export FBGCIP=#{conf['nodes'][conf['node']]['ip']} >> /etc/profile.d/vagrant.sh\n")
-
-conf['nodes'].each do |key,node|
-    nodes.concat("#{key},")
-    esnodes.concat("#{key}:9200,")
-    ips.concat("#{node['ip']},")
-    hosts.concat("echo #{node['ip']}     #{key} >> /etc/fbghosts\n")
-end
-
-esnodes = esnodes.chomp(',')
-nodes = nodes.chomp(',')
-ips = ips.chomp(',')
-
 Vagrant.configure("2") do |config|
-
- $before_script = <<SCRIPT
-  rm -rf /etc/fbghosts
-  #{hosts.to_str}
-  echo # vagrant profile script > /etc/profile.d/vagrant.sh
-  #{cnode.to_str}
-  echo export FBGNODES=#{nodes} >> /etc/profile.d/vagrant.sh\n
-  echo export FBGIPS=#{ips} >> /etc/profile.d/vagrant.sh\n
-  echo export ESNODES=#{esnodes} >> /etc/profile.d/vagrant.sh\n 
-  chmod +x /etc/profile.d/vagrant.sh
-SCRIPT
-
-$after_script = <<SCRIPT
-    rm -rf /etc/profile.d/vagrant.sh
-SCRIPT
-
-puts $before_script
-
         config.vm.box = "precise64"
         config.vm.box_url = "http://files.vagrantup.com/precise64.box"
-        config.vm.provision "shell", inline: $before_script
         config.vm.provision :shell, :path => "bootstrap.sh"
-        config.vm.provision "shell", inline: $after_script
-        config.vm.network "public_network", bridge:conf['nodes'][conf['node']]['eth'], ip: conf['nodes'][conf['node']]['ip']
-        config.vm.hostname = conf['node']
+        config.vm.network "public_network"
+        config.vm.hostname = fbg
                 
         config.vm.synced_folder "../backend/code/var/api", "/var/www/api",  owner: "www-data", group: "www-data"
 
         config.vm.provider :virtualbox do |vb|
-            vb.customize ["modifyvm", :id, "--memory", conf['nodes'][conf['node']]['memory']]
+            vb.customize ["modifyvm", :id, "--memory", 4096
             vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
         end
 end

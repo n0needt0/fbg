@@ -2,7 +2,7 @@
 "node":"nodea",
 
 "nodes": {
-                "nodea":{"ip":"10.10.10.11","eth":"eth0","memory":"1024"},
-                "nodeb":{"ip":"10.10.10.12","eth":"eth0","memory":"1024"}
+                "nodea":{"ip":"10.10.10.11","eth":"eth0","memory":"4096"},
+                "nodeb":{"ip":"10.10.10.12","eth":"eth0","memory":"4096"}
                 }
 }
