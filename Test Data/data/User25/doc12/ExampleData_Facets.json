@@ -1,7 +1,9 @@
 {
-	"name": "Anne",
-	"date": "2/16/12",
-	"pageNumber": 3,
-	"type": "picture",
-	"cc": ["Joe", "Fred", "Reave", "Beth", "Sue"]
+	"doc_folder": "Gonzalez_Fred_3867",
+	"doc_uri": "/docs/repository/YKYYIdczgcoJF",
+	"doc_date": "6/12/13",
+	"doc_type": "letter",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "Berkeley",
+	"cc": ["Bob Mann", "Ben Moor", "Andrew Murn", "Beth Rue", "Sue Willis"]
 }

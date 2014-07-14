@@ -1,7 +1,9 @@
 {
-	"name": "Mary",
-	"date": "2/7/10",
-	"pageNumber": 10,
-	"type": "treatment description",
-	"cc": ["Fred", "Anne", "Beth"]
+	"doc_folder": "McCullen_Joe_1574",
+	"doc_uri": "/docs/repository/tbJaeengAjjmiCclL",
+	"doc_date": "10/15/10",
+	"doc_type": "treatment description",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "San Jose",
+	"cc": ["Joe McCullen", "Nick Norman", "Beth Rue"]
 }

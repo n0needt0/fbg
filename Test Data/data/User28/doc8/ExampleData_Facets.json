@@ -1,7 +1,8 @@
 {
-	"name": "Anne",
-	"date": "1/3/12",
-	"pageNumber": 1,
-	"type": "letter",
-	"cc": ["Fred", "Anne", "Beth", "Sally", "Mary"]
+	"doc_folder": "McCullen_Joe_2559",
+	"doc_uri": "/docs/repository/ShZsszScVpuPCMAWkLBU",
+	"doc_date": "2/25/12",
+	"doc_type": "record",
+	"doc_location": "Salinas",
+	"cc": ["Bob Mann", "Nick Norman", "Ben Moor", "Andrew Murn", "Sally McAllister"]
 }

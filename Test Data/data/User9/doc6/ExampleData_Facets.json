@@ -1,7 +1,8 @@
 {
-	"name": "Nick",
-	"date": "8/17/13",
-	"pageNumber": 20,
-	"type": "treatment description",
-	"cc": ["Joe", "Nick", "Beth", "Sally", "Mary"]
+	"doc_folder": "McAllister_Sally_9358",
+	"doc_uri": "/docs/repository/TqMbydGXesG",
+	"doc_date": "5/18/10",
+	"doc_type": "interview",
+	"doc_location": "Concord",
+	"cc": ["Reave Fisk", "Beth Rue", "Sally McAllister"]
 }

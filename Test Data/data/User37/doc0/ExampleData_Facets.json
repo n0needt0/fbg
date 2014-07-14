@@ -1,7 +1,9 @@
 {
-	"name": "Sue",
-	"date": "7/25/13",
-	"pageNumber": 20,
-	"type": "interview",
-	"cc": ["Joe"]
+	"doc_folder": "McAllister_Sally_9587",
+	"doc_uri": "/docs/repository/onUPmWApxdcgdpU",
+	"doc_date": "8/3/13",
+	"doc_type": "report",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Vallejo",
+	"cc": ["Bob Mann", "Joe McCullen", "Fred Gonzalez", "Beth Rue", "Sally McAllister", "Sue Willis"]
 }

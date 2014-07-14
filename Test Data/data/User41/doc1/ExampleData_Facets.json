@@ -1,7 +1,9 @@
 {
-	"name": "Ben",
-	"date": "7/5/10",
-	"pageNumber": 12,
-	"type": "report",
-	"cc": ["Bob", "Fred", "Nick", "Reave", "Sue"]
+	"doc_folder": "McAllister_Sally_7428",
+	"doc_uri": "/docs/repository/FcfUhMgryYPhdiw",
+	"doc_date": "4/17/13",
+	"doc_type": "treatment description",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "San Mateo",
+	"cc": ["Joe McCullen", "Fred Gonzalez", "Ben Moor", "Mary Monze", "Sue Willis"]
 }

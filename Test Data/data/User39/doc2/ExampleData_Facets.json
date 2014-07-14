@@ -1,7 +1,9 @@
 {
-	"name": "Fred",
-	"date": "6/10/12",
-	"pageNumber": 11,
-	"type": "fax",
-	"cc": ["Bob", "Nick", "Mary", "Sue"]
+	"doc_folder": "Monze_Mary_0943",
+	"doc_uri": "/docs/repository/QeUhEiBYNuaryPTv",
+	"doc_date": "3/2/11",
+	"doc_type": "interview",
+	"doc_group": " Physical Therapy Folder",
+	"doc_location": "Salinas",
+	"cc": ["Andrew Murn", "Beth Rue", "Mary Monze"]
 }

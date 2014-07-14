@@ -1,7 +1,9 @@
 {
-	"name": "Andrew",
-	"date": "8/21/12",
-	"pageNumber": 13,
-	"type": "fax",
-	"cc": ["Bob", "Joe", "Fred", "Nick", "Andrew", "Sally", "Mary"]
+	"doc_folder": "Willis_Sue_3540",
+	"doc_uri": "/docs/repository/buSmjzhSDRYj",
+	"doc_date": "7/12/11",
+	"doc_type": "record",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "Concord",
+	"cc": ["Fred Gonzalez", "Reave Fisk"]
 }

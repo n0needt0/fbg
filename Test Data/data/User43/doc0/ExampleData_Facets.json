@@ -1,7 +1,9 @@
 {
-	"name": "Beth",
-	"date": "1/4/12",
-	"pageNumber": 1,
-	"type": "record",
-	"cc": ["Nick", "Sally", "Mary"]
+	"doc_folder": "Murn_Andrew_3347",
+	"doc_uri": "/docs/repository/HqbdQuTSXD",
+	"doc_date": "2/9/13",
+	"doc_type": "record",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "Oakland",
+	"cc": ["Nick Norman", "Beth Rue", "Sue Willis"]
 }

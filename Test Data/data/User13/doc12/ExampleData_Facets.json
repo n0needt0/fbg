@@ -1,7 +1,9 @@
 {
-	"name": "Bob",
-	"date": "3/21/10",
-	"pageNumber": 23,
-	"type": "report",
-	"cc": ["Bob", "Reave", "Anne", "Beth"]
+	"doc_folder": "Rue_Beth_4704",
+	"doc_uri": "/docs/repository/WDzfqkJJHUzW",
+	"doc_date": "9/26/12",
+	"doc_type": "treatment description",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "Berkeley",
+	"cc": ["Joe McCullen", "Fred Gonzalez", "Nick Norman", "Andrew Murn", "Sally McAllister", "Sue Willis"]
 }

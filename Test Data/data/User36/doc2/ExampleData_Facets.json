@@ -1,7 +1,9 @@
 {
-	"name": "Bob",
-	"date": "10/25/13",
-	"pageNumber": 14,
-	"type": "letter",
-	"cc": ["Bob", "Joe", "Andrew", "Anne", "Beth", "Sue"]
+	"doc_folder": "Monze_Mary_9708",
+	"doc_uri": "/docs/repository/JZIhPczLJFoaE",
+	"doc_date": "1/3/10",
+	"doc_type": "record",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "San Francisco",
+	"cc": ["Ben Moor", "Mary Monze"]
 }

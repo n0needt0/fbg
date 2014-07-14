@@ -1,7 +1,9 @@
 {
-	"name": "Ben",
-	"date": "9/24/11",
-	"pageNumber": 25,
-	"type": "letter",
-	"cc": ["Bob", "Fred", "Nick", "Reave", "Sally", "Sue"]
+	"doc_folder": "Fisk_Reave_6521",
+	"doc_uri": "/docs/repository/SViqgUpLsltu",
+	"doc_date": "6/26/10",
+	"doc_type": "note",
+	"doc_group": " Physical Therapy Folder",
+	"doc_location": "Hayward",
+	"cc": ["Anne Quillis", "Beth Rue", "Sally McAllister", "Mary Monze"]
 }

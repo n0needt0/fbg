@@ -1,7 +1,9 @@
 {
-	"name": "Fred",
-	"date": "1/25/12",
-	"pageNumber": 25,
-	"type": "note",
-	"cc": ["Bob", "Andrew"]
+	"doc_folder": "Mann_Bob_4833",
+	"doc_uri": "/docs/repository/QBSDmCJxjpCqVbJDCuh",
+	"doc_date": "6/19/13",
+	"doc_type": "interview",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "Concord",
+	"cc": ["Bob Mann", "Reave Fisk", "Mary Monze"]
 }

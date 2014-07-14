@@ -1,7 +1,8 @@
 {
-	"name": "Joe",
-	"date": "4/17/11",
-	"pageNumber": 4,
-	"type": "note",
-	"cc": ["Bob", "Fred", "Ben", "Reave", "Beth", "Mary", "Sue"]
+	"doc_folder": "McAllister_Sally_7293",
+	"doc_uri": "/docs/repository/IoxkdsMEzJQZ",
+	"doc_date": "8/13/11",
+	"doc_type": "planning",
+	"doc_location": "Atherton",
+	"cc": ["Joe McCullen", "Fred Gonzalez", "Andrew Murn", "Anne Quillis"]
 }

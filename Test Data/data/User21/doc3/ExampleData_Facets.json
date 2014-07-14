@@ -1,7 +1,8 @@
 {
-	"name": "Mary",
-	"date": "10/10/10",
-	"pageNumber": 15,
-	"type": "planning",
-	"cc": ["Bob", "Joe", "Reave", "Anne"]
+	"doc_folder": "Gonzalez_Fred_3621",
+	"doc_uri": "/docs/repository/AQoSysxOgU",
+	"doc_date": "2/1/11",
+	"doc_type": "planning",
+	"doc_location": "San Francisco",
+	"cc": ["Bob Mann", "Sally McAllister"]
 }

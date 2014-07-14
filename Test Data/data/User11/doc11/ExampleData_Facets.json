@@ -1,7 +1,9 @@
 {
-	"name": "Mary",
-	"date": "7/28/12",
-	"pageNumber": 7,
-	"type": "note",
-	"cc": ["Nick", "Ben", "Beth", "Sue"]
+	"doc_folder": "Moor_Ben_3634",
+	"doc_uri": "/docs/repository/tllwqaoOnHRpwdEhsXXn",
+	"doc_date": "7/20/13",
+	"doc_type": "record",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "San Francisco",
+	"cc": ["Bob Mann", "Nick Norman", "Andrew Murn", "Reave Fisk", "Mary Monze"]
 }

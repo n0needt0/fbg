@@ -1,7 +1,9 @@
 {
-	"name": "Nick",
-	"date": "1/8/12",
-	"pageNumber": 1,
-	"type": "treatment description",
-	"cc": ["Fred", "Ben"]
+	"doc_folder": "Mann_Bob_6213",
+	"doc_uri": "/docs/repository/RTukPCfIAMdnRrDuLES",
+	"doc_date": "7/19/11",
+	"doc_type": "record",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "Concord",
+	"cc": ["Ben Moor", "Andrew Murn", "Beth Rue", "Sally McAllister"]
 }

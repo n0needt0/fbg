@@ -1,7 +1,9 @@
 {
-	"name": "Joe",
-	"date": "2/14/12",
-	"pageNumber": 16,
-	"type": "record",
-	"cc": ["Joe", "Nick", "Andrew", "Reave", "Mary"]
+	"doc_folder": "Rue_Beth_2083",
+	"doc_uri": "/docs/repository/ULXxFXSAqiSLomym",
+	"doc_date": "5/9/11",
+	"doc_type": "interview",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "Hayward",
+	"cc": ["Andrew Murn", "Anne Quillis", "Beth Rue", "Sally McAllister", "Mary Monze"]
 }

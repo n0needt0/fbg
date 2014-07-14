@@ -1,7 +1,9 @@
 {
-	"name": "Joe",
-	"date": "10/4/13",
-	"pageNumber": 12,
-	"type": "interview",
-	"cc": ["Joe", "Nick", "Anne", "Beth", "Sally", "Mary", "Sue"]
+	"doc_folder": "Moor_Ben_0422",
+	"doc_uri": "/docs/repository/qKcczMttsyWtknYe",
+	"doc_date": "1/17/13",
+	"doc_type": "treatment description",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "San Mateo",
+	"cc": ["Bob Mann", "Joe McCullen", "Nick Norman", "Reave Fisk", "Sally McAllister", "Mary Monze", "Sue Willis"]
 }

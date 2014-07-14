@@ -1,7 +1,9 @@
 {
-	"name": "Sue",
-	"date": "3/23/10",
-	"pageNumber": 21,
-	"type": "note",
-	"cc": ["Anne", "Sue"]
+	"doc_folder": "Gonzalez_Fred_4188",
+	"doc_uri": "/docs/repository/utqGCRPWAXFofre",
+	"doc_date": "10/22/11",
+	"doc_type": "report",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Fairfield",
+	"cc": ["Fred Gonzalez", "Andrew Murn", "Beth Rue", "Mary Monze"]
 }

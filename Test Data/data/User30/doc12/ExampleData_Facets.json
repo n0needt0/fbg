@@ -1,7 +1,8 @@
 {
-	"name": "Sally",
-	"date": "9/21/11",
-	"pageNumber": 12,
-	"type": "planning",
-	"cc": ["Bob", "Reave", "Sally", "Mary", "Sue"]
+	"doc_folder": "McAllister_Sally_0194",
+	"doc_uri": "/docs/repository/qVYlKDogXiCgwalIEpC",
+	"doc_date": "2/22/11",
+	"doc_type": "fax",
+	"doc_location": "Redwood City",
+	"cc": ["Nick Norman", "Andrew Murn"]
 }

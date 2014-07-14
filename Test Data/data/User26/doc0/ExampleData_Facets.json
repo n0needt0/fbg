@@ -1,7 +1,9 @@
 {
-	"name": "Ben",
-	"date": "6/5/11",
-	"pageNumber": 11,
-	"type": "form",
-	"cc": ["Fred", "Nick", "Sally"]
+	"doc_folder": "Monze_Mary_9001",
+	"doc_uri": "/docs/repository/AfMEkRSuQVlXNfhOv",
+	"doc_date": "2/3/13",
+	"doc_type": "note",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "Fairfield",
+	"cc": ["Fred Gonzalez", "Nick Norman", "Ben Moor", "Andrew Murn", "Sue Willis"]
 }

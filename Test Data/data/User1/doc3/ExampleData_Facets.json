@@ -1,7 +1,9 @@
 {
-	"name": "Nick",
-	"date": "5/18/10",
-	"pageNumber": 17,
-	"type": "report",
-	"cc": ["Bob", "Fred", "Nick", "Anne", "Beth", "Sally"]
+	"doc_folder": "Mann_Bob_3378",
+	"doc_uri": "/docs/repository/QOxDZHANJGi",
+	"doc_date": "2/6/10",
+	"doc_type": "note",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Sunnyvale",
+	"cc": ["Bob Mann", "Fred Gonzalez", "Nick Norman", "Anne Quillis"]
 }

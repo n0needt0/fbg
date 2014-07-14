@@ -1,7 +1,9 @@
 {
-	"name": "Beth",
-	"date": "12/11/13",
-	"pageNumber": 24,
-	"type": "fax",
-	"cc": ["Sally", "Mary"]
+	"doc_folder": "Gonzalez_Fred_5957",
+	"doc_uri": "/docs/repository/tGUPPARSRi",
+	"doc_date": "11/6/13",
+	"doc_type": "note",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "Atherton",
+	"cc": ["Bob Mann", "Joe McCullen", "Ben Moor", "Reave Fisk", "Sally McAllister", "Mary Monze", "Sue Willis"]
 }

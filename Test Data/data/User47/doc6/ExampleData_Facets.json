@@ -1,7 +1,9 @@
 {
-	"name": "Nick",
-	"date": "4/18/13",
-	"pageNumber": 13,
-	"type": "treatment description",
-	"cc": ["Reave", "Sally", "Sue"]
+	"doc_folder": "Willis_Sue_6355",
+	"doc_uri": "/docs/repository/WYPJzrKDYVtD",
+	"doc_date": "3/16/12",
+	"doc_type": "record",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "San Francisco",
+	"cc": ["Joe McCullen", "Sally McAllister", "Sue Willis"]
 }

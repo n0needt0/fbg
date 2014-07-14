@@ -1,7 +1,9 @@
 {
-	"name": "Bob",
-	"date": "11/14/12",
-	"pageNumber": 10,
-	"type": "fax",
-	"cc": ["Ben", "Anne", "Beth", "Sally", "Sue"]
+	"doc_folder": "McAllister_Sally_0976",
+	"doc_uri": "/docs/repository/dbSQrBXJussL",
+	"doc_date": "3/11/13",
+	"doc_type": "fax",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "San Francisco",
+	"cc": ["Joe McCullen", "Nick Norman", "Reave Fisk", "Anne Quillis", "Sally McAllister"]
 }

@@ -1,7 +1,9 @@
 {
-	"name": "Sue",
-	"date": "12/22/11",
-	"pageNumber": 20,
-	"type": "picture",
-	"cc": ["Joe", "Nick", "Ben", "Andrew", "Anne", "Beth", "Sally", "Sue"]
+	"doc_folder": "McAllister_Sally_2782",
+	"doc_uri": "/docs/repository/FvgQHrRGFZLPs",
+	"doc_date": "1/28/13",
+	"doc_type": "fax",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Fremont",
+	"cc": ["Joe McCullen", "Mary Monze", "Sue Willis"]
 }

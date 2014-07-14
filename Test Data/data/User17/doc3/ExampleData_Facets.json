@@ -1,7 +1,8 @@
 {
-	"name": "Beth",
-	"date": "5/28/11",
-	"pageNumber": 10,
-	"type": "letter",
-	"cc": ["Nick", "Reave", "Sally"]
+	"doc_folder": "Moor_Ben_7515",
+	"doc_uri": "/docs/repository/LuxMMUzfpDzBjDJad",
+	"doc_date": "3/13/12",
+	"doc_type": "interview",
+	"doc_location": "Berkeley",
+	"cc": ["Reave Fisk", "Mary Monze"]
 }

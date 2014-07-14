@@ -1,7 +1,9 @@
 {
-	"name": "Beth",
-	"date": "8/3/10",
-	"pageNumber": 21,
-	"type": "interview",
-	"cc": ["Ben"]
+	"doc_folder": "McCullen_Joe_5228",
+	"doc_uri": "/docs/repository/lIYXSPabdZRc",
+	"doc_date": "6/5/10",
+	"doc_type": "interview",
+	"doc_group": " Physical Therapy Folder",
+	"doc_location": "San Francisco",
+	"cc": ["Fred Gonzalez", "Ben Moor", "Andrew Murn", "Beth Rue"]
 }

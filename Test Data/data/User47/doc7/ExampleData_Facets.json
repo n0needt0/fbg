@@ -1,7 +1,9 @@
 {
-	"name": "Mary",
-	"date": "10/4/11",
-	"pageNumber": 6,
-	"type": "report",
-	"cc": ["Bob", "Reave", "Sue"]
+	"doc_folder": "McAllister_Sally_9175",
+	"doc_uri": "/docs/repository/YGtDbdiYYgsuJMNxDE",
+	"doc_date": "6/19/10",
+	"doc_type": "record",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Menlo",
+	"cc": ["Bob Mann", "Fred Gonzalez", "Nick Norman", "Andrew Murn", "Anne Quillis"]
 }

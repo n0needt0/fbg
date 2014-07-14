@@ -1,7 +1,9 @@
 {
-	"name": "Ben",
-	"date": "9/17/12",
-	"pageNumber": 4,
-	"type": "note",
-	"cc": ["Bob", "Nick", "Beth", "Mary"]
+	"doc_folder": "McCullen_Joe_8791",
+	"doc_uri": "/docs/repository/uXplNaDVSKFVHYqCPc",
+	"doc_date": "3/23/13",
+	"doc_type": "planning",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "Fremont",
+	"cc": ["Reave Fisk", "Anne Quillis", "Beth Rue", "Sue Willis"]
 }

@@ -1,7 +1,9 @@
 {
-	"name": "Sue",
-	"date": "9/24/12",
-	"pageNumber": 12,
-	"type": "letter",
-	"cc": ["Bob", "Fred", "Ben"]
+	"doc_folder": "Moor_Ben_7198",
+	"doc_uri": "/docs/repository/GbgZqjGPKB",
+	"doc_date": "12/5/12",
+	"doc_type": "interview",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "Vallejo",
+	"cc": ["Bob Mann", "Fred Gonzalez", "Nick Norman", "Reave Fisk", "Anne Quillis", "Beth Rue", "Sally McAllister"]
 }

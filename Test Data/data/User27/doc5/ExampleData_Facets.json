@@ -1,7 +1,9 @@
 {
-	"name": "Anne",
-	"date": "9/8/12",
-	"pageNumber": 3,
-	"type": "planning",
-	"cc": ["Bob", "Fred", "Beth", "Sally", "Sue"]
+	"doc_folder": "Quillis_Anne_5531",
+	"doc_uri": "/docs/repository/LNMDPpzCaJgonGRidLnd",
+	"doc_date": "7/12/11",
+	"doc_type": "letter",
+	"doc_group": " Physical Therapy Folder",
+	"doc_location": "Berkeley",
+	"cc": ["Bob Mann", "Anne Quillis", "Mary Monze", "Sue Willis"]
 }

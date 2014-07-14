@@ -1,7 +1,9 @@
 {
-	"name": "Ben",
-	"date": "8/26/13",
-	"pageNumber": 1,
-	"type": "treatment description",
-	"cc": ["Bob", "Ben", "Andrew"]
+	"doc_folder": "McAllister_Sally_0457",
+	"doc_uri": "/docs/repository/qgGgMDfDKEIofcEgghpY",
+	"doc_date": "12/24/12",
+	"doc_type": "record",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "Sunnyvale",
+	"cc": ["Bob Mann", "Joe McCullen", "Nick Norman", "Andrew Murn", "Reave Fisk", "Sally McAllister", "Sue Willis"]
 }

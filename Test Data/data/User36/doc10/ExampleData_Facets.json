@@ -1,7 +1,9 @@
 {
-	"name": "Nick",
-	"date": "1/1/11",
-	"pageNumber": 11,
-	"type": "form",
-	"cc": ["Bob", "Fred", "Anne", "Mary", "Sue"]
+	"doc_folder": "Rue_Beth_1574",
+	"doc_uri": "/docs/repository/gJGnXyncFAJOrmECtAzH",
+	"doc_date": "7/11/13",
+	"doc_type": "treatment description",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "Fairfield",
+	"cc": ["Ben Moor", "Andrew Murn", "Anne Quillis"]
 }

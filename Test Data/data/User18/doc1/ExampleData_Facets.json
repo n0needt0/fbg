@@ -1,7 +1,8 @@
 {
-	"name": "Sally",
-	"date": "5/25/13",
-	"pageNumber": 18,
-	"type": "interview",
-	"cc": ["Bob", "Andrew", "Anne"]
+	"doc_folder": "Mann_Bob_5949",
+	"doc_uri": "/docs/repository/mljJKsFyODLdCkp",
+	"doc_date": "8/2/13",
+	"doc_type": "picture",
+	"doc_location": "Oakland",
+	"cc": ["Nick Norman", "Ben Moor", "Reave Fisk", "Sue Willis"]
 }

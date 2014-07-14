@@ -1,7 +1,9 @@
 {
-	"name": "Joe",
-	"date": "5/5/10",
-	"pageNumber": 9,
-	"type": "interview",
-	"cc": ["Bob", "Nick"]
+	"doc_folder": "Monze_Mary_4445",
+	"doc_uri": "/docs/repository/GJHgAcZpgVPYHW",
+	"doc_date": "7/6/10",
+	"doc_type": "fax",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "San Jose",
+	"cc": ["Bob Mann", "Ben Moor", "Andrew Murn", "Reave Fisk", "Anne Quillis"]
 }

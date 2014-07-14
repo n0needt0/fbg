@@ -1,7 +1,9 @@
 {
-	"name": "Mary",
-	"date": "2/27/10",
-	"pageNumber": 20,
-	"type": "note",
-	"cc": ["Bob", "Nick", "Ben", "Andrew", "Anne", "Beth"]
+	"doc_folder": "Mann_Bob_6758",
+	"doc_uri": "/docs/repository/pxgmbUNZbXVwbFOzictp",
+	"doc_date": "2/12/13",
+	"doc_type": "picture",
+	"doc_group": " Physical Therapy Folder",
+	"doc_location": "Fairfield",
+	"cc": ["Reave Fisk", "Beth Rue", "Sally McAllister", "Mary Monze"]
 }

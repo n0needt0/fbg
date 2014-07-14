@@ -1,7 +1,9 @@
 {
-	"name": "Bob",
-	"date": "6/18/12",
-	"pageNumber": 13,
-	"type": "picture",
-	"cc": ["Bob", "Fred", "Sally"]
+	"doc_folder": "McAllister_Sally_4211",
+	"doc_uri": "/docs/repository/aavBeAQNaflrZmK",
+	"doc_date": "2/11/10",
+	"doc_type": "picture",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "Sunnyvale",
+	"cc": ["Fred Gonzalez", "Ben Moor"]
 }

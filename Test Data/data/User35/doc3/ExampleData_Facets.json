@@ -1,7 +1,9 @@
 {
-	"name": "Anne",
-	"date": "5/28/13",
-	"pageNumber": 21,
-	"type": "fax",
-	"cc": ["Ben", "Sally", "Mary"]
+	"doc_folder": "Monze_Mary_6613",
+	"doc_uri": "/docs/repository/yBNIUBXAie",
+	"doc_date": "2/14/12",
+	"doc_type": "treatment description",
+	"doc_group": " Physical Therapy Folder",
+	"doc_location": "Fremont",
+	"cc": ["Bob Mann", "Ben Moor", "Sally McAllister", "Sue Willis"]
 }

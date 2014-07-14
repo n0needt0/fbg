@@ -1,7 +1,8 @@
 {
-	"name": "Sue",
-	"date": "8/21/10",
-	"pageNumber": 15,
-	"type": "note",
-	"cc": ["Fred", "Andrew"]
+	"doc_folder": "McAllister_Sally_1593",
+	"doc_uri": "/docs/repository/AaYGmYRVOtnRuVjOZz",
+	"doc_date": "8/1/10",
+	"doc_type": "letter",
+	"doc_location": "Atherton",
+	"cc": ["Bob Mann", "Andrew Murn", "Anne Quillis", "Sally McAllister"]
 }

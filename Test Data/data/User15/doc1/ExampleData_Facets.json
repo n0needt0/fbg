@@ -1,7 +1,9 @@
 {
-	"name": "Ben",
-	"date": "3/26/11",
-	"pageNumber": 1,
-	"type": "interview",
-	"cc": ["Nick", "Ben", "Reave", "Sally", "Sue"]
+	"doc_folder": "Fisk_Reave_9162",
+	"doc_uri": "/docs/repository/TBWNTUrcApj",
+	"doc_date": "7/28/11",
+	"doc_type": "interview",
+	"doc_group": " Physical Therapy Folder",
+	"doc_location": "Vallejo",
+	"cc": ["Fred Gonzalez", "Ben Moor", "Reave Fisk", "Beth Rue", "Sally McAllister"]
 }

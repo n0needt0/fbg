@@ -1,7 +1,9 @@
 {
-	"name": "Ben",
-	"date": "5/9/11",
-	"pageNumber": 12,
-	"type": "picture",
-	"cc": ["Reave", "Mary", "Sue"]
+	"doc_folder": "Moor_Ben_5366",
+	"doc_uri": "/docs/repository/MsvyeNekyKelthxDT",
+	"doc_date": "11/14/10",
+	"doc_type": "planning",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Fremont",
+	"cc": ["Fred Gonzalez", "Nick Norman", "Anne Quillis", "Beth Rue", "Mary Monze"]
 }

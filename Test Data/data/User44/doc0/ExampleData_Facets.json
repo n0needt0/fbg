@@ -1,7 +1,9 @@
 {
-	"name": "Joe",
-	"date": "9/16/12",
-	"pageNumber": 2,
-	"type": "interview",
-	"cc": ["Bob", "Nick", "Anne", "Mary"]
+	"doc_folder": "Norman_Nick_2782",
+	"doc_uri": "/docs/repository/nyysQnwJKmwIFFzCW",
+	"doc_date": "11/22/11",
+	"doc_type": "picture",
+	"doc_group": " Physical Therapy Folder",
+	"doc_location": "Berkeley",
+	"cc": ["Nick Norman", "Ben Moor", "Andrew Murn", "Reave Fisk", "Mary Monze", "Sue Willis"]
 }

@@ -1,7 +1,9 @@
 {
-	"name": "Beth",
-	"date": "2/18/11",
-	"pageNumber": 16,
-	"type": "note",
-	"cc": ["Fred", "Ben", "Sally", "Sue"]
+	"doc_folder": "McAllister_Sally_5619",
+	"doc_uri": "/docs/repository/LjXkYRFXiGaRQRi",
+	"doc_date": "12/13/10",
+	"doc_type": "treatment description",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "Atherton",
+	"cc": ["Fred Gonzalez", "Andrew Murn", "Anne Quillis", "Beth Rue", "Sally McAllister", "Mary Monze", "Sue Willis"]
 }

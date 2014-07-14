@@ -1,7 +1,9 @@
 {
-	"name": "Sue",
-	"date": "9/20/12",
-	"pageNumber": 2,
-	"type": "picture",
-	"cc": ["Bob", "Fred", "Ben", "Mary"]
+	"doc_folder": "Fisk_Reave_9566",
+	"doc_uri": "/docs/repository/CSGWcFEOqgguygeixu",
+	"doc_date": "11/25/13",
+	"doc_type": "record",
+	"doc_group": " Physical Therapy Folder",
+	"doc_location": "San Francisco",
+	"cc": ["Joe McCullen", "Nick Norman", "Ben Moor", "Andrew Murn", "Sally McAllister", "Mary Monze"]
 }

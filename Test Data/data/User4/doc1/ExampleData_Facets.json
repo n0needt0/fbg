@@ -1,7 +1,9 @@
 {
-	"name": "Fred",
-	"date": "4/7/13",
-	"pageNumber": 6,
-	"type": "report",
-	"cc": ["Bob", "Nick", "Mary"]
+	"doc_folder": "Gonzalez_Fred_8735",
+	"doc_uri": "/docs/repository/uMGZCvoozm",
+	"doc_date": "12/7/11",
+	"doc_type": "picture",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Salinas",
+	"cc": ["Anne Quillis", "Sue Willis"]
 }

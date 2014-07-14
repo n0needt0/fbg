@@ -1,7 +1,8 @@
 {
-	"name": "Beth",
-	"date": "10/13/13",
-	"pageNumber": 3,
-	"type": "picture",
-	"cc": ["Beth", "Mary"]
+	"doc_folder": "Willis_Sue_9046",
+	"doc_uri": "/docs/repository/GXGCQdAhdTdMmq",
+	"doc_date": "11/7/13",
+	"doc_type": "letter",
+	"doc_location": "Hayward",
+	"cc": ["Bob Mann", "Joe McCullen", "Nick Norman", "Reave Fisk", "Beth Rue", "Sue Willis"]
 }

@@ -1,7 +1,9 @@
 {
-	"name": "Mary",
-	"date": "9/27/12",
-	"pageNumber": 11,
-	"type": "interview",
-	"cc": ["Sally"]
+	"doc_folder": "Monze_Mary_4853",
+	"doc_uri": "/docs/repository/pSNZfChJyzGxNdd",
+	"doc_date": "7/26/11",
+	"doc_type": "treatment description",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Hayward",
+	"cc": ["Ben Moor", "Anne Quillis", "Beth Rue", "Mary Monze", "Sue Willis"]
 }

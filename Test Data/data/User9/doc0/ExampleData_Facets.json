@@ -1,7 +1,9 @@
 {
-	"name": "Reave",
-	"date": "2/6/12",
-	"pageNumber": 15,
-	"type": "interview",
-	"cc": ["Bob", "Joe", "Fred", "Reave", "Beth"]
+	"doc_folder": "Mann_Bob_9983",
+	"doc_uri": "/docs/repository/UPJGxwoeyQJiwVf",
+	"doc_date": "9/11/13",
+	"doc_type": "fax",
+	"doc_group": " Physical Therapy Folder",
+	"doc_location": "Oakland",
+	"cc": ["Bob Mann", "Joe McCullen", "Nick Norman", "Andrew Murn", "Reave Fisk"]
 }

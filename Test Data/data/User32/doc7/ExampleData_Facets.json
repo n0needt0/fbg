@@ -1,7 +1,8 @@
 {
-	"name": "Fred",
-	"date": "1/17/13",
-	"pageNumber": 3,
-	"type": "letter",
-	"cc": ["Fred", "Sally"]
+	"doc_folder": "Monze_Mary_6306",
+	"doc_uri": "/docs/repository/BVOBSwxzTpZr",
+	"doc_date": "4/20/11",
+	"doc_type": "planning",
+	"doc_location": "Concord",
+	"cc": ["Bob Mann", "Sally McAllister"]
 }

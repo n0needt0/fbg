@@ -1,7 +1,9 @@
 {
-	"name": "Sue",
-	"date": "5/11/13",
-	"pageNumber": 25,
-	"type": "record",
-	"cc": ["Bob", "Fred", "Reave", "Anne", "Sally", "Sue"]
+	"doc_folder": "Gonzalez_Fred_2676",
+	"doc_uri": "/docs/repository/cpfeiJLGdKyvwG",
+	"doc_date": "6/21/13",
+	"doc_type": "interview",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "Concord",
+	"cc": []
 }

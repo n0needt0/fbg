@@ -2,18 +2,16 @@ import os
 import sys
 import random
 import shutil
+import string
 
-NUM_USERS = 50
-MAX_DOCS = 30
-NUM_WORDS = 1000
-NUM_PDFS = 9
+NUM_USERS, MAX_DOCS, NUM_WORDS, NUM_PDFS, URI_MIN, URI_MAX = 80, 15, 1000, 9, 10, 20
 DICT_PATH = sys.argv[1] if len(sys.argv) > 1 else "/usr/share/dict/words"
 
 print("Dictionary path is: ", DICT_PATH)
 words = open(DICT_PATH).read().splitlines()
 properties = open("properties.txt").read().splitlines()
-types = properties[0].split(",")
-names = properties[1].split(",")
+types, names, locations, groups = (propList.split(",") for propList in properties)
+
 
 if not os.path.exists("./data"):
         os.makedirs("./data")
@@ -39,12 +37,21 @@ for i in range(0, NUM_USERS):
 
         exampleFacets = open(dirName + "/ExampleData_Facets.json", "w+")
         exampleFacets.write("{\n")
-        exampleFacets.write("\t\"name\": \"" + random.choice(names) + "\",\n")
-        exampleFacets.write("\t\"date\": \"" + str(random.randint(1, 12)) + "/" +
-                                               str(random.randint(1, 28)) + "/" +
-                                               str(random.randint(10, 13)) + "\",\n")
-        exampleFacets.write("\t\"pageNumber\": " + str(random.randint(1, 25)) + ",\n")
-        exampleFacets.write("\t\"type\": \"" + random.choice(types) + "\",\n")
+        exampleFacets.write("\t\"doc_folder\": \"" +
+                            "_".join(reversed(random.choice(names).split())) +
+                            "_" + "".join(str(random.randint(0, 9)) for k in range(0, 4)) +
+                            "\",\n")
+        exampleFacets.write("\t\"doc_uri\": \"" +
+                            "/docs/repository/" +
+                            "".join(random.choice(string.ascii_letters) for k in range(0, random.randint(URI_MIN, URI_MAX))) +
+                            "\",\n")
+        exampleFacets.write("\t\"doc_date\": \"" +
+                            str(random.randint(1, 12)) + "/" +
+                            str(random.randint(1, 28)) + "/" +
+                            str(random.randint(10, 13)) + "\",\n")
+        exampleFacets.write("\t\"doc_type\": \"" + random.choice(types) + "\",\n")
+        exampleFacets.write("\t\"doc_group\": \"" + random.choice(groups) + "\",\n")
+        exampleFacets.write("\t\"doc_location\": \"" + random.choice(locations) + "\",\n")
         exampleFacets.write("\t\"cc\": [")
         previousCC = False
         for name in names:
@@ -54,5 +61,5 @@ for i in range(0, NUM_USERS):
                 previousCC = True
                 exampleFacets.write("\"" + name + "\"")
         exampleFacets.write("]\n")
-
         exampleFacets.write("}\n")
+        exampleFacets.close()

@@ -1,7 +1,8 @@
 {
-	"name": "Nick",
-	"date": "4/14/10",
-	"pageNumber": 13,
-	"type": "record",
-	"cc": ["Fred", "Sally", "Mary"]
+	"doc_folder": "Mann_Bob_9017",
+	"doc_uri": "/docs/repository/rebgjbLDbokxkH",
+	"doc_date": "11/12/12",
+	"doc_type": "planning",
+	"doc_location": "Salinas",
+	"cc": ["Joe McCullen", "Ben Moor", "Beth Rue", "Sally McAllister"]
 }

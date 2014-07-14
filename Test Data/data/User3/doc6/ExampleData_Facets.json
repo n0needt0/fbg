@@ -1,7 +1,9 @@
 {
-	"name": "Ben",
-	"date": "4/9/12",
-	"pageNumber": 23,
-	"type": "planning",
-	"cc": ["Bob", "Beth"]
+	"doc_folder": "Willis_Sue_7854",
+	"doc_uri": "/docs/repository/MwPXPuDMMTXku",
+	"doc_date": "6/1/12",
+	"doc_type": "note",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "San Mateo",
+	"cc": ["Fred Gonzalez", "Nick Norman", "Reave Fisk", "Sally McAllister", "Mary Monze"]
 }

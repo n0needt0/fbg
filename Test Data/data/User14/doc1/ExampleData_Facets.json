@@ -1,7 +1,9 @@
 {
-	"name": "Reave",
-	"date": "8/26/12",
-	"pageNumber": 16,
-	"type": "letter",
-	"cc": ["Bob", "Fred", "Anne", "Beth", "Mary", "Sue"]
+	"doc_folder": "Mann_Bob_0603",
+	"doc_uri": "/docs/repository/VAMZAYzIDZnKb",
+	"doc_date": "8/1/11",
+	"doc_type": "report",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "Hayward",
+	"cc": ["Bob Mann", "Nick Norman", "Reave Fisk", "Sally McAllister", "Mary Monze", "Sue Willis"]
 }

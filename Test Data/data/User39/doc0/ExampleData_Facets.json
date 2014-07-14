@@ -1,7 +1,9 @@
 {
-	"name": "Beth",
-	"date": "7/21/12",
-	"pageNumber": 6,
-	"type": "fax",
-	"cc": ["Joe", "Andrew", "Anne", "Sally", "Mary", "Sue"]
+	"doc_folder": "Fisk_Reave_6456",
+	"doc_uri": "/docs/repository/IUNDsRojMQplJxVLF",
+	"doc_date": "9/17/10",
+	"doc_type": "report",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Atherton",
+	"cc": ["Bob Mann", "Joe McCullen", "Fred Gonzalez", "Nick Norman", "Anne Quillis", "Beth Rue", "Mary Monze", "Sue Willis"]
 }

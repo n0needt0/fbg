@@ -1,7 +1,9 @@
 {
-	"name": "Bob",
-	"date": "7/1/13",
-	"pageNumber": 12,
-	"type": "interview",
-	"cc": ["Joe", "Ben", "Reave", "Anne", "Beth", "Mary", "Sue"]
+	"doc_folder": "Fisk_Reave_2358",
+	"doc_uri": "/docs/repository/XJHRhWQFIaEAeDRzo",
+	"doc_date": "3/6/12",
+	"doc_type": "planning",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "San Jose",
+	"cc": ["Joe McCullen", "Beth Rue", "Sue Willis"]
 }

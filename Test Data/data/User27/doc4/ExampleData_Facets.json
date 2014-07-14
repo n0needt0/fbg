@@ -1,7 +1,9 @@
 {
-	"name": "Beth",
-	"date": "10/9/13",
-	"pageNumber": 3,
-	"type": "planning",
-	"cc": ["Nick", "Ben", "Andrew", "Mary"]
+	"doc_folder": "Moor_Ben_9890",
+	"doc_uri": "/docs/repository/NgqeoIGAYrkURPRqMOFG",
+	"doc_date": "6/22/11",
+	"doc_type": "report",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Menlo",
+	"cc": ["Joe McCullen", "Beth Rue", "Sally McAllister", "Mary Monze"]
 }

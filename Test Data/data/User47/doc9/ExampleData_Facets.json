@@ -1,7 +1,9 @@
 {
-	"name": "Beth",
-	"date": "7/28/11",
-	"pageNumber": 9,
-	"type": "planning",
-	"cc": ["Joe", "Nick", "Sally", "Mary"]
+	"doc_folder": "Fisk_Reave_3363",
+	"doc_uri": "/docs/repository/xGzFkaHLPnVDNmgTY",
+	"doc_date": "4/6/11",
+	"doc_type": "interview",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "San Mateo",
+	"cc": ["Bob Mann", "Joe McCullen", "Fred Gonzalez", "Reave Fisk", "Beth Rue", "Sally McAllister", "Mary Monze", "Sue Willis"]
 }

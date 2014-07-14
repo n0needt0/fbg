@@ -1,7 +1,9 @@
 {
-	"name": "Bob",
-	"date": "7/24/11",
-	"pageNumber": 6,
-	"type": "interview",
-	"cc": ["Fred", "Anne", "Sue"]
+	"doc_folder": "Moor_Ben_9819",
+	"doc_uri": "/docs/repository/nsmtrTUKIGHUJojhpG",
+	"doc_date": "4/2/10",
+	"doc_type": "report",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "Fremont",
+	"cc": ["Joe McCullen"]
 }

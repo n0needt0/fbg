@@ -1,7 +1,9 @@
 {
-	"name": "Andrew",
-	"date": "2/25/12",
-	"pageNumber": 3,
-	"type": "interview",
-	"cc": ["Fred", "Ben", "Andrew", "Sally"]
+	"doc_folder": "Willis_Sue_7413",
+	"doc_uri": "/docs/repository/uVZecrkgucFhqD",
+	"doc_date": "10/17/12",
+	"doc_type": "treatment description",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "San Jose",
+	"cc": ["Joe McCullen", "Nick Norman", "Ben Moor", "Andrew Murn", "Mary Monze"]
 }

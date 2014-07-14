@@ -1,7 +1,9 @@
 {
-	"name": "Fred",
-	"date": "4/9/12",
-	"pageNumber": 25,
-	"type": "record",
-	"cc": ["Reave", "Mary"]
+	"doc_folder": "Murn_Andrew_6330",
+	"doc_uri": "/docs/repository/rkBSfwnQsFvWCXfTLvv",
+	"doc_date": "12/17/12",
+	"doc_type": "planning",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Oakland",
+	"cc": ["Bob Mann", "Andrew Murn", "Beth Rue", "Mary Monze", "Sue Willis"]
 }

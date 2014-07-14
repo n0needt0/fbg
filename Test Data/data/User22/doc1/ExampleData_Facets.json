@@ -1,7 +1,9 @@
 {
-	"name": "Fred",
-	"date": "2/7/10",
-	"pageNumber": 8,
-	"type": "letter",
-	"cc": ["Fred", "Andrew", "Beth"]
+	"doc_folder": "McAllister_Sally_6867",
+	"doc_uri": "/docs/repository/impBOBeYGgEqMkvzbZd",
+	"doc_date": "12/23/11",
+	"doc_type": "interview",
+	"doc_group": " Physical Therapy Folder",
+	"doc_location": "Salinas",
+	"cc": ["Bob Mann", "Andrew Murn", "Sue Willis"]
 }

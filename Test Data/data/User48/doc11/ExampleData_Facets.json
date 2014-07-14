@@ -1,7 +1,8 @@
 {
-	"name": "Mary",
-	"date": "12/15/11",
-	"pageNumber": 4,
-	"type": "picture",
-	"cc": ["Fred", "Reave", "Sally", "Mary"]
+	"doc_folder": "Monze_Mary_7327",
+	"doc_uri": "/docs/repository/MSLHaIydtQEFe",
+	"doc_date": "2/27/12",
+	"doc_type": "record",
+	"doc_location": "Salinas",
+	"cc": ["Bob Mann", "Fred Gonzalez", "Ben Moor", "Andrew Murn", "Anne Quillis", "Mary Monze", "Sue Willis"]
 }

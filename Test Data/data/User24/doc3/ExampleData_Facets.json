@@ -1,7 +1,9 @@
 {
-	"name": "Mary",
-	"date": "11/18/13",
-	"pageNumber": 12,
-	"type": "picture",
-	"cc": ["Bob", "Andrew", "Sally", "Sue"]
+	"doc_folder": "Mann_Bob_1087",
+	"doc_uri": "/docs/repository/eqzKXoJdpTONZpqy",
+	"doc_date": "9/8/12",
+	"doc_type": "record",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Berkeley",
+	"cc": ["Ben Moor", "Andrew Murn", "Mary Monze"]
 }

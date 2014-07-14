@@ -1,7 +1,9 @@
 {
-	"name": "Ben",
-	"date": "8/25/12",
-	"pageNumber": 20,
-	"type": "treatment description",
-	"cc": ["Reave", "Anne", "Mary"]
+	"doc_folder": "McAllister_Sally_6923",
+	"doc_uri": "/docs/repository/ykzMSWyVQTwVLYF",
+	"doc_date": "8/25/10",
+	"doc_type": "picture",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "Santa Clara",
+	"cc": ["Bob Mann", "Nick Norman", "Beth Rue"]
 }

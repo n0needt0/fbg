@@ -1,7 +1,9 @@
 {
-	"name": "Joe",
-	"date": "7/10/12",
-	"pageNumber": 25,
-	"type": "planning",
-	"cc": ["Nick", "Andrew", "Sally", "Mary"]
+	"doc_folder": "Willis_Sue_7078",
+	"doc_uri": "/docs/repository/CqrHeVPGiPGLSh",
+	"doc_date": "4/9/13",
+	"doc_type": "report",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "Fairfield",
+	"cc": ["Bob Mann", "Fred Gonzalez"]
 }

@@ -1,7 +1,8 @@
 {
-	"name": "Sally",
-	"date": "7/11/11",
-	"pageNumber": 1,
-	"type": "interview",
-	"cc": ["Fred", "Reave", "Mary", "Sue"]
+	"doc_folder": "Fisk_Reave_0513",
+	"doc_uri": "/docs/repository/WOpkiNXGxgHEdiOv",
+	"doc_date": "1/11/12",
+	"doc_type": "letter",
+	"doc_location": "Redwood City",
+	"cc": ["Fred Gonzalez", "Nick Norman", "Sue Willis"]
 }

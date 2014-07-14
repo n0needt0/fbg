@@ -1,7 +1,9 @@
 {
-	"name": "Anne",
-	"date": "10/14/13",
-	"pageNumber": 9,
-	"type": "letter",
-	"cc": ["Bob", "Joe", "Anne", "Beth", "Mary", "Sue"]
+	"doc_folder": "Mann_Bob_8115",
+	"doc_uri": "/docs/repository/phAVGwDsQjFSJE",
+	"doc_date": "2/23/10",
+	"doc_type": "form",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Sunnyvale",
+	"cc": ["Ben Moor", "Sue Willis"]
 }

@@ -1,6 +1,5 @@
 <?php namespace Lasdorf\CronratApi;
 
-use Lasdorf\CronratApi\CronratBase;
 use Illuminate\Support\Facades\DB as DB;
 use Illuminate\Support\Facades\Redis as Redis;
 use Illuminate\Support\Facades\Config as Config;

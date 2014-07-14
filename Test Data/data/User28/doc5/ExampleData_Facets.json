@@ -1,7 +1,8 @@
 {
-	"name": "Sally",
-	"date": "7/2/12",
-	"pageNumber": 9,
-	"type": "picture",
-	"cc": ["Bob", "Nick", "Ben", "Andrew", "Reave", "Beth", "Sally"]
+	"doc_folder": "Mann_Bob_5592",
+	"doc_uri": "/docs/repository/EoHpKQFoEJrhp",
+	"doc_date": "2/1/12",
+	"doc_type": "interview",
+	"doc_location": "Berkeley",
+	"cc": ["Fred Gonzalez", "Ben Moor"]
 }

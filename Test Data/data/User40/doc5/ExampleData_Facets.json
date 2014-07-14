@@ -1,7 +1,9 @@
 {
-	"name": "Sally",
-	"date": "1/15/13",
-	"pageNumber": 7,
-	"type": "treatment description",
-	"cc": ["Nick", "Ben", "Andrew", "Reave"]
+	"doc_folder": "Willis_Sue_2179",
+	"doc_uri": "/docs/repository/sePSfTGMzNPJ",
+	"doc_date": "2/25/10",
+	"doc_type": "form",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Hayward",
+	"cc": ["Joe McCullen", "Ben Moor", "Andrew Murn", "Reave Fisk", "Anne Quillis", "Sue Willis"]
 }

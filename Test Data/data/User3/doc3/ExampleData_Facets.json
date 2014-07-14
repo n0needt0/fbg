@@ -1,7 +1,9 @@
 {
-	"name": "Sally",
-	"date": "2/5/11",
-	"pageNumber": 16,
-	"type": "record",
-	"cc": ["Joe", "Beth", "Sue"]
+	"doc_folder": "Willis_Sue_1325",
+	"doc_uri": "/docs/repository/VdrqJAqgWDgGLZYdr",
+	"doc_date": "1/21/10",
+	"doc_type": "treatment description",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "Hayward",
+	"cc": ["Bob Mann", "Joe McCullen", "Fred Gonzalez", "Beth Rue"]
 }

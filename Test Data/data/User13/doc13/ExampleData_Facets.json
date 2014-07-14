@@ -1,7 +1,9 @@
 {
-	"name": "Joe",
-	"date": "5/8/10",
-	"pageNumber": 17,
-	"type": "fax",
-	"cc": ["Andrew", "Beth", "Sally"]
+	"doc_folder": "McCullen_Joe_7039",
+	"doc_uri": "/docs/repository/cbgIPmVCtAVCu",
+	"doc_date": "3/1/10",
+	"doc_type": "report",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "Sunnyvale",
+	"cc": ["Bob Mann", "Joe McCullen", "Sally McAllister"]
 }

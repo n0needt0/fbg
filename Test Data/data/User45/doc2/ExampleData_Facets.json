@@ -1,7 +1,9 @@
 {
-	"name": "Sue",
-	"date": "6/25/11",
-	"pageNumber": 18,
-	"type": "record",
-	"cc": ["Nick"]
+	"doc_folder": "McCullen_Joe_0149",
+	"doc_uri": "/docs/repository/rJCIgOlxEhOMjJCfHpyQ",
+	"doc_date": "11/19/12",
+	"doc_type": "planning",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "Santa Clara",
+	"cc": ["Bob Mann", "Joe McCullen", "Ben Moor", "Sue Willis"]
 }

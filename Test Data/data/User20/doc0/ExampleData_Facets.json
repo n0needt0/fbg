@@ -1,7 +1,9 @@
 {
-	"name": "Fred",
-	"date": "5/15/12",
-	"pageNumber": 8,
-	"type": "planning",
-	"cc": ["Reave", "Anne", "Beth", "Sally", "Mary", "Sue"]
+	"doc_folder": "Mann_Bob_2207",
+	"doc_uri": "/docs/repository/QNIZzgAVmgIY",
+	"doc_date": "10/3/11",
+	"doc_type": "interview",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "Redwood City",
+	"cc": ["Bob Mann", "Joe McCullen", "Nick Norman", "Andrew Murn", "Beth Rue", "Sue Willis"]
 }

@@ -1,7 +1,8 @@
 {
-	"name": "Sue",
-	"date": "12/12/10",
-	"pageNumber": 25,
-	"type": "fax",
-	"cc": ["Joe", "Nick"]
+	"doc_folder": "McAllister_Sally_0750",
+	"doc_uri": "/docs/repository/QjTXpJPPMomayfFVzN",
+	"doc_date": "8/5/13",
+	"doc_type": "fax",
+	"doc_location": "Oakland",
+	"cc": ["Bob Mann", "Joe McCullen", "Beth Rue", "Sue Willis"]
 }

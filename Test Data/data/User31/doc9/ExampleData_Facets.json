@@ -1,7 +1,9 @@
 {
-	"name": "Anne",
-	"date": "12/11/11",
-	"pageNumber": 16,
-	"type": "treatment description",
-	"cc": ["Joe", "Beth", "Sally"]
+	"doc_folder": "McCullen_Joe_8608",
+	"doc_uri": "/docs/repository/TNwaIRGZTxmz",
+	"doc_date": "3/19/13",
+	"doc_type": "interview",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "Atherton",
+	"cc": ["Nick Norman", "Ben Moor"]
 }

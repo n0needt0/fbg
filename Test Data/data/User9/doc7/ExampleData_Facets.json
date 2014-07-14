@@ -1,7 +1,8 @@
 {
-	"name": "Anne",
-	"date": "11/10/10",
-	"pageNumber": 4,
-	"type": "interview",
-	"cc": ["Bob", "Anne"]
+	"doc_folder": "Fisk_Reave_3031",
+	"doc_uri": "/docs/repository/SuXbbDgaZfN",
+	"doc_date": "7/5/11",
+	"doc_type": "fax",
+	"doc_location": "Redwood City",
+	"cc": ["Fred Gonzalez", "Nick Norman", "Andrew Murn"]
 }

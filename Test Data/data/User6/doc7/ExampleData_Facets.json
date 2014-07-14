@@ -1,7 +1,9 @@
 {
-	"name": "Joe",
-	"date": "11/4/13",
-	"pageNumber": 7,
-	"type": "treatment description",
-	"cc": ["Joe", "Andrew", "Beth", "Mary"]
+	"doc_folder": "McCullen_Joe_2688",
+	"doc_uri": "/docs/repository/nRuSPzGqhGjEjwG",
+	"doc_date": "6/28/13",
+	"doc_type": "interview",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "Fairfield",
+	"cc": ["Bob Mann", "Nick Norman", "Ben Moor", "Beth Rue"]
 }

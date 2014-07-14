@@ -1,7 +1,9 @@
 {
-	"name": "Beth",
-	"date": "5/19/10",
-	"pageNumber": 22,
-	"type": "record",
-	"cc": ["Ben", "Andrew", "Sally"]
+	"doc_folder": "Willis_Sue_8108",
+	"doc_uri": "/docs/repository/pQGWuqpvMJqmeQq",
+	"doc_date": "8/17/13",
+	"doc_type": "letter",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "Vallejo",
+	"cc": ["Bob Mann", "Fred Gonzalez", "Ben Moor", "Reave Fisk", "Mary Monze"]
 }

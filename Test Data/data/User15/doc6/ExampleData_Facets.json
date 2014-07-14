@@ -1,7 +1,9 @@
 {
-	"name": "Fred",
-	"date": "5/23/12",
-	"pageNumber": 20,
-	"type": "record",
-	"cc": ["Nick", "Ben", "Andrew", "Reave", "Sally"]
+	"doc_folder": "Gonzalez_Fred_3294",
+	"doc_uri": "/docs/repository/ZAYdmuWgjfdvpQYR",
+	"doc_date": "7/1/12",
+	"doc_type": "picture",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Fairfield",
+	"cc": ["Fred Gonzalez", "Andrew Murn", "Beth Rue"]
 }

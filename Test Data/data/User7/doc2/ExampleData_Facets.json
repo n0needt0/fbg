@@ -1,7 +1,9 @@
 {
-	"name": "Mary",
-	"date": "4/6/10",
-	"pageNumber": 16,
-	"type": "letter",
-	"cc": ["Andrew", "Beth", "Sue"]
+	"doc_folder": "Moor_Ben_0617",
+	"doc_uri": "/docs/repository/TYRkOopzGdNRqI",
+	"doc_date": "9/14/11",
+	"doc_type": "letter",
+	"doc_group": " Physical Therapy Folder",
+	"doc_location": "Fairfield",
+	"cc": ["Beth Rue", "Sally McAllister", "Sue Willis"]
 }

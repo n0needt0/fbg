@@ -1,7 +1,8 @@
 {
-	"name": "Sally",
-	"date": "1/1/13",
-	"pageNumber": 11,
-	"type": "interview",
-	"cc": ["Bob", "Joe", "Anne", "Sally"]
+	"doc_folder": "Gonzalez_Fred_8457",
+	"doc_uri": "/docs/repository/kTLfdjsaNg",
+	"doc_date": "3/20/11",
+	"doc_type": "fax",
+	"doc_location": "Atherton",
+	"cc": ["Nick Norman", "Reave Fisk", "Anne Quillis", "Sue Willis"]
 }

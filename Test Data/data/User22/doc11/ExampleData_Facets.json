@@ -1,7 +1,8 @@
 {
-	"name": "Andrew",
-	"date": "8/26/10",
-	"pageNumber": 9,
-	"type": "fax",
-	"cc": ["Joe", "Ben", "Anne", "Sally"]
+	"doc_folder": "McAllister_Sally_3711",
+	"doc_uri": "/docs/repository/gSoXQHUBshLPdmu",
+	"doc_date": "5/8/12",
+	"doc_type": "record",
+	"doc_location": "Oakland",
+	"cc": ["Bob Mann", "Nick Norman", "Ben Moor", "Reave Fisk"]
 }

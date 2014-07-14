@@ -1,7 +1,9 @@
 {
-	"name": "Sally",
-	"date": "4/27/10",
-	"pageNumber": 1,
-	"type": "treatment description",
-	"cc": ["Fred", "Nick", "Reave", "Sue"]
+	"doc_folder": "Quillis_Anne_4630",
+	"doc_uri": "/docs/repository/GCbvTKJquabtYQ",
+	"doc_date": "1/27/12",
+	"doc_type": "treatment description",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Oakland",
+	"cc": ["Joe McCullen", "Nick Norman", "Ben Moor", "Reave Fisk"]
 }

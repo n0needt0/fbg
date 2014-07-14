@@ -1,7 +1,9 @@
 {
-	"name": "Sue",
-	"date": "1/14/11",
-	"pageNumber": 15,
-	"type": "fax",
-	"cc": ["Reave"]
+	"doc_folder": "Mann_Bob_7644",
+	"doc_uri": "/docs/repository/CtAPtGVLYczChYL",
+	"doc_date": "11/16/10",
+	"doc_type": "form",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Oakland",
+	"cc": ["Fred Gonzalez"]
 }

@@ -1,7 +1,9 @@
 {
-	"name": "Anne",
-	"date": "1/8/10",
-	"pageNumber": 19,
-	"type": "interview",
-	"cc": ["Bob", "Fred", "Andrew"]
+	"doc_folder": "Rue_Beth_4307",
+	"doc_uri": "/docs/repository/cxppNqZKvFzmCUHerqEY",
+	"doc_date": "6/23/12",
+	"doc_type": "report",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "Salinas",
+	"cc": ["Bob Mann", "Anne Quillis", "Mary Monze", "Sue Willis"]
 }

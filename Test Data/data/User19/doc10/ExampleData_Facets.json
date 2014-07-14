@@ -1,7 +1,9 @@
 {
-	"name": "Nick",
-	"date": "10/5/13",
-	"pageNumber": 12,
-	"type": "picture",
-	"cc": ["Bob", "Nick", "Andrew", "Sue"]
+	"doc_folder": "Murn_Andrew_0224",
+	"doc_uri": "/docs/repository/jJwjfuakMfOLhTduPKNL",
+	"doc_date": "1/26/13",
+	"doc_type": "note",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Menlo",
+	"cc": ["Bob Mann", "Sue Willis"]
 }

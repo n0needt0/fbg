@@ -1,7 +1,9 @@
 {
-	"name": "Nick",
-	"date": "6/1/12",
-	"pageNumber": 6,
-	"type": "report",
-	"cc": ["Bob", "Joe", "Ben", "Andrew", "Mary", "Sue"]
+	"doc_folder": "Willis_Sue_8334",
+	"doc_uri": "/docs/repository/zPHgMEgawbbAGke",
+	"doc_date": "11/9/10",
+	"doc_type": "fax",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "Menlo",
+	"cc": ["Fred Gonzalez", "Andrew Murn", "Mary Monze", "Sue Willis"]
 }

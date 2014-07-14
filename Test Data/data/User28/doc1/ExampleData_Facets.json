@@ -1,7 +1,8 @@
 {
-	"name": "Reave",
-	"date": "5/11/10",
-	"pageNumber": 17,
-	"type": "report",
-	"cc": ["Bob", "Joe", "Fred", "Nick", "Ben", "Reave", "Beth"]
+	"doc_folder": "Norman_Nick_1667",
+	"doc_uri": "/docs/repository/iBGMKrwNDVokvbCeS",
+	"doc_date": "12/19/12",
+	"doc_type": "planning",
+	"doc_location": "Fairfield",
+	"cc": ["Ben Moor", "Reave Fisk", "Anne Quillis", "Mary Monze"]
 }

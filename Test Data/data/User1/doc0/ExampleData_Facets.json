@@ -1,7 +1,9 @@
 {
-	"name": "Mary",
-	"date": "4/8/12",
-	"pageNumber": 20,
-	"type": "picture",
-	"cc": ["Andrew", "Reave", "Anne", "Beth"]
+	"doc_folder": "Moor_Ben_4600",
+	"doc_uri": "/docs/repository/XnHHrEqRPGiTTi",
+	"doc_date": "9/5/12",
+	"doc_type": "treatment description",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "Atherton",
+	"cc": ["Joe McCullen", "Fred Gonzalez"]
 }

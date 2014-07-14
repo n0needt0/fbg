@@ -1,7 +1,9 @@
 {
-	"name": "Mary",
-	"date": "8/2/12",
-	"pageNumber": 14,
-	"type": "note",
-	"cc": ["Bob", "Joe", "Reave", "Mary", "Sue"]
+	"doc_folder": "Monze_Mary_7398",
+	"doc_uri": "/docs/repository/AXQFUmLpTInZILSJGalC",
+	"doc_date": "2/10/10",
+	"doc_type": "letter",
+	"doc_group": " Physical Therapy Folder",
+	"doc_location": "Atherton",
+	"cc": ["Fred Gonzalez", "Ben Moor", "Reave Fisk", "Sally McAllister", "Sue Willis"]
 }

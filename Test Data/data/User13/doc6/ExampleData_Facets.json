@@ -1,7 +1,9 @@
 {
-	"name": "Bob",
-	"date": "5/26/12",
-	"pageNumber": 19,
-	"type": "treatment description",
-	"cc": ["Bob", "Fred", "Ben", "Andrew", "Beth", "Mary", "Sue"]
+	"doc_folder": "McAllister_Sally_8822",
+	"doc_uri": "/docs/repository/KyXnwUUHKFtvRLiCE",
+	"doc_date": "12/26/10",
+	"doc_type": "fax",
+	"doc_group": " Physical Therapy Folder",
+	"doc_location": "Fremont",
+	"cc": ["Fred Gonzalez", "Andrew Murn", "Reave Fisk", "Beth Rue"]
 }

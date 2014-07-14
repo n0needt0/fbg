@@ -1,7 +1,9 @@
 {
-	"name": "Fred",
-	"date": "6/1/10",
-	"pageNumber": 10,
-	"type": "planning",
-	"cc": ["Bob", "Nick", "Andrew", "Reave", "Sally", "Sue"]
+	"doc_folder": "McAllister_Sally_7270",
+	"doc_uri": "/docs/repository/fslxmVBzKR",
+	"doc_date": "5/22/12",
+	"doc_type": "report",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Atherton",
+	"cc": ["Joe McCullen", "Fred Gonzalez", "Ben Moor", "Anne Quillis", "Mary Monze", "Sue Willis"]
 }

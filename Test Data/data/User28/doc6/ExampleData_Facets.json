@@ -1,7 +1,8 @@
 {
-	"name": "Bob",
-	"date": "8/22/13",
-	"pageNumber": 17,
-	"type": "treatment description",
-	"cc": ["Mary"]
+	"doc_folder": "Norman_Nick_5419",
+	"doc_uri": "/docs/repository/XkCzZhtzAIOADGidQV",
+	"doc_date": "3/22/13",
+	"doc_type": "planning",
+	"doc_location": "San Francisco",
+	"cc": ["Nick Norman", "Andrew Murn", "Anne Quillis", "Beth Rue", "Sally McAllister", "Mary Monze"]
 }

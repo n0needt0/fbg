@@ -1,7 +1,9 @@
 {
-	"name": "Beth",
-	"date": "8/20/13",
-	"pageNumber": 13,
-	"type": "letter",
-	"cc": ["Joe", "Nick", "Ben", "Andrew", "Sally"]
+	"doc_folder": "McAllister_Sally_3680",
+	"doc_uri": "/docs/repository/dylncvUGmluv",
+	"doc_date": "3/13/11",
+	"doc_type": "letter",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Atherton",
+	"cc": ["Ben Moor", "Andrew Murn", "Reave Fisk"]
 }

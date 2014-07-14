@@ -1,7 +1,8 @@
 {
-	"name": "Joe",
-	"date": "9/28/10",
-	"pageNumber": 12,
-	"type": "planning",
-	"cc": ["Nick", "Ben", "Andrew", "Reave"]
+	"doc_folder": "Murn_Andrew_8271",
+	"doc_uri": "/docs/repository/pMGMOkIbSDkyrUl",
+	"doc_date": "7/16/11",
+	"doc_type": "picture",
+	"doc_location": "San Mateo",
+	"cc": ["Bob Mann", "Reave Fisk"]
 }

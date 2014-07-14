@@ -1,7 +1,9 @@
 {
-	"name": "Nick",
-	"date": "11/12/10",
-	"pageNumber": 7,
-	"type": "treatment description",
-	"cc": ["Andrew", "Beth", "Sally"]
+	"doc_folder": "Monze_Mary_2769",
+	"doc_uri": "/docs/repository/PUMPjuRYgblQFMOaoz",
+	"doc_date": "12/27/11",
+	"doc_type": "letter",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "Hayward",
+	"cc": ["Joe McCullen", "Nick Norman", "Anne Quillis", "Sue Willis"]
 }

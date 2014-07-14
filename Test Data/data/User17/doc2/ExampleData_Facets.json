@@ -1,7 +1,8 @@
 {
-	"name": "Joe",
-	"date": "8/3/11",
-	"pageNumber": 4,
-	"type": "letter",
-	"cc": ["Joe", "Fred", "Reave"]
+	"doc_folder": "Murn_Andrew_2022",
+	"doc_uri": "/docs/repository/xSMZkMBAUXL",
+	"doc_date": "12/22/11",
+	"doc_type": "picture",
+	"doc_location": "Salinas",
+	"cc": ["Fred Gonzalez", "Mary Monze"]
 }

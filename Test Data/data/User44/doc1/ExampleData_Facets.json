@@ -1,7 +1,9 @@
 {
-	"name": "Sue",
-	"date": "10/20/13",
-	"pageNumber": 21,
-	"type": "report",
-	"cc": ["Bob", "Andrew", "Beth"]
+	"doc_folder": "McCullen_Joe_0932",
+	"doc_uri": "/docs/repository/sfpabzdmkwWyUZNf",
+	"doc_date": "1/17/11",
+	"doc_type": "interview",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "San Mateo",
+	"cc": ["Ben Moor", "Sally McAllister"]
 }

@@ -1,7 +1,8 @@
 {
-	"name": "Sally",
-	"date": "3/24/13",
-	"pageNumber": 15,
-	"type": "form",
-	"cc": ["Nick", "Andrew", "Anne", "Sue"]
+	"doc_folder": "Norman_Nick_4436",
+	"doc_uri": "/docs/repository/FeZwwPRwVNiRJChEiGm",
+	"doc_date": "6/9/12",
+	"doc_type": "planning",
+	"doc_location": "Oakland",
+	"cc": ["Nick Norman", "Reave Fisk", "Anne Quillis", "Beth Rue"]
 }

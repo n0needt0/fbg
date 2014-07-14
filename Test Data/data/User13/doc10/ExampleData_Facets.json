@@ -1,7 +1,9 @@
 {
-	"name": "Beth",
-	"date": "4/24/13",
-	"pageNumber": 10,
-	"type": "record",
-	"cc": ["Bob", "Mary", "Sue"]
+	"doc_folder": "Fisk_Reave_0074",
+	"doc_uri": "/docs/repository/bupbwvYnCaxYBwIuPVDw",
+	"doc_date": "1/24/10",
+	"doc_type": "treatment description",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Menlo",
+	"cc": ["Joe McCullen", "Nick Norman", "Andrew Murn", "Reave Fisk", "Anne Quillis", "Sally McAllister"]
 }

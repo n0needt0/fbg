@@ -1,7 +1,8 @@
 {
-	"name": "Anne",
-	"date": "5/27/13",
-	"pageNumber": 12,
-	"type": "note",
-	"cc": ["Bob", "Nick", "Andrew", "Anne", "Sally"]
+	"doc_folder": "Norman_Nick_7424",
+	"doc_uri": "/docs/repository/LHFaLLkLSwPdLX",
+	"doc_date": "4/3/11",
+	"doc_type": "picture",
+	"doc_location": "San Francisco",
+	"cc": ["Bob Mann", "Joe McCullen", "Nick Norman", "Andrew Murn", "Anne Quillis", "Sally McAllister", "Mary Monze"]
 }

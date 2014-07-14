@@ -1,7 +1,9 @@
 {
-	"name": "Joe",
-	"date": "7/2/11",
-	"pageNumber": 22,
-	"type": "fax",
-	"cc": ["Andrew", "Reave", "Mary", "Sue"]
+	"doc_folder": "Willis_Sue_8493",
+	"doc_uri": "/docs/repository/IlySJlNZCEfb",
+	"doc_date": "4/26/12",
+	"doc_type": "planning",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "Fairfield",
+	"cc": ["Nick Norman", "Beth Rue", "Mary Monze"]
 }

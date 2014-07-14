@@ -1,7 +1,9 @@
 {
-	"name": "Ben",
-	"date": "4/23/10",
-	"pageNumber": 25,
-	"type": "interview",
-	"cc": ["Joe", "Fred", "Ben", "Mary"]
+	"doc_folder": "Monze_Mary_2427",
+	"doc_uri": "/docs/repository/JMkMsJZyzBj",
+	"doc_date": "6/6/12",
+	"doc_type": "treatment description",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Sunnyvale",
+	"cc": ["Ben Moor", "Andrew Murn"]
 }

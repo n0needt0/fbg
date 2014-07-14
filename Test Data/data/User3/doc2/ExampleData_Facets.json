@@ -1,7 +1,9 @@
 {
-	"name": "Nick",
-	"date": "4/9/13",
-	"pageNumber": 3,
-	"type": "form",
-	"cc": ["Bob", "Joe", "Fred", "Anne", "Sally"]
+	"doc_folder": "Quillis_Anne_5878",
+	"doc_uri": "/docs/repository/qPTChemOxQVgXpuF",
+	"doc_date": "11/3/10",
+	"doc_type": "letter",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "Sunnyvale",
+	"cc": ["Nick Norman", "Sally McAllister"]
 }

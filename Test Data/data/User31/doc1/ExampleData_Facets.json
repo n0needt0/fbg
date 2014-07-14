@@ -1,7 +1,9 @@
 {
-	"name": "Mary",
-	"date": "12/4/10",
-	"pageNumber": 2,
-	"type": "picture",
-	"cc": ["Bob", "Nick", "Ben", "Anne", "Sally", "Mary"]
+	"doc_folder": "Fisk_Reave_5784",
+	"doc_uri": "/docs/repository/kQPciIBdaKCSdZ",
+	"doc_date": "10/10/12",
+	"doc_type": "fax",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Hayward",
+	"cc": ["Bob Mann", "Joe McCullen", "Fred Gonzalez", "Nick Norman", "Beth Rue"]
 }

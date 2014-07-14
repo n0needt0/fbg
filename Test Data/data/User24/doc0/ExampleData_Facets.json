@@ -1,7 +1,9 @@
 {
-	"name": "Reave",
-	"date": "5/3/13",
-	"pageNumber": 3,
-	"type": "picture",
-	"cc": ["Bob", "Fred", "Mary"]
+	"doc_folder": "Moor_Ben_6789",
+	"doc_uri": "/docs/repository/nwXqoJDqsgxmuUCYqh",
+	"doc_date": "4/6/13",
+	"doc_type": "picture",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "San Jose",
+	"cc": ["Fred Gonzalez", "Andrew Murn"]
 }

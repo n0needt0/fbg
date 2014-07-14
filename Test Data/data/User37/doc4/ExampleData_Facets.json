@@ -1,7 +1,9 @@
 {
-	"name": "Reave",
-	"date": "4/10/12",
-	"pageNumber": 19,
-	"type": "interview",
-	"cc": ["Bob", "Nick", "Anne", "Mary"]
+	"doc_folder": "McCullen_Joe_5509",
+	"doc_uri": "/docs/repository/NxdoWIlzINnKqsGp",
+	"doc_date": "5/17/11",
+	"doc_type": "letter",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "San Francisco",
+	"cc": ["Joe McCullen", "Reave Fisk", "Anne Quillis", "Mary Monze"]
 }

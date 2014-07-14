@@ -1,7 +1,9 @@
 {
-	"name": "Anne",
-	"date": "12/10/10",
-	"pageNumber": 11,
-	"type": "interview",
-	"cc": ["Fred", "Andrew", "Beth", "Mary", "Sue"]
+	"doc_folder": "Murn_Andrew_0894",
+	"doc_uri": "/docs/repository/NvwGLvrYCitRRQKh",
+	"doc_date": "6/6/12",
+	"doc_type": "planning",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Fairfield",
+	"cc": ["Joe McCullen", "Fred Gonzalez", "Anne Quillis", "Beth Rue", "Sally McAllister", "Mary Monze", "Sue Willis"]
 }

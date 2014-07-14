@@ -1,7 +1,9 @@
 {
-	"name": "Ben",
-	"date": "12/16/11",
-	"pageNumber": 5,
-	"type": "interview",
-	"cc": ["Joe", "Ben", "Andrew", "Reave", "Anne", "Mary"]
+	"doc_folder": "Monze_Mary_6313",
+	"doc_uri": "/docs/repository/gIqJzdlaPCo",
+	"doc_date": "5/28/11",
+	"doc_type": "fax",
+	"doc_group": " Physical Therapy Folder",
+	"doc_location": "Menlo",
+	"cc": ["Bob Mann", "Fred Gonzalez", "Ben Moor", "Reave Fisk", "Beth Rue"]
 }

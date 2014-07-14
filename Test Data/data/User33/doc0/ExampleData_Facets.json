@@ -1,7 +1,9 @@
 {
-	"name": "Sally",
-	"date": "1/11/11",
-	"pageNumber": 21,
-	"type": "treatment description",
-	"cc": ["Fred", "Ben", "Anne", "Mary"]
+	"doc_folder": "Moor_Ben_5253",
+	"doc_uri": "/docs/repository/JXsGUeMfhpKzN",
+	"doc_date": "5/22/11",
+	"doc_type": "fax",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "Berkeley",
+	"cc": ["Fred Gonzalez", "Andrew Murn", "Anne Quillis", "Sally McAllister", "Mary Monze"]
 }

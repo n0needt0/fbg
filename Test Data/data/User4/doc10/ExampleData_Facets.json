@@ -1,7 +1,9 @@
 {
-	"name": "Joe",
-	"date": "4/25/12",
-	"pageNumber": 1,
-	"type": "interview",
-	"cc": ["Bob", "Fred", "Andrew", "Reave", "Anne", "Sue"]
+	"doc_folder": "Gonzalez_Fred_3652",
+	"doc_uri": "/docs/repository/ombwloZPqbJIwvHdHtoQ",
+	"doc_date": "2/24/10",
+	"doc_type": "planning",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Oakland",
+	"cc": ["Bob Mann", "Joe McCullen", "Nick Norman", "Reave Fisk", "Anne Quillis", "Sally McAllister", "Sue Willis"]
 }

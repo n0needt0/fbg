@@ -1,7 +1,8 @@
 {
-	"name": "Beth",
-	"date": "6/18/11",
-	"pageNumber": 24,
-	"type": "planning",
-	"cc": ["Bob", "Anne", "Sally", "Mary", "Sue"]
+	"doc_folder": "McCullen_Joe_2104",
+	"doc_uri": "/docs/repository/jxhIqsYqEbGee",
+	"doc_date": "2/6/10",
+	"doc_type": "note",
+	"doc_location": "Oakland",
+	"cc": ["Fred Gonzalez", "Ben Moor", "Sally McAllister", "Mary Monze", "Sue Willis"]
 }

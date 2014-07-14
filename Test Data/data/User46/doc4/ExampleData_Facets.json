@@ -1,7 +1,9 @@
 {
-	"name": "Sue",
-	"date": "10/12/10",
-	"pageNumber": 17,
-	"type": "note",
-	"cc": ["Fred", "Sally", "Mary"]
+	"doc_folder": "McCullen_Joe_9769",
+	"doc_uri": "/docs/repository/ubRGXMXBqTzILbuxcCR",
+	"doc_date": "3/3/12",
+	"doc_type": "picture",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "Santa Clara",
+	"cc": ["Fred Gonzalez", "Reave Fisk", "Sue Willis"]
 }

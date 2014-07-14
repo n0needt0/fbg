@@ -1,7 +1,8 @@
 {
-	"name": "Sue",
-	"date": "6/22/11",
-	"pageNumber": 9,
-	"type": "report",
-	"cc": ["Bob", "Fred", "Reave", "Sue"]
+	"doc_folder": "Mann_Bob_0620",
+	"doc_uri": "/docs/repository/EcUCmhjPXJFOokIKJ",
+	"doc_date": "1/4/10",
+	"doc_type": "report",
+	"doc_location": "Vallejo",
+	"cc": ["Bob Mann", "Fred Gonzalez", "Ben Moor", "Andrew Murn", "Reave Fisk"]
 }

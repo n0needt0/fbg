@@ -1,7 +1,9 @@
 {
-	"name": "Sally",
-	"date": "11/28/10",
-	"pageNumber": 19,
-	"type": "record",
-	"cc": ["Bob", "Joe", "Nick", "Andrew", "Reave", "Anne"]
+	"doc_folder": "Norman_Nick_8944",
+	"doc_uri": "/docs/repository/VIweDIyyWLcrxEB",
+	"doc_date": "1/20/13",
+	"doc_type": "record",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Salinas",
+	"cc": ["Ben Moor", "Beth Rue"]
 }

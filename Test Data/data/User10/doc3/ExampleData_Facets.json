@@ -1,7 +1,8 @@
 {
-	"name": "Joe",
-	"date": "2/23/13",
-	"pageNumber": 18,
-	"type": "record",
-	"cc": ["Bob", "Nick", "Ben", "Andrew", "Reave"]
+	"doc_folder": "Gonzalez_Fred_3711",
+	"doc_uri": "/docs/repository/gOfjsMVwZXKGsqZqT",
+	"doc_date": "10/22/12",
+	"doc_type": "note",
+	"doc_location": "Atherton",
+	"cc": ["Mary Monze"]
 }

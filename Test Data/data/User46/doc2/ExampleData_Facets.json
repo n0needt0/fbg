@@ -1,7 +1,9 @@
 {
-	"name": "Ben",
-	"date": "2/24/13",
-	"pageNumber": 3,
-	"type": "letter",
-	"cc": ["Bob", "Mary"]
+	"doc_folder": "Murn_Andrew_3612",
+	"doc_uri": "/docs/repository/lvfQPVVcVHRAYV",
+	"doc_date": "7/12/13",
+	"doc_type": "form",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "San Francisco",
+	"cc": ["Joe McCullen", "Fred Gonzalez", "Reave Fisk", "Beth Rue"]
 }

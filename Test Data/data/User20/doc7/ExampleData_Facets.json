@@ -1,7 +1,9 @@
 {
-	"name": "Mary",
-	"date": "8/10/13",
-	"pageNumber": 7,
-	"type": "picture",
-	"cc": ["Nick", "Andrew", "Reave", "Beth", "Mary", "Sue"]
+	"doc_folder": "Fisk_Reave_8921",
+	"doc_uri": "/docs/repository/DSsSisUeoYQUtNN",
+	"doc_date": "2/20/10",
+	"doc_type": "record",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "Salinas",
+	"cc": ["Bob Mann", "Joe McCullen", "Anne Quillis"]
 }

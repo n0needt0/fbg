@@ -1,7 +1,9 @@
 {
-	"name": "Bob",
-	"date": "7/16/12",
-	"pageNumber": 1,
-	"type": "record",
-	"cc": ["Bob", "Reave", "Anne", "Beth"]
+	"doc_folder": "Murn_Andrew_0986",
+	"doc_uri": "/docs/repository/jDFhYfrCdlrnofaJVMS",
+	"doc_date": "8/22/13",
+	"doc_type": "report",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "San Francisco",
+	"cc": ["Fred Gonzalez", "Andrew Murn", "Beth Rue", "Sally McAllister", "Mary Monze"]
 }

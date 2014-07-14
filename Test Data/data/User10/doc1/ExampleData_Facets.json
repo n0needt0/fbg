@@ -1,7 +1,9 @@
 {
-	"name": "Ben",
-	"date": "12/2/10",
-	"pageNumber": 20,
-	"type": "note",
-	"cc": ["Joe", "Mary", "Sue"]
+	"doc_folder": "Rue_Beth_6579",
+	"doc_uri": "/docs/repository/jHGLXzzgTbkHlmOqk",
+	"doc_date": "10/5/12",
+	"doc_type": "letter",
+	"doc_group": " Physical Therapy Folder",
+	"doc_location": "Menlo",
+	"cc": ["Bob Mann", "Joe McCullen", "Ben Moor", "Reave Fisk", "Anne Quillis", "Sue Willis"]
 }

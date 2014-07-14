@@ -1,7 +1,9 @@
 {
-	"name": "Nick",
-	"date": "7/11/11",
-	"pageNumber": 1,
-	"type": "letter",
-	"cc": ["Reave", "Anne"]
+	"doc_folder": "McAllister_Sally_6594",
+	"doc_uri": "/docs/repository/cldLnPxsjfb",
+	"doc_date": "10/14/10",
+	"doc_type": "fax",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "Fairfield",
+	"cc": ["Nick Norman", "Andrew Murn", "Reave Fisk"]
 }

@@ -1,7 +1,9 @@
 {
-	"name": "Bob",
-	"date": "2/26/11",
-	"pageNumber": 21,
-	"type": "form",
-	"cc": ["Fred", "Mary", "Sue"]
+	"doc_folder": "McCullen_Joe_9656",
+	"doc_uri": "/docs/repository/fVUxiVhwNXzsjCldHRQ",
+	"doc_date": "8/18/12",
+	"doc_type": "note",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "Fairfield",
+	"cc": ["Joe McCullen", "Fred Gonzalez", "Reave Fisk"]
 }

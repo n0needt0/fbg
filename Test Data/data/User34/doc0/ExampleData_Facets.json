@@ -1,7 +1,9 @@
 {
-	"name": "Sue",
-	"date": "9/3/11",
-	"pageNumber": 4,
-	"type": "planning",
-	"cc": ["Bob", "Joe", "Fred", "Anne", "Sue"]
+	"doc_folder": "Moor_Ben_4106",
+	"doc_uri": "/docs/repository/LVhZIqMselKcHD",
+	"doc_date": "1/28/10",
+	"doc_type": "fax",
+	"doc_group": " Physical Therapy Folder",
+	"doc_location": "Salinas",
+	"cc": ["Nick Norman", "Ben Moor", "Andrew Murn", "Reave Fisk", "Anne Quillis", "Beth Rue", "Mary Monze", "Sue Willis"]
 }

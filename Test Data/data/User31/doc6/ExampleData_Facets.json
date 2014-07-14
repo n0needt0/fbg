@@ -1,7 +1,9 @@
 {
-	"name": "Sue",
-	"date": "4/16/12",
-	"pageNumber": 10,
-	"type": "form",
-	"cc": ["Bob", "Nick", "Andrew", "Sue"]
+	"doc_folder": "Norman_Nick_6613",
+	"doc_uri": "/docs/repository/dyGZjJtXXsqhfJMKfG",
+	"doc_date": "12/18/13",
+	"doc_type": "picture",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Sunnyvale",
+	"cc": ["Bob Mann", "Nick Norman", "Beth Rue", "Sue Willis"]
 }

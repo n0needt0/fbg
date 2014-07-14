@@ -1,7 +1,9 @@
 {
-	"name": "Reave",
-	"date": "12/18/12",
-	"pageNumber": 1,
-	"type": "report",
-	"cc": ["Fred", "Andrew"]
+	"doc_folder": "Murn_Andrew_2910",
+	"doc_uri": "/docs/repository/CNIcRHPmhuE",
+	"doc_date": "8/2/11",
+	"doc_type": "report",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "San Mateo",
+	"cc": ["Joe McCullen", "Fred Gonzalez", "Ben Moor", "Andrew Murn"]
 }

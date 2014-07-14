@@ -1,7 +1,9 @@
 {
-	"name": "Bob",
-	"date": "12/25/10",
-	"pageNumber": 8,
-	"type": "picture",
-	"cc": ["Joe", "Ben", "Reave", "Anne"]
+	"doc_folder": "Moor_Ben_9914",
+	"doc_uri": "/docs/repository/JaADwVQYcJyc",
+	"doc_date": "11/19/11",
+	"doc_type": "report",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Oakland",
+	"cc": ["Joe McCullen", "Andrew Murn", "Sally McAllister"]
 }

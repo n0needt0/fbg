@@ -1,7 +1,9 @@
 {
-	"name": "Joe",
-	"date": "12/24/11",
-	"pageNumber": 17,
-	"type": "note",
-	"cc": ["Ben"]
+	"doc_folder": "Rue_Beth_7572",
+	"doc_uri": "/docs/repository/OfvIrcqWixkSyCzyFvpl",
+	"doc_date": "4/16/11",
+	"doc_type": "note",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "Santa Clara",
+	"cc": ["Bob Mann", "Joe McCullen", "Ben Moor", "Beth Rue", "Sue Willis"]
 }

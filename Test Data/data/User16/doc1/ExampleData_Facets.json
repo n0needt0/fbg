@@ -1,7 +1,9 @@
 {
-	"name": "Bob",
-	"date": "2/25/11",
-	"pageNumber": 20,
-	"type": "form",
-	"cc": ["Bob", "Joe", "Fred", "Nick", "Reave", "Anne", "Mary"]
+	"doc_folder": "Mann_Bob_2955",
+	"doc_uri": "/docs/repository/BvriVgKeclh",
+	"doc_date": "7/21/12",
+	"doc_type": "picture",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "Hayward",
+	"cc": ["Bob Mann", "Joe McCullen", "Andrew Murn", "Anne Quillis", "Mary Monze"]
 }

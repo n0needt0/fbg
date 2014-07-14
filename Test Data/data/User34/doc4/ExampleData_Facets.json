@@ -1,7 +1,8 @@
 {
-	"name": "Sue",
-	"date": "2/9/11",
-	"pageNumber": 10,
-	"type": "planning",
-	"cc": ["Joe", "Fred", "Ben", "Reave", "Sally"]
+	"doc_folder": "Murn_Andrew_1757",
+	"doc_uri": "/docs/repository/eALjFppNSnMzcciZnju",
+	"doc_date": "5/27/13",
+	"doc_type": "fax",
+	"doc_location": "Menlo",
+	"cc": ["Nick Norman", "Ben Moor", "Anne Quillis"]
 }

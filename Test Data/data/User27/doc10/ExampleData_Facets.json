@@ -1,7 +1,9 @@
 {
-	"name": "Andrew",
-	"date": "7/22/10",
-	"pageNumber": 6,
-	"type": "letter",
-	"cc": ["Bob", "Fred", "Nick", "Ben", "Reave"]
+	"doc_folder": "Monze_Mary_8406",
+	"doc_uri": "/docs/repository/xumtFhuosBX",
+	"doc_date": "11/7/10",
+	"doc_type": "picture",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Hayward",
+	"cc": ["Fred Gonzalez", "Andrew Murn", "Sue Willis"]
 }

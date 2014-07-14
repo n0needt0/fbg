@@ -1,7 +1,8 @@
 {
-	"name": "Bob",
-	"date": "3/12/12",
-	"pageNumber": 5,
-	"type": "picture",
-	"cc": ["Bob", "Fred", "Anne"]
+	"doc_folder": "Fisk_Reave_3338",
+	"doc_uri": "/docs/repository/cKObByFUsXtH",
+	"doc_date": "12/10/10",
+	"doc_type": "note",
+	"doc_location": "Salinas",
+	"cc": ["Bob Mann", "Sally McAllister", "Mary Monze"]
 }

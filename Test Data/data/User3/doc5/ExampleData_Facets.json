@@ -1,7 +1,9 @@
 {
-	"name": "Bob",
-	"date": "3/28/13",
-	"pageNumber": 8,
-	"type": "treatment description",
-	"cc": ["Ben", "Sally", "Mary"]
+	"doc_folder": "Fisk_Reave_6361",
+	"doc_uri": "/docs/repository/nUQJVnSMwwUfy",
+	"doc_date": "5/25/11",
+	"doc_type": "treatment description",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Santa Clara",
+	"cc": ["Joe McCullen", "Nick Norman", "Andrew Murn", "Reave Fisk", "Anne Quillis", "Mary Monze", "Sue Willis"]
 }

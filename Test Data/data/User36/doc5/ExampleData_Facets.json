@@ -1,7 +1,9 @@
 {
-	"name": "Joe",
-	"date": "7/11/10",
-	"pageNumber": 2,
-	"type": "report",
-	"cc": ["Bob", "Andrew", "Reave"]
+	"doc_folder": "Murn_Andrew_8451",
+	"doc_uri": "/docs/repository/GpRdjnipmRmSMEXeKsmZ",
+	"doc_date": "5/17/11",
+	"doc_type": "picture",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "Redwood City",
+	"cc": ["Joe McCullen", "Fred Gonzalez", "Andrew Murn", "Reave Fisk", "Mary Monze", "Sue Willis"]
 }

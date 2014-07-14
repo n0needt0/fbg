@@ -1,7 +1,9 @@
 {
-	"name": "Mary",
-	"date": "11/4/12",
-	"pageNumber": 4,
-	"type": "record",
-	"cc": ["Joe", "Nick", "Reave"]
+	"doc_folder": "Gonzalez_Fred_6665",
+	"doc_uri": "/docs/repository/UFXAdwOUQNRFesYmmJEA",
+	"doc_date": "3/9/12",
+	"doc_type": "note",
+	"doc_group": " Physical Therapy Folder",
+	"doc_location": "San Mateo",
+	"cc": ["Bob Mann", "Joe McCullen", "Ben Moor", "Anne Quillis", "Sally McAllister", "Mary Monze", "Sue Willis"]
 }

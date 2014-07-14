@@ -1,7 +1,9 @@
 {
-	"name": "Ben",
-	"date": "8/6/12",
-	"pageNumber": 16,
-	"type": "fax",
-	"cc": []
+	"doc_folder": "Norman_Nick_9183",
+	"doc_uri": "/docs/repository/LAwlvxwmgWbMxetmYRUU",
+	"doc_date": "4/21/12",
+	"doc_type": "treatment description",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "Atherton",
+	"cc": ["Bob Mann", "Fred Gonzalez"]
 }

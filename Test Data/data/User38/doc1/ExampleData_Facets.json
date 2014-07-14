@@ -1,7 +1,9 @@
 {
-	"name": "Sue",
-	"date": "9/5/13",
-	"pageNumber": 23,
-	"type": "picture",
-	"cc": ["Nick", "Andrew", "Beth", "Sue"]
+	"doc_folder": "McCullen_Joe_3617",
+	"doc_uri": "/docs/repository/DCLfHWCbNpL",
+	"doc_date": "11/27/12",
+	"doc_type": "treatment description",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "Berkeley",
+	"cc": ["Fred Gonzalez", "Andrew Murn", "Reave Fisk", "Anne Quillis"]
 }

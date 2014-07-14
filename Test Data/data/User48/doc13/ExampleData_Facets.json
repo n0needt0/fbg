@@ -1,7 +1,8 @@
 {
-	"name": "Beth",
-	"date": "7/14/10",
-	"pageNumber": 24,
-	"type": "letter",
-	"cc": ["Beth", "Sue"]
+	"doc_folder": "Monze_Mary_3464",
+	"doc_uri": "/docs/repository/WGpXgcgKWkJIhg",
+	"doc_date": "12/18/12",
+	"doc_type": "interview",
+	"doc_location": "Atherton",
+	"cc": ["Bob Mann", "Fred Gonzalez", "Anne Quillis", "Beth Rue"]
 }

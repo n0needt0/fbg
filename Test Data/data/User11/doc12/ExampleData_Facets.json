@@ -1,7 +1,9 @@
 {
-	"name": "Ben",
-	"date": "6/2/10",
-	"pageNumber": 15,
-	"type": "fax",
-	"cc": ["Nick", "Andrew", "Reave"]
+	"doc_folder": "Fisk_Reave_0242",
+	"doc_uri": "/docs/repository/uFzdanlLpzlcxmffYOS",
+	"doc_date": "7/6/11",
+	"doc_type": "note",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "Oakland",
+	"cc": ["Joe McCullen", "Fred Gonzalez", "Ben Moor", "Andrew Murn", "Mary Monze"]
 }

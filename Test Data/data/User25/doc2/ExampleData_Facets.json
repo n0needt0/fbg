@@ -1,7 +1,9 @@
 {
-	"name": "Ben",
-	"date": "2/27/11",
-	"pageNumber": 10,
-	"type": "fax",
-	"cc": ["Bob", "Joe", "Andrew", "Anne"]
+	"doc_folder": "Rue_Beth_4556",
+	"doc_uri": "/docs/repository/QBbBkyylQXhUMehOWUoA",
+	"doc_date": "9/25/13",
+	"doc_type": "record",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "Fairfield",
+	"cc": ["Bob Mann", "Joe McCullen", "Fred Gonzalez", "Ben Moor", "Sally McAllister"]
 }

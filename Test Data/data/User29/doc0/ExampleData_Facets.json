@@ -1,7 +1,9 @@
 {
-	"name": "Anne",
-	"date": "4/17/10",
-	"pageNumber": 16,
-	"type": "letter",
-	"cc": ["Nick", "Ben", "Andrew"]
+	"doc_folder": "Willis_Sue_8560",
+	"doc_uri": "/docs/repository/yQrORPFyCJsOwp",
+	"doc_date": "7/6/12",
+	"doc_type": "record",
+	"doc_group": " Physical Therapy Folder",
+	"doc_location": "Redwood City",
+	"cc": ["Bob Mann", "Sue Willis"]
 }

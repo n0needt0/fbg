@@ -1,7 +1,9 @@
 {
-	"name": "Andrew",
-	"date": "8/2/12",
-	"pageNumber": 2,
-	"type": "fax",
-	"cc": ["Joe", "Nick", "Ben", "Mary", "Sue"]
+	"doc_folder": "Moor_Ben_0899",
+	"doc_uri": "/docs/repository/zovYsCtyAMW",
+	"doc_date": "8/28/11",
+	"doc_type": "fax",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "Salinas",
+	"cc": []
 }

@@ -1,7 +1,9 @@
 {
-	"name": "Ben",
-	"date": "1/27/11",
-	"pageNumber": 7,
-	"type": "form",
-	"cc": ["Joe", "Andrew", "Anne", "Mary"]
+	"doc_folder": "Quillis_Anne_0789",
+	"doc_uri": "/docs/repository/bAcQbEvqFbW",
+	"doc_date": "3/26/11",
+	"doc_type": "picture",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Berkeley",
+	"cc": ["Bob Mann", "Fred Gonzalez", "Nick Norman", "Sally McAllister"]
 }

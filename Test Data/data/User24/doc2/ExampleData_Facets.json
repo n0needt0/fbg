@@ -1,7 +1,9 @@
 {
-	"name": "Bob",
-	"date": "11/20/13",
-	"pageNumber": 20,
-	"type": "form",
-	"cc": []
+	"doc_folder": "Fisk_Reave_3724",
+	"doc_uri": "/docs/repository/wXqQpfcLpiYg",
+	"doc_date": "8/8/12",
+	"doc_type": "interview",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "San Francisco",
+	"cc": ["Joe McCullen", "Fred Gonzalez", "Reave Fisk", "Beth Rue", "Sally McAllister"]
 }

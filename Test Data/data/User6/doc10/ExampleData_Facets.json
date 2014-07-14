@@ -1,7 +1,9 @@
 {
-	"name": "Reave",
-	"date": "6/18/12",
-	"pageNumber": 19,
-	"type": "fax",
-	"cc": ["Nick", "Andrew", "Anne"]
+	"doc_folder": "Gonzalez_Fred_9784",
+	"doc_uri": "/docs/repository/jsGyXKwBRatNCglHIo",
+	"doc_date": "8/23/10",
+	"doc_type": "note",
+	"doc_group": " Physical Therapy Folder",
+	"doc_location": "Concord",
+	"cc": ["Joe McCullen", "Fred Gonzalez", "Reave Fisk"]
 }

@@ -1,7 +1,9 @@
 {
-	"name": "Joe",
-	"date": "11/24/13",
-	"pageNumber": 10,
-	"type": "form",
-	"cc": ["Bob", "Joe", "Ben", "Mary"]
+	"doc_folder": "Rue_Beth_1461",
+	"doc_uri": "/docs/repository/mtFmhXhIAvJltSgGj",
+	"doc_date": "3/19/10",
+	"doc_type": "letter",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "Oakland",
+	"cc": ["Fred Gonzalez", "Sue Willis"]
 }

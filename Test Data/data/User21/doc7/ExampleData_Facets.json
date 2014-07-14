@@ -1,7 +1,8 @@
 {
-	"name": "Reave",
-	"date": "4/4/12",
-	"pageNumber": 20,
-	"type": "note",
-	"cc": ["Bob", "Sue"]
+	"doc_folder": "Fisk_Reave_9049",
+	"doc_uri": "/docs/repository/GOddCZNbCp",
+	"doc_date": "2/14/11",
+	"doc_type": "letter",
+	"doc_location": "San Mateo",
+	"cc": ["Joe McCullen", "Fred Gonzalez", "Nick Norman", "Reave Fisk", "Mary Monze"]
 }

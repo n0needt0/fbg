@@ -1,7 +1,8 @@
 {
-	"name": "Reave",
-	"date": "2/25/10",
-	"pageNumber": 7,
-	"type": "record",
-	"cc": ["Bob", "Joe", "Fred", "Mary", "Sue"]
+	"doc_folder": "McCullen_Joe_2478",
+	"doc_uri": "/docs/repository/mAxLntHXFRrznfCWbzOl",
+	"doc_date": "1/10/11",
+	"doc_type": "record",
+	"doc_location": "Sunnyvale",
+	"cc": ["Fred Gonzalez", "Andrew Murn", "Reave Fisk", "Sally McAllister", "Mary Monze"]
 }

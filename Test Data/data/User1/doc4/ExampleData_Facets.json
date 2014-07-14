@@ -1,7 +1,9 @@
 {
-	"name": "Fred",
-	"date": "6/28/10",
-	"pageNumber": 17,
-	"type": "treatment description",
-	"cc": ["Bob", "Ben", "Andrew", "Sally"]
+	"doc_folder": "Norman_Nick_8621",
+	"doc_uri": "/docs/repository/TdajyTTlwMunN",
+	"doc_date": "8/11/12",
+	"doc_type": "report",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "Hayward",
+	"cc": ["Bob Mann", "Nick Norman", "Andrew Murn"]
 }

@@ -1,7 +1,9 @@
 {
-	"name": "Mary",
-	"date": "9/28/12",
-	"pageNumber": 23,
-	"type": "picture",
-	"cc": ["Joe", "Fred", "Ben", "Andrew", "Reave", "Anne", "Sally", "Sue"]
+	"doc_folder": "Fisk_Reave_7824",
+	"doc_uri": "/docs/repository/phJIcYhfZalP",
+	"doc_date": "8/12/12",
+	"doc_type": "report",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "San Francisco",
+	"cc": ["Bob Mann", "Fred Gonzalez", "Ben Moor", "Reave Fisk", "Anne Quillis", "Mary Monze"]
 }

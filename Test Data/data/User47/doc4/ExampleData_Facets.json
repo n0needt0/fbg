@@ -1,7 +1,9 @@
 {
-	"name": "Sally",
-	"date": "10/12/13",
-	"pageNumber": 5,
-	"type": "interview",
-	"cc": ["Fred", "Nick", "Sue"]
+	"doc_folder": "Norman_Nick_4810",
+	"doc_uri": "/docs/repository/qwnNORHZXvgY",
+	"doc_date": "12/26/13",
+	"doc_type": "planning",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "Berkeley",
+	"cc": ["Ben Moor", "Andrew Murn"]
 }

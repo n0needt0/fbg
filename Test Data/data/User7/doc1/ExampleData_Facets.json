@@ -1,7 +1,9 @@
 {
-	"name": "Sue",
-	"date": "1/26/10",
-	"pageNumber": 19,
-	"type": "treatment description",
-	"cc": ["Joe", "Reave", "Anne", "Beth", "Mary", "Sue"]
+	"doc_folder": "Willis_Sue_9205",
+	"doc_uri": "/docs/repository/uVdOJMXeptwEgCWXdmmm",
+	"doc_date": "9/13/12",
+	"doc_type": "report",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "Hayward",
+	"cc": ["Fred Gonzalez", "Sue Willis"]
 }

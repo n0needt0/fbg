@@ -1,7 +1,9 @@
 {
-	"name": "Bob",
-	"date": "7/16/12",
-	"pageNumber": 11,
-	"type": "note",
-	"cc": ["Joe", "Andrew", "Reave", "Beth", "Mary", "Sue"]
+	"doc_folder": "Quillis_Anne_1853",
+	"doc_uri": "/docs/repository/ePBTUJdmROnOvO",
+	"doc_date": "12/19/11",
+	"doc_type": "fax",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "Concord",
+	"cc": ["Bob Mann", "Reave Fisk", "Anne Quillis", "Beth Rue", "Sally McAllister"]
 }

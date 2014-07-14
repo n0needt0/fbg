@@ -1,7 +1,9 @@
 {
-	"name": "Sue",
-	"date": "10/2/10",
-	"pageNumber": 16,
-	"type": "treatment description",
-	"cc": ["Joe", "Ben", "Andrew", "Reave", "Sally"]
+	"doc_folder": "Monze_Mary_7897",
+	"doc_uri": "/docs/repository/vqMPvUKfpsdQdHkUPu",
+	"doc_date": "3/3/11",
+	"doc_type": "planning",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "Concord",
+	"cc": ["Nick Norman", "Reave Fisk", "Sally McAllister", "Mary Monze", "Sue Willis"]
 }

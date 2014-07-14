@@ -1,7 +1,9 @@
 {
-	"name": "Nick",
-	"date": "8/20/12",
-	"pageNumber": 25,
-	"type": "fax",
-	"cc": ["Joe", "Fred", "Nick", "Andrew", "Reave", "Beth", "Sally", "Sue"]
+	"doc_folder": "Rue_Beth_2774",
+	"doc_uri": "/docs/repository/MzBJqIGxemjkvWKsjWgW",
+	"doc_date": "1/5/10",
+	"doc_type": "fax",
+	"doc_group": " Physical Therapy Folder",
+	"doc_location": "Fremont",
+	"cc": ["Bob Mann", "Fred Gonzalez", "Andrew Murn"]
 }

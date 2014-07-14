@@ -1,7 +1,9 @@
 {
-	"name": "Beth",
-	"date": "10/10/10",
-	"pageNumber": 8,
-	"type": "record",
-	"cc": ["Fred", "Nick", "Andrew", "Mary"]
+	"doc_folder": "Mann_Bob_2813",
+	"doc_uri": "/docs/repository/TOOthWYFVZyad",
+	"doc_date": "9/3/11",
+	"doc_type": "planning",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "San Francisco",
+	"cc": ["Ben Moor", "Beth Rue", "Sally McAllister"]
 }

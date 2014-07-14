@@ -1,7 +1,9 @@
 {
-	"name": "Sally",
-	"date": "8/6/12",
-	"pageNumber": 25,
-	"type": "treatment description",
-	"cc": ["Joe", "Anne", "Beth"]
+	"doc_folder": "Moor_Ben_9973",
+	"doc_uri": "/docs/repository/HjgJSMsvXQlLtoe",
+	"doc_date": "12/4/13",
+	"doc_type": "picture",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "Santa Clara",
+	"cc": ["Bob Mann", "Joe McCullen", "Fred Gonzalez", "Nick Norman", "Ben Moor", "Anne Quillis", "Sally McAllister", "Sue Willis"]
 }

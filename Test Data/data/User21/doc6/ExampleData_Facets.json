@@ -1,7 +1,8 @@
 {
-	"name": "Nick",
-	"date": "7/20/13",
-	"pageNumber": 10,
-	"type": "planning",
-	"cc": ["Bob", "Joe", "Fred", "Nick", "Anne", "Sue"]
+	"doc_folder": "Quillis_Anne_0167",
+	"doc_uri": "/docs/repository/ELYaFlqDAwEBNcPiLXGL",
+	"doc_date": "7/25/10",
+	"doc_type": "treatment description",
+	"doc_location": "San Jose",
+	"cc": ["Joe McCullen", "Nick Norman", "Ben Moor", "Andrew Murn"]
 }

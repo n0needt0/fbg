@@ -1,7 +1,9 @@
 {
-	"name": "Beth",
-	"date": "2/17/13",
-	"pageNumber": 7,
-	"type": "planning",
-	"cc": ["Joe", "Fred", "Sally", "Mary"]
+	"doc_folder": "McAllister_Sally_6944",
+	"doc_uri": "/docs/repository/NUkqGgOgChw",
+	"doc_date": "8/2/12",
+	"doc_type": "interview",
+	"doc_group": " Physical Therapy Folder",
+	"doc_location": "Berkeley",
+	"cc": ["Fred Gonzalez", "Ben Moor", "Andrew Murn", "Reave Fisk"]
 }

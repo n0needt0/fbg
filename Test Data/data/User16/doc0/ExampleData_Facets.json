@@ -1,7 +1,9 @@
 {
-	"name": "Fred",
-	"date": "8/8/12",
-	"pageNumber": 7,
-	"type": "letter",
-	"cc": ["Joe", "Reave", "Beth"]
+	"doc_folder": "Mann_Bob_4079",
+	"doc_uri": "/docs/repository/HAfxGHFEEKLxiQvHqaq",
+	"doc_date": "11/8/12",
+	"doc_type": "planning",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Fairfield",
+	"cc": ["Bob Mann", "Fred Gonzalez", "Ben Moor", "Anne Quillis", "Beth Rue", "Sally McAllister"]
 }

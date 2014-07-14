@@ -1,7 +1,9 @@
 {
-	"name": "Beth",
-	"date": "5/19/13",
-	"pageNumber": 8,
-	"type": "interview",
-	"cc": ["Bob", "Reave", "Anne"]
+	"doc_folder": "Fisk_Reave_5800",
+	"doc_uri": "/docs/repository/dGTTKTfsejJTtkOjH",
+	"doc_date": "3/7/13",
+	"doc_type": "fax",
+	"doc_group": "Psychological Therapy Folder",
+	"doc_location": "San Mateo",
+	"cc": ["Joe McCullen", "Reave Fisk"]
 }

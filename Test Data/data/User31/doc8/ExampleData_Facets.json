@@ -1,7 +1,9 @@
 {
-	"name": "Fred",
-	"date": "7/7/13",
-	"pageNumber": 20,
-	"type": "interview",
-	"cc": ["Joe", "Fred", "Ben"]
+	"doc_folder": "Rue_Beth_0151",
+	"doc_uri": "/docs/repository/PGjzQgHmJmraBslehj",
+	"doc_date": "12/17/10",
+	"doc_type": "letter",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "Concord",
+	"cc": ["Bob Mann", "Nick Norman", "Ben Moor", "Reave Fisk", "Beth Rue"]
 }

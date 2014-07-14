@@ -1,7 +1,9 @@
 {
-	"name": "Sally",
-	"date": "1/1/12",
-	"pageNumber": 19,
-	"type": "treatment description",
-	"cc": ["Sally", "Mary", "Sue"]
+	"doc_folder": "Rue_Beth_2614",
+	"doc_uri": "/docs/repository/IUfrRBSwHhxNQoFdaMK",
+	"doc_date": "1/4/11",
+	"doc_type": "note",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Hayward",
+	"cc": ["Bob Mann", "Ben Moor", "Andrew Murn", "Reave Fisk", "Mary Monze"]
 }

@@ -1,7 +1,9 @@
 {
-	"name": "Ben",
-	"date": "5/26/11",
-	"pageNumber": 7,
-	"type": "note",
-	"cc": ["Nick", "Ben", "Sue"]
+	"doc_folder": "Fisk_Reave_3999",
+	"doc_uri": "/docs/repository/URWiALrhNbdIyiYpvl",
+	"doc_date": "10/4/11",
+	"doc_type": "fax",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Santa Clara",
+	"cc": ["Bob Mann", "Joe McCullen", "Beth Rue"]
 }

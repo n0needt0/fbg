@@ -1,7 +1,9 @@
 {
-	"name": "Mary",
-	"date": "10/22/12",
-	"pageNumber": 5,
-	"type": "treatment description",
-	"cc": ["Bob", "Joe", "Ben", "Reave", "Sue"]
+	"doc_folder": "McCullen_Joe_1185",
+	"doc_uri": "/docs/repository/uLYPyFbnWAYpKqiM",
+	"doc_date": "12/9/11",
+	"doc_type": "report",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Menlo",
+	"cc": ["Bob Mann", "Ben Moor", "Reave Fisk", "Beth Rue"]
 }

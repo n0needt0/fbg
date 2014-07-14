@@ -1,7 +1,9 @@
 {
-	"name": "Sally",
-	"date": "2/2/10",
-	"pageNumber": 24,
-	"type": "note",
-	"cc": ["Bob", "Nick", "Reave"]
+	"doc_folder": "Fisk_Reave_4734",
+	"doc_uri": "/docs/repository/qbuEPbHOCoZCEnPYZm",
+	"doc_date": "11/28/11",
+	"doc_type": "report",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "Berkeley",
+	"cc": ["Anne Quillis", "Sue Willis"]
 }

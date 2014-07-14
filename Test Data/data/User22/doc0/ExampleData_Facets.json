@@ -1,7 +1,9 @@
 {
-	"name": "Nick",
-	"date": "8/5/13",
-	"pageNumber": 24,
-	"type": "report",
-	"cc": ["Bob", "Fred", "Andrew", "Reave", "Anne", "Beth", "Mary", "Sue"]
+	"doc_folder": "Gonzalez_Fred_9452",
+	"doc_uri": "/docs/repository/IUXoYgbOZrFQeUWyGE",
+	"doc_date": "10/13/13",
+	"doc_type": "record",
+	"doc_group": " Insurance Claims Folder",
+	"doc_location": "Oakland",
+	"cc": ["Reave Fisk", "Mary Monze"]
 }

@@ -1,7 +1,9 @@
 {
-	"name": "Ben",
-	"date": "11/1/11",
-	"pageNumber": 2,
-	"type": "interview",
-	"cc": ["Fred", "Sally"]
+	"doc_folder": "Gonzalez_Fred_0931",
+	"doc_uri": "/docs/repository/TlSMVzvysBMiVLm",
+	"doc_date": "3/2/12",
+	"doc_type": "report",
+	"doc_group": " Life Skills Folder",
+	"doc_location": "San Mateo",
+	"cc": ["Joe McCullen", "Ben Moor", "Reave Fisk", "Beth Rue"]
 }
