@@ -111,6 +111,10 @@ insert  into `users_groups`(`user_id`,`group_id`) values (11,1);
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 
-GRANT USAGE ON *.* to fbg@% IDENTIFIED BY 'fbg#1'; 
-GRANT ALL PRIVILEDGES ON fbg.* to fbg@%;
+DROP USER fbg;
+FLUSH PRIVILEGES;
+
+CREATE USER fbg IDENTIFIED BY 'fbg#1';
+GRANT USAGE ON fbg.* to fbg IDENTIFIED BY 'fbg#1'; 
+GRANT ALL PRIVILEGES ON fbg.* to fbg IDENTIFIED BY 'fbg#1';
 

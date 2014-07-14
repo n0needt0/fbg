@@ -1,6 +1,6 @@
-#This is new cluster install for UBUNTU 12.04LTS
+#This is for dev install
 
-#Run as root on both nodes A and B
+#Step 1. Run as root on both nodes A and B first
 
 apt-get update -y
 
@@ -8,24 +8,23 @@ apt-get install git
 
 apt-get upgrade -y
 
-git clone https://github.com/n0needt0/fbg fbginstall 
+cd /opt
 
-edit config.cfg file per your network requirements, basically you want free private network block
+git clone https://github.com/n0needt0/fbg fbg
 
-#then
+cd /opt/fbg
 
-cd fbginstall && bash setup.sh
+#Virtual Install
 
-#and then 
+This is most common dev setup where you can run just one node, or multiple nodes as separate vms.
 
-switch to specified user (in this case fbguser) and his home directory
+cd /opt/fbg/node  
 
-like so
+and edit config.json
 
-su fbguser
+example is for 2 node install
 
-cd /home/fbguser/fbg/appliance 
+set the "node":"THE CURRENT NODE being installed, it should be in nodes collection"
 
-vagrant plugin install vagrant-vbguest
+run vagrant up
 
-bash startall.sh

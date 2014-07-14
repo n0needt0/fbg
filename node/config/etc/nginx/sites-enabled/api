@@ -1,5 +1,5 @@
 server {
-    listen 0.0.0.0:3000 default deferred;
+    listen 0.0.0.0:80 default deferred;
     server_name www.fbg.com
 
     sendfile off;
