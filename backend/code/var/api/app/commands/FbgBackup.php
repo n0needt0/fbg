@@ -58,8 +58,9 @@ class FbgBackup extends Command {
         $data =array();
 
         try{
-
                 //DO STUFF HERE
+                Fbg::me();
+
                 $this->notify($data, "Backup Completed!");
         }
         catch(Exception $e)
