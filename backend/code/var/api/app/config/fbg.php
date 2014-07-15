@@ -2,9 +2,9 @@
 return array(
                 'eshosts'=>array('localhost:9200'), // one or several
                 'pdfs'=>'/gfs', //thats where actual fles leave
+                'admin'=>array('email'=>'andrewy@lasdorf.com'),
+
                 //this is where file room defined
-
-
 
     'fileroom' => array(
         'folder' => array(

@@ -1,4 +1,4 @@
-<?php namespace Lasdorf\FbgApi;
+<?php namespace Lasdorf\Fbg;
 
 Class FbgBase{
     public $sig;

@@ -10,4 +10,4 @@
 | the console gets access to each of the command object instances.
 |
 */
-Artisan::add(new RatCheck);
+Artisan::add(new FbgBackup);

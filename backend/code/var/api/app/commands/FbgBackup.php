@@ -3,7 +3,8 @@
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
-use \Lasdorf\FbgApi\FbgApi as Fbg;
+use \Lasdorf\Fbg\FbgApi;
+use \Lasdorf\Fbg\FbgUtils;
 
 class FbgBackup extends Command {
 
@@ -30,6 +31,7 @@ class FbgBackup extends Command {
     public function __construct()
     {
         parent::__construct();
+        $this->fbg = new FbgApi();
     }
 
     private function debug($msg)
@@ -55,56 +57,23 @@ class FbgBackup extends Command {
             die;
         }
 
-        $data =array();
+        $data =array('email'=>Config::get('fbg.admin.email'));
 
         try{
                 //DO STUFF HERE
-                Fbg::me();
 
-                $this->notify($data, "Backup Completed!");
+
+                FbgUtils::notify($data, "Backup Completed!");
         }
         catch(Exception $e)
         {
             //notify and log
             $this->error($e->getMessage());
             $data['error'] = $e->getMessage();
-            $this->notify($data, "Backup Failed!");
+            FbgUtils::notify($data, "Backup Failed!");
         }
     }
 
-    private function notify($data, $status_msg)
-    {
-        $data['random'] = $this->get_random_text(); //add random text to fool junk mail filters
 
-        Mail::send('emails.fbg.notify', $data, function($message) use ($data)
-        {
-            $message->to($data['email'])->subject($status_msg);
-        });
-    }
-
-    function get_random_text()
-    {
-        $file = __DIR__ . '/misc/random.txt';
-        $returnlines = 20;
-        $i=0;
-        $buffer="\n";
-        $rand = rand(1, filesize($file));
-
-        $handle = @fopen($file, "r");
-        fseek($handle, $rand);
-
-        if ($handle)
-        {
-            while (!feof($handle) && $i<=$returnlines)
-            {
-                $buffer .= fgets($handle, 4096);
-                $i++;
-            }
-
-            fclose($handle);
-        }
-
-        return "\n</br>\n</br>\n</br>*************RANDOM TEXT TO ESCAPE SPAM FILTER****************************\n</br>\n</br>\n</br>" . $buffer;
-    }
 
 }
