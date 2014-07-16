@@ -5,6 +5,7 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 use \Lasdorf\Fbg\FbgApi;
 use \Lasdorf\Fbg\FbgUtils;
+use \Elasticsearch\Client;
 
 class FbgBackup extends Command {
 
@@ -23,11 +24,6 @@ class FbgBackup extends Command {
      */
     protected $description = 'This Command Backs up FBG installation to configured location in YYMMDD.ZIP file';
 
-    /**
-     * Create a new command instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         parent::__construct();
@@ -57,13 +53,11 @@ class FbgBackup extends Command {
             die;
         }
 
-        $data =array('email'=>Config::get('fbg.admin.email'));
+        $data = array('email'=>Config::get('fbg.admin.email'));
 
-        try{
-                //DO STUFF HERE
-
-
-                FbgUtils::notify($data, "Backup Completed!");
+        try
+        {
+            FbgUtils::notify($data, "Backup Completed!");
         }
         catch(Exception $e)
         {
@@ -73,7 +67,4 @@ class FbgBackup extends Command {
             FbgUtils::notify($data, "Backup Failed!");
         }
     }
-
-
-
 }

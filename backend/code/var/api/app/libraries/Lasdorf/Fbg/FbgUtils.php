@@ -7,8 +7,27 @@ use Illuminate\Log; //to log screw ups
 
 Class FbgUtils extends FbgBase{
 
-    public function __construct(){
+    private static $sendNotifications = true;
+    private static $dataDir = '';
 
+    public function __construct()
+    {
+
+    }
+
+    public static function enableNotifications($flag)
+    {
+        self::$sendNotifications = $flag;
+    }
+
+    public static function setDataDir($fName)
+    {
+        self::$dataDir = $fName;
+    }
+
+    public static function getDataDir()
+    {
+        return self::$dataDir;
     }
 
     public static function notify($data, $status_msg="")

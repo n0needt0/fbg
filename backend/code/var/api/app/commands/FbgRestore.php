@@ -5,6 +5,7 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 use \Lasdorf\Fbg\FbgApi;
 use \Lasdorf\Fbg\FbgUtils;
+use \Elasticsearch\Client;
 
 class FbgRestore extends Command {
 
@@ -59,11 +60,53 @@ class FbgRestore extends Command {
 
         $data =array('email'=>Config::get('fbg.admin.email'));
 
-        try{
-                //DO STUFF HERE
+        try
+        {
+            //Disable Andrew's email
+            FBGUtils::enableNotifications(false);
 
+            //Initializes test client
+            $testParams = array();
+            $testParams['hosts'] = array(
+                "http://search.helppain.net:9200/"
+            );
+            $client = new Client($testParams);
 
-                FbgUtils::notify($data, "Backup Completed!");
+            //Creates blank test index
+            $indexParams = array();
+            $indexParams['index'] = 'tests';
+            $client->indices()->delete($indexParams);
+            $client->indices()->create($indexParams);
+
+            FbgUtils::setDataDir(__DIR__ . '/Test Data/data/');
+            $mainDir = FbgUtils::getDataDir();
+            $this->info($mainDir);
+            $userDirs = array_diff(scandir($mainDir), array('..', '.'));
+            foreach($userDirs as $userDir)
+            {
+                $userDir = $mainDir . $userDir . '/';
+                $this->info("\t" . $userDir);
+                $docDirs = array_diff(scandir($userDir), array('..', '.'));
+                foreach($docDirs as $docDir)
+                {
+                    $docDir = $userDir . $docDir . '/';
+                    $this->info("\t\t" . $docDir);
+                    $facets = json_decode(file_get_contents($docDir . 'facets.json'), true);
+                    $facets['text'] = file_get_contents($docDir . 'text.txt');
+
+                    $docParams = array();
+                    $docParams['body'] = $facets;
+                    $id = md5(json_encode($docParams['body']) . time());
+
+                    $docParams['body']['uri'] = $id . '.pdf';
+                    $docParams['index'] = 'tests';
+                    $docParams['type'] = 'test';
+                    $docParams['id'] = $id;
+                    $client->index($docParams);
+                }
+            }
+
+            FbgUtils::notify($data, "Backup Completed!");
         }
         catch(Exception $e)
         {
@@ -73,7 +116,4 @@ class FbgRestore extends Command {
             FbgUtils::notify($data, "Backup Failed!");
         }
     }
-
-
-
 }
