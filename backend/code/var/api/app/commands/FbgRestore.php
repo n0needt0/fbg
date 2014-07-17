@@ -6,6 +6,7 @@ use Symfony\Component\Console\Input\InputArgument;
 use \Lasdorf\Fbg\FbgApi;
 use \Lasdorf\Fbg\FbgUtils;
 use \Elasticsearch\Client;
+use Illuminate\Support\Facades\Config;
 
 class FbgRestore extends Command {
 
@@ -68,27 +69,27 @@ class FbgRestore extends Command {
             //Initializes test client
             $testParams = array();
             $testParams['hosts'] = array(
-                "http://search.helppain.net:9200/"
+                Config::get('fbg.import_export_settings.es_url')
             );
             $client = new Client($testParams);
 
             //Creates blank test index
             $indexParams = array();
-            $indexParams['index'] = 'tests';
+            $indexParams['index'] = Config::get('fbg.import_export_settings.index_name');
             $client->indices()->delete($indexParams);
             $client->indices()->create($indexParams);
 
-            FbgUtils::setDataDir(__DIR__ . '/Test Data/data/');
-            $mainDir = FbgUtils::getDataDir();
+            $mainDir = Config::get('fbg.import_export_settings.import_dir');
             $this->info($mainDir);
-            $userDirs = array_diff(scandir($mainDir), array('..', '.'));
+            $userDirs = array_diff(scandir($mainDir), array('..', '.', '.DS_Store', '.idea'));
             foreach($userDirs as $userDir)
             {
                 $userDir = $mainDir . $userDir . '/';
                 $this->info("\t" . $userDir);
-                $docDirs = array_diff(scandir($userDir), array('..', '.'));
+                $docDirs = array_diff(scandir($userDir), array('..', '.', '.DS_Store', '.idea'));
                 foreach($docDirs as $docDir)
                 {
+
                     $docDir = $userDir . $docDir . '/';
                     $this->info("\t\t" . $docDir);
                     $facets = json_decode(file_get_contents($docDir . 'facets.json'), true);
@@ -98,7 +99,7 @@ class FbgRestore extends Command {
                     $docParams['body'] = $facets;
                     $id = md5(json_encode($docParams['body']) . time());
 
-                    $docParams['body']['uri'] = $id . '.pdf';
+                    $docParams['body']['doc_uri'] = $id . '.pdf';
                     $docParams['index'] = 'tests';
                     $docParams['type'] = 'test';
                     $docParams['id'] = $id;

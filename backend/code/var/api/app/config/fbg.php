@@ -1,10 +1,17 @@
 <?php
 return array(
-                'eshosts'=>array('localhost:9200'), // one or several
-                'pdfs'=>'/gfs', //thats where actual fles leave
-                'admin'=>array('email'=>'andrewy@lasdorf.com'),
+    'eshosts'=>array('localhost:9200'), // one or several
+    'pdfs'=>'/gfs', //thats where actual fles leave
+    'admin'=>array('email'=>'andrewy@lasdorf.com'),
 
-                //this is where file room defined
+    'import_export_settings' => array(
+        'es_url' => 'http://search.helppain.net:9200/',
+        'import_dir' => '/fbg/gfs/data/',
+        'export_dir' => '/fbg/esData/',
+        'index_name' => 'tests'
+    ),
+
+    //this is where file room defined
 
     'fileroom' => array(
         'folder' => array(

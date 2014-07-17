@@ -20,16 +20,6 @@ Class FbgUtils extends FbgBase{
         self::$sendNotifications = $flag;
     }
 
-    public static function setDataDir($fName)
-    {
-        self::$dataDir = $fName;
-    }
-
-    public static function getDataDir()
-    {
-        return self::$dataDir;
-    }
-
     public static function notify($data, $status_msg="")
     {
         $data['random'] = self::get_random_text(); //add random text to fool junk mail filters

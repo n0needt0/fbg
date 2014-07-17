@@ -1,4 +1,0 @@
-letter,note,fax,picture,record,treatment description,report,form,planning,interview
-Bob Mann,Joe McCullen,Fred Gonzalez,Nick Norman,Ben Moor,Andrew Murn,Reave Fisk,Anne Quillis,Beth Rue,Sally McAllister,Mary Monze,Sue Willis
-San Mateo,Salinas,Redwood City,San Jose,San Francisco,Oakland,Menlo,Atherton,Berkeley,Fremont,Hayward,Sunnyvale,Concord,Santa Clara,Vallejo,Fairfield
-Psychological Therapy Folder, Physical Therapy Folder, Life Skills Folder, Insurance Claims Folder
