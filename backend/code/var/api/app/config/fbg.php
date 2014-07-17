@@ -8,7 +8,8 @@ return array(
         'es_url' => 'http://search.helppain.net:9200/',
         'import_dir' => '/fbg/gfs/data/',
         'export_dir' => '/fbg/esData/',
-        'index_name' => 'tests'
+        'index_name' => 'tests',
+        'search_blocks' => 10
     ),
 
     //this is where file room defined

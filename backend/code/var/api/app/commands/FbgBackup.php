@@ -57,6 +57,40 @@ class FbgBackup extends Command {
 
         try
         {
+            //TODO: Need to somehow get from GFS
+
+            //Disable Andrew's email
+            FBGUtils::enableNotifications(false);
+
+            //Initializes test client
+            $clientParams = array();
+            $clientParams['hosts'] = array(
+                Config::get('fbg.import_export_settings.es_url')
+            );
+            $client = new Client($clientParams);
+
+            $from = 0;
+            $numDocs = -1;
+            do
+            {
+                $searchParams = array();
+                $searchParams['index'] = Config::get('fbg.import_export_settings.index_name');
+                $searchParams['size'] = Config::get('fbg.import_export_settings.search_blocks');
+                $searchParams['from'] = $from;
+
+                $results = $client->search($searchParams)['hits'];
+                if($numDocs == -1)
+                {
+                    $numDocs = $results['total'];
+                }
+
+                $documents = $results['hits'];
+                foreach($documents as $document)
+                {
+
+                }
+            } while ($from < $numDocs);
+
             FbgUtils::notify($data, "Backup Completed!");
         }
         catch(Exception $e)

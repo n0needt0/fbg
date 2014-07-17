@@ -5,7 +5,6 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 use \Lasdorf\Fbg\FbgApi;
 use \Lasdorf\Fbg\FbgUtils;
-use \Elasticsearch\Client;
 use Illuminate\Support\Facades\Config;
 
 class FbgRestore extends Command {
@@ -66,48 +65,19 @@ class FbgRestore extends Command {
             //Disable Andrew's email
             FBGUtils::enableNotifications(false);
 
-            //Initializes test client
-            $testParams = array();
-            $testParams['hosts'] = array(
-                Config::get('fbg.import_export_settings.es_url')
-            );
-            $client = new Client($testParams);
+            $api = new FbgApi();
+            $succeeded = $api->put_docs_into_es(Config::get('fbg.import_export_settings.es_url'),
+                                                Config::get('fbg.import_export_settings.index_name'),
+                                                Config::get('fbg.import_export_settings.import_dir'));
 
-            //Creates blank test index
-            $indexParams = array();
-            $indexParams['index'] = Config::get('fbg.import_export_settings.index_name');
-            $client->indices()->delete($indexParams);
-            $client->indices()->create($indexParams);
-
-            $mainDir = Config::get('fbg.import_export_settings.import_dir');
-            $this->info($mainDir);
-            $userDirs = array_diff(scandir($mainDir), array('..', '.', '.DS_Store', '.idea'));
-            foreach($userDirs as $userDir)
+            if($succeeded)
             {
-                $userDir = $mainDir . $userDir . '/';
-                $this->info("\t" . $userDir);
-                $docDirs = array_diff(scandir($userDir), array('..', '.', '.DS_Store', '.idea'));
-                foreach($docDirs as $docDir)
-                {
-
-                    $docDir = $userDir . $docDir . '/';
-                    $this->info("\t\t" . $docDir);
-                    $facets = json_decode(file_get_contents($docDir . 'facets.json'), true);
-                    $facets['text'] = file_get_contents($docDir . 'text.txt');
-
-                    $docParams = array();
-                    $docParams['body'] = $facets;
-                    $id = md5(json_encode($docParams['body']) . time());
-
-                    $docParams['body']['doc_uri'] = $id . '.pdf';
-                    $docParams['index'] = 'tests';
-                    $docParams['type'] = 'test';
-                    $docParams['id'] = $id;
-                    $client->index($docParams);
-                }
+                FbgUtils::notify($data, "Backup Completed!");
             }
-
-            FbgUtils::notify($data, "Backup Completed!");
+            else
+            {
+                FbgUtils::notify($data, "Backup failed.");
+            }
         }
         catch(Exception $e)
         {
