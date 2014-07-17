@@ -12,7 +12,7 @@ return array(
         'search_blocks' => 5
     ),
 
-    //this is where file room defined
+    //this is where the file room is defined
 
     'fileroom' => array(
         'folder' => array(
@@ -57,7 +57,5 @@ return array(
             'required' => false
         )
     )
-
-
 );
 
