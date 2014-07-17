@@ -58,8 +58,17 @@ Class FbgApi extends FbgBase{
 
                     $docParams = array();
                     $docParams['body'] = $facets;
-                    $id = md5(json_encode($docParams['body']) . time());
 
+                    $id = '';
+                    if(array_key_exists('doc_uri', $docParams['body']))
+                    {
+                        $id = $docParams['body']['doc_uri'];
+                        $id = substr($id, 0, strlen($id) - 4);
+                    }
+                    else
+                    {
+                        $id = md5(json_encode($docParams['body']) . time());
+                    }
                     $docParams['body']['doc_uri'] = $id . '.pdf';
                     $docParams['index'] = $index_name;
                     $docParams['type'] = $docParams['body']['doc_type'];
@@ -76,8 +85,52 @@ Class FbgApi extends FbgBase{
         }
     }
 
-    public function get_all_docs_in_index($index)
+    public function get_docs_from_es($es_url, $index_name, $export_dir, $search_blocks)
     {
+        try
+        {
+            $client = $this->create_client($es_url);
+            $dir_name = $export_dir . time() . '/';
 
+            $from = 0;
+            $numDocs = -1;
+            do
+            {
+                $searchParams = array();
+                $searchParams['index'] = $index_name;
+                $searchParams['size'] = $search_blocks;
+                $searchParams['from'] = $from;
+
+                $results = $client->search($searchParams)['hits'];
+                if($numDocs == -1)
+                {
+                    $numDocs = $results['total'];
+                }
+
+                $documents = $results['hits'];
+                foreach($documents as $document)
+                {
+                    $data = $document['_source'];
+                    $folder = $data['doc_folder'];
+                    $sub_folder = $data['doc_uri'];
+                    $sub_folder = substr($sub_folder, 0, strlen($sub_folder) - 4);
+
+                    $doc_folder = $dir_name . $folder . '/' . $sub_folder . '/';
+                    if(!file_exists($doc_folder))
+                    {
+                        mkdir($doc_folder, 0777, true);
+                        file_put_contents($doc_folder . 'facets.json', json_encode($data));
+                        file_put_contents($doc_folder . 'text.txt', $data['text']);
+                    }
+                }
+                $from += $search_blocks;
+            } while ($from < $numDocs);
+
+            return true;
+        }
+        catch(Exception $e)
+        {
+            return false;
+        }
     }
 }

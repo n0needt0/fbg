@@ -72,11 +72,7 @@ class FbgRestore extends Command {
 
             if($succeeded)
             {
-                FbgUtils::notify($data, "Backup Completed!");
-            }
-            else
-            {
-                FbgUtils::notify($data, "Backup failed.");
+                FbgUtils::notify($data, "Restore Completed!");
             }
         }
         catch(Exception $e)
@@ -84,7 +80,7 @@ class FbgRestore extends Command {
             //notify and log
             $this->error($e->getMessage());
             $data['error'] = $e->getMessage();
-            FbgUtils::notify($data, "Backup Failed!");
+            FbgUtils::notify($data, "Restore Failed!");
         }
     }
 }

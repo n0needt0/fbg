@@ -6,6 +6,7 @@ use Symfony\Component\Console\Input\InputArgument;
 use \Lasdorf\Fbg\FbgApi;
 use \Lasdorf\Fbg\FbgUtils;
 use \Elasticsearch\Client;
+use Illuminate\Support\Facades\Config;
 
 class FbgBackup extends Command {
 
@@ -62,36 +63,16 @@ class FbgBackup extends Command {
             //Disable Andrew's email
             FBGUtils::enableNotifications(false);
 
-            //Initializes test client
-            $clientParams = array();
-            $clientParams['hosts'] = array(
-                Config::get('fbg.import_export_settings.es_url')
-            );
-            $client = new Client($clientParams);
+            $api = new FbgApi();
+            $succeeded = $api->get_docs_from_es(Config::get('fbg.import_export_settings.es_url'),
+                                                Config::get('fbg.import_export_settings.index_name'),
+                                                Config::get('fbg.import_export_settings.export_dir'),
+                                                Config::get('fbg.import_export_settings.search_blocks'));
 
-            $from = 0;
-            $numDocs = -1;
-            do
+            if($succeeded)
             {
-                $searchParams = array();
-                $searchParams['index'] = Config::get('fbg.import_export_settings.index_name');
-                $searchParams['size'] = Config::get('fbg.import_export_settings.search_blocks');
-                $searchParams['from'] = $from;
-
-                $results = $client->search($searchParams)['hits'];
-                if($numDocs == -1)
-                {
-                    $numDocs = $results['total'];
-                }
-
-                $documents = $results['hits'];
-                foreach($documents as $document)
-                {
-
-                }
-            } while ($from < $numDocs);
-
-            FbgUtils::notify($data, "Backup Completed!");
+                FbgUtils::notify($data, "Backup Completed!");
+            }
         }
         catch(Exception $e)
         {

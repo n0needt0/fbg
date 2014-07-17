@@ -7,9 +7,9 @@ return array(
     'import_export_settings' => array(
         'es_url' => 'http://search.helppain.net:9200/',
         'import_dir' => '/fbg/gfs/data/',
-        'export_dir' => '/fbg/esData/',
+        'export_dir' => '/fbg/export/',
         'index_name' => 'tests',
-        'search_blocks' => 10
+        'search_blocks' => 5
     ),
 
     //this is where file room defined
