@@ -22,7 +22,7 @@ class FbgRestore extends Command {
      *
      * @var string
      */
-    protected $description = 'This Command Backs up FBG installation to configured location in YYMMDD.ZIP file';
+    protected $description = 'Put data from a predefined location onto es';
 
     /**
      * Create a new command instance.

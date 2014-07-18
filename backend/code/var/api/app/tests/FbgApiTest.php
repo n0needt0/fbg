@@ -36,12 +36,39 @@ class FbgApiTest extends TestCase
 
     public function test_import_export_completion()
     {
-//        shell_exec('rm -rf ' . Config::get('fbg.import_export_settings.import_dir'));
-//        shell_exec('python ' . Config::get('fbg.import_export_settings.import_dir') . '../generate.py');
+        shell_exec(
+            'cd ' . Config::get('fbg.api_test_settings.test_dir') . Config::get('fbg.api_test_settings.import_sub_dir') . '..;' .
+            'rm -rf data;' .
+            'python generate.py'
+        );
+        echo `ls /fbg/test/datagen`;
+
+        $api = new FbgApi();
+        $initDocList = $this->generate_user_doc_array(Config::get('fbg.api_test_settings.test_dir') . Config::get('fbg.api_test_settings.import_sub_dir'), $api);
+        $api->put_docs_into_es(Config::get('fbg.api_test_settings.es_url'),
+                               Config::get('fbg.api_test_settings.index_name'),
+                               Config::get('fbg.api_test_settings.test_dir') . Config::get('fbg.api_test_settings.import_sub_dir'));
+        $api->get_docs_from_es(Config::get('fbg.api_test_settings.es_url'),
+                               Config::get('fbg.api_test_settings.index_name'),
+                               Config::get('fbg.api_test_settings.test_dir') . Config::get('fbg.api_test_settings.export_sub_dir'),
+                               Config::get('fbg.api_test_settings.search_blocks'));
+
+        $recreatedDocList = $this->generate_user_doc_array(Config::get('fbg.api_test_settings.test_dir') . Config::get('fbg.api_test_settings.export_sub_dir'), $api);
+
+        echo implode("\n", $initDocList);
+        $this->assertTrue($initDocList == $recreatedDocList);
     }
 
-    public function countFolders($levels, $path)
+    public function generate_user_doc_array($docPath, FbgApi $api)
     {
+        $userList = $api->dir_sub_array($docPath);
+        $docList = array();
 
+        foreach($userList as $user)
+        {
+            $docList[$user] = count($api->dir_sub_array($docPath . $user));
+        }
+
+        return $docList;
     }
 }

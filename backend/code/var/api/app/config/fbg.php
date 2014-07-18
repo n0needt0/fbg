@@ -5,7 +5,12 @@ return array(
     'admin'=>array('email'=>'andrewy@lasdorf.com'),
 
     'api_test_settings' => array(
-        'test_dir' => '/fbg/test/'
+        'test_dir' => '/fbg/test/',
+        'import_sub_dir' => 'datagen/data/',
+        'export_sub_dir' => 'datagen/export/',
+        'es_url' => 'http://search.helppain.net:9200/',
+        'index_name' => 'api_tests',
+        'search_blocks' => 5
     ),
 
     'import_export_settings' => array(
