@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="14adab2a-580a-402f-931a-be3393bd29ad" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backend/code/var/api/app/tests/FbgApiTest.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/code/var/api/app/tests/CronratUrlTest.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/code/var/api/vendor/autoload.php" afterPath="$PROJECT_DIR$/backend/code/var/api/vendor/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/code/var/api/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/backend/code/var/api/vendor/composer/autoload_classmap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/code/var/api/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/backend/code/var/api/vendor/composer/autoload_namespaces.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/code/var/api/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/backend/code/var/api/vendor/composer/autoload_real.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/code/var/api/composer.json" afterPath="$PROJECT_DIR$/backend/code/var/api/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/code/var/api/composer.lock" afterPath="$PROJECT_DIR$/backend/code/var/api/composer.lock" />
+    <list default="true" id="14adab2a-580a-402f-931a-be3393bd29ad" name="Default" comment="created clean test env">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/code/var/api/app/libraries/Lasdorf/Fbg/FbgApi.php" afterPath="$PROJECT_DIR$/backend/code/var/api/app/libraries/Lasdorf/Fbg/FbgApi.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/code/var/api/app/tests/FbgApiTest.php" afterPath="$PROJECT_DIR$/backend/code/var/api/app/tests/FbgApiTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/code/var/api/app/commands/FbgBackup.php" afterPath="$PROJECT_DIR$/backend/code/var/api/app/commands/FbgBackup.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/code/var/api/app/config/fbg.php" afterPath="$PROJECT_DIR$/backend/code/var/api/app/config/fbg.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/code/var/api/vendor/composer/include_paths.php" afterPath="$PROJECT_DIR$/backend/code/var/api/vendor/composer/include_paths.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/code/var/api/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/backend/code/var/api/vendor/composer/installed.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="fbg.iws" />
@@ -39,12 +32,9 @@
       <file leaf-file-name="FbgApi.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/code/var/api/app/libraries/Lasdorf/Fbg/FbgApi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="1" selection-start="4414" selection-end="4414" vertical-scroll-proportion="-21.25" vertical-offset="675" max-vertical-offset="1275">
+            <state line="37" column="91" selection-start="1072" selection-end="1072" vertical-scroll-proportion="-11.875" vertical-offset="270" max-vertical-offset="2115">
               <folding>
                 <element signature="e#30#54#0" expanded="true" />
-                <element signature="e#690#928#0" expanded="false" />
-                <element signature="e#934#1073#0" expanded="false" />
-                <element signature="e#2755#4412#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -53,10 +43,8 @@
       <file leaf-file-name="FbgBackup.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/code/var/api/app/commands/FbgBackup.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="43" selection-start="1648" selection-end="1648" vertical-scroll-proportion="-18.666666" vertical-offset="572" max-vertical-offset="1350">
-              <folding>
-                <element signature="e#7#38#0" expanded="true" />
-              </folding>
+            <state line="6" column="26" selection-start="190" selection-end="190" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="1335">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -64,7 +52,7 @@
       <file leaf-file-name="FbgRestore.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/code/var/api/app/commands/FbgRestore.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="97" selection-start="1507" selection-end="1507" vertical-scroll-proportion="-27.083334" vertical-offset="370" max-vertical-offset="1365">
+            <state line="2" column="4" selection-start="11" selection-end="11" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="1365">
               <folding>
                 <element signature="e#7#38#0" expanded="true" />
               </folding>
@@ -75,7 +63,7 @@
       <file leaf-file-name="fbg.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/code/var/api/app/config/fbg.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="5" selection-start="1856" selection-end="1856" vertical-scroll-proportion="-36.25" vertical-offset="0" max-vertical-offset="1005">
+            <state line="8" column="6" selection-start="258" selection-end="258" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="1065">
               <folding />
             </state>
           </provider>
@@ -84,16 +72,27 @@
       <file leaf-file-name="FbgApiTest.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/code/var/api/app/tests/FbgApiTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="101" selection-end="101" vertical-scroll-proportion="0.1978022" vertical-offset="0" max-vertical-offset="455">
+            <state line="33" column="43" selection-start="969" selection-end="969" vertical-scroll-proportion="1.083151" vertical-offset="0" max-vertical-offset="780">
+              <folding>
+                <element signature="e#7#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExampleTest.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/code/var/api/app/tests/ExampleTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="30" selection-start="77" selection-end="77" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="285">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="phpunit" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/code/var/api/vendor/phpunit/phpunit/phpunit">
+      <file leaf-file-name="TestCase.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/code/var/api/app/tests/TestCase.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="420">
+            <state line="8" column="37" selection-start="167" selection-end="167" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="285">
               <folding />
             </state>
           </provider>
@@ -121,8 +120,9 @@
         <option value="$PROJECT_DIR$/backend/code/var/api/app/libraries/Lasdorf/Fbg/FbgUtils.php" />
         <option value="$PROJECT_DIR$/backend/code/var/api/app/commands/FbgRestore.php" />
         <option value="$PROJECT_DIR$/backend/code/var/api/app/commands/FbgBackup.php" />
-        <option value="$PROJECT_DIR$/backend/code/var/api/app/libraries/Lasdorf/Fbg/FbgApi.php" />
         <option value="$PROJECT_DIR$/backend/code/var/api/app/config/fbg.php" />
+        <option value="$PROJECT_DIR$/backend/code/var/api/app/tests/TestCase.php" />
+        <option value="$PROJECT_DIR$/backend/code/var/api/app/libraries/Lasdorf/Fbg/FbgApi.php" />
         <option value="$PROJECT_DIR$/backend/code/var/api/app/tests/FbgApiTest.php" />
       </list>
     </option>
@@ -158,7 +158,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -301,6 +300,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -380,7 +380,11 @@
       <created>1405639625752</created>
       <updated>1405639625752</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="created clean test env">
+      <created>1405641419277</created>
+      <updated>1405641419277</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -407,13 +411,12 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891566" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38915664" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38822114" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32932693" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26680973" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27038628" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -421,11 +424,12 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891566" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891566" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -446,17 +450,13 @@
     <MESSAGE value="made restore configurable" />
     <MESSAGE value="moved restore into api" />
     <MESSAGE value="finished backup and restore" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished backup and restore" />
+    <MESSAGE value="created clean test env" />
+    <option name="LAST_COMMIT_MESSAGE" value="created clean test env" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backend/code/var/api/app/views/partials/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/code/var/api/app/views/partials/navbar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="40" selection-start="2996" selection-end="2996" vertical-scroll-proportion="0.0" vertical-offset="354" max-vertical-offset="1185" />
@@ -467,9 +467,6 @@
         <state line="2" column="0" selection-start="33" selection-end="99" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="270">
           <folding>
             <element signature="e#30#54#0" expanded="true" />
-            <element signature="e#690#928#0" expanded="false" />
-            <element signature="e#934#1073#0" expanded="false" />
-            <element signature="e#2755#4412#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -670,46 +667,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/code/var/api/app/start/artisan.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="29" selection-start="467" selection-end="467" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="285">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/code/var/api/app/commands/FbgRestore.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="97" selection-start="1507" selection-end="1507" vertical-scroll-proportion="-27.083334" vertical-offset="370" max-vertical-offset="1365">
-          <folding>
-            <element signature="e#7#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/code/var/api/app/commands/FbgBackup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="43" selection-start="1648" selection-end="1648" vertical-scroll-proportion="-18.666666" vertical-offset="572" max-vertical-offset="1350">
-          <folding>
-            <element signature="e#7#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/code/var/api/app/libraries/Lasdorf/Fbg/FbgApi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="1" selection-start="4414" selection-end="4414" vertical-scroll-proportion="-21.25" vertical-offset="0" max-vertical-offset="600">
-          <folding>
-            <element signature="e#30#54#0" expanded="true" />
-            <element signature="e#690#928#0" expanded="false" />
-            <element signature="e#934#1073#0" expanded="false" />
-            <element signature="e#2755#4412#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="13" column="29" selection-start="467" selection-end="467" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="285" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/code/var/api/app/config/testing/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="420" selection-end="420" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="1545">
-          <folding />
-        </state>
+        <state line="14" column="0" selection-start="420" selection-end="420" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="1545" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/code/var/api/phpunit.xml">
@@ -721,12 +684,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/code/var/api/vendor/classpreloader/classpreloader/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="13" selection-start="1353" selection-end="1353" vertical-scroll-proportion="0.6129808" vertical-offset="60" max-vertical-offset="1710">
-          <folding />
-        </state>
+        <state line="21" column="13" selection-start="1353" selection-end="1353" vertical-scroll-proportion="0.6129808" vertical-offset="60" max-vertical-offset="1710" />
       </provider>
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/code/var/api/app/tests/ExampleTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="30" selection-start="77" selection-end="77" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="285">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/code/var/api/vendor/phpunit/phpunit/phpunit">
@@ -736,17 +704,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/backend/code/var/api/app/tests/TestCase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="37" selection-start="167" selection-end="167" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/code/var/api/app/commands/FbgRestore.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="4" selection-start="11" selection-end="11" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="1365">
+          <folding>
+            <element signature="e#7#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/backend/code/var/api/app/config/fbg.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="5" selection-start="1856" selection-end="1856" vertical-scroll-proportion="-36.25" vertical-offset="0" max-vertical-offset="1005">
+        <state line="8" column="6" selection-start="258" selection-end="258" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="1065">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/code/var/api/app/commands/FbgBackup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="26" selection-start="190" selection-end="190" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="1335">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/code/var/api/app/libraries/Lasdorf/Fbg/FbgApi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="91" selection-start="1072" selection-end="1072" vertical-scroll-proportion="-11.875" vertical-offset="270" max-vertical-offset="2115">
+          <folding>
+            <element signature="e#30#54#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/code/var/api/app/tests/FbgApiTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="101" selection-end="101" vertical-scroll-proportion="0.1978022" vertical-offset="0" max-vertical-offset="455">
-          <folding />
+        <state line="33" column="43" selection-start="969" selection-end="969" vertical-scroll-proportion="1.083151" vertical-offset="0" max-vertical-offset="780">
+          <folding>
+            <element signature="e#7#45#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

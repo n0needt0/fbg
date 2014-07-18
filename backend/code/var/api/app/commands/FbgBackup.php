@@ -5,7 +5,6 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 use \Lasdorf\Fbg\FbgApi;
 use \Lasdorf\Fbg\FbgUtils;
-use \Elasticsearch\Client;
 use Illuminate\Support\Facades\Config;
 
 class FbgBackup extends Command {

@@ -35,7 +35,7 @@ Class FbgApi extends FbgBase{
 
     public function dir_sub_array($dir_name)
     {
-        return array_diff(scandir($dir_name), array('..', '.', '.DS_Store', '.idea'));
+        return array_filter(scandir($dir_name), function($str){ return substr($str, 0, 1) != '.'; });
     }
 
     public function put_docs_into_es($es_url, $index_name, $import_dir)

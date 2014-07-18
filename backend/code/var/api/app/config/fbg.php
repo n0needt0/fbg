@@ -4,6 +4,10 @@ return array(
     'pdfs'=>'/gfs', //thats where actual fles leave
     'admin'=>array('email'=>'andrewy@lasdorf.com'),
 
+    'api_test_settings' => array(
+        'test_dir' => '/fbg/test/'
+    ),
+
     'import_export_settings' => array(
         'es_url' => 'http://search.helppain.net:9200/',
         'import_dir' => '/fbg/gfs/data/',
